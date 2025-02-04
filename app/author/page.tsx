@@ -1,5 +1,10 @@
+import BookList from "./BookList";
+import { books } from './book-data';
+
 export default function AuthorPage(){
     return(
-        <h1>Author Page</h1>
+        <main>
+            <BookList books={ books }/>
+        </main>
     )
 }
