@@ -2,22 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --font-azeret-mono: "Azeret Mono", monospace;
+  --font-inter: "Inter", sans-serif;
+}
+
 body {
   @apply bg-white text-gray-900;
+  font-family: var(--font-inter);
+}
+
+h1 {
+  @apply text-3xl font-cardo font-bold text-accent;
+}
+
+h2 {
+  @apply font-inter text-base font-medium text-accent;
+}
+
+h3{
+  @apply text-xl font-cardo text-lightText;
+}
+
+h4 {
+  @apply text-base text-accent;
+}
+
+h5{
+  @apply text-xs text-darker;
 }
 
 nav {
   @apply
-    pb-4
-    border-b-2 border-gray-200
+    pb-0
     items-center gap-5 
     text-center
-    my-8 mx-auto 
+    my-1 mx-auto 
     max-w-5xl;
 }
 
 nav h2{
-  @apply text-3xl mb-4;
+  @apply mb-2;
 }
 
 nav a, nav span {
@@ -43,10 +68,10 @@ button:hover {
   @apply bg-opacity-90;
 }
 .btn-primary {
-  @apply bg-primary text-white;
+  @apply bg-accent text-lightAccent;
 }
 .btn-secondary {
-  @apply bg-gray-200 text-gray-900;
+  @apply bg-lightAccent text-accent;
 }
   
 /* feedback styles */
@@ -61,4 +86,33 @@ button:hover {
     block
     max-w-fit
     my-4 mx-auto;
+}
+
+/* Image loop transitions*/
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fade-in 1s ease-in-out;
+}
+
+.fade-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: opacity 1s ease-in-out; /* Smooth fade effect */
+}
+
+.fade-in {
+  opacity: 1;
+  z-index: 2; /* Ensure new image is on top */
+}
+
+.fade-out {
+  opacity: 0;
+  z-index: 1; /* Old image fades out below */
 }

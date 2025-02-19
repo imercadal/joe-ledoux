@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image'
 
 export default function BookList({ books }: { books: Book[]}) {
+
     return(
         <main> 
             {books.map(book => (

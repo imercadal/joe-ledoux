@@ -3,7 +3,6 @@ This is a personal webpage for Neuroscientist, Author and Musician Joseph E. LeD
 ## FrontEnd
 /neuroscientist
     /publications
-    /citations
     /lectures
 
 /author
@@ -23,3 +22,4 @@ This is a personal webpage for Neuroscientist, Author and Musician Joseph E. LeD
 ## Backend
 
 
+Connect to MongoDB through string!

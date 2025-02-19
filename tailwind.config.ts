@@ -9,13 +9,20 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#0091BD",
-        secondary: {
-          100: '#ffffff',
-          200: '#eb2847'
-        }
+        lightText: "#ebf5fc",
+        lightAccent: "#d8f5fa",
+        accent: '#0091bd',
+				dark: '#0d3a4e',
+				darker: '#0b2f42',
+				darkest: '#062637'
+      },
+      fontFamily: {
+        azeret: ["var(--font-azeret-mono)"],
+        inter: ["var(--font-inter)"],
+        cardo: ["Cardo, serif"],
       },
     },
   },
   plugins: [],
 } satisfies Config;
+
