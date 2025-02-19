@@ -21,7 +21,7 @@ h2 {
 }
 
 h3{
-  @apply text-xl font-cardo text-lightText;
+  @apply text-xl font-cardo text-white;
 }
 
 h4 {
@@ -51,7 +51,7 @@ nav a, nav span {
     text-sm
 }
 nav a:hover {
-  @apply text-black;
+  @apply text-darkest;
 }
 main nav {
   @apply border-0;

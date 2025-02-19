@@ -11,6 +11,7 @@ export default {
       colors: {
         lightText: "#ebf5fc",
         lightAccent: "#d8f5fa",
+        subMenu: "#0091bd",
         accent: '#0091bd',
 				dark: '#0d3a4e',
 				darker: '#0b2f42',
