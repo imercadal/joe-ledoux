@@ -1,17 +1,20 @@
 import { Publication } from './publication-data';
-import Link from 'next/link';
 
 export default function PublicationList({ publications }: { publications: Publication[]}) {
     return(
         <main> 
             {publications.map(publication => (
-                <div key={publication.id}>
-                    <Link href={`/neuroscience/${publication.id}`}>
-                        <h3>{publication.title} ({publication.year})</h3>
-                        <p>{publication.abstract}</p>
-                        <button>See more</button>
-                    </Link>
+                <div key={publication.id} className='mb-8'>
+                    <a 
+                        href={publication.link}
+                        target='_blank'
+                        rel='noopener noreferrer'
+                    >
+                        <p>{publication.authors}.</p>
+                        <p><strong>{publication.title}</strong>. {publication.date.toLocaleDateString('en-US', { month: 'long', day: 'numeric' })}.</p>
+                    </a>
                 </div>
+                
             ))}
         </main>
     )

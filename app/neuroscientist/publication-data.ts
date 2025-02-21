@@ -8,6 +8,7 @@ export interface Publication {
     link: string;
 }
 
+/*
 export const publications : Publication[] = [{
     id: "1",
     title: "aaaaaaMetacognition as a window into subjective affective experience",
@@ -34,3 +35,4 @@ export const publications : Publication[] = [{
     link : "temp link"
 }
 ]
+*/{}

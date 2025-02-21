@@ -57,7 +57,7 @@ const navigation = [
 export default function Footer() {
     return(
         <footer className="bg-lightText">
-            <div className="h-16 mx-auto max-w-7xl px-6 py-6 md:flex md:items-center md:justify-around lg:px-20">
+            <div className="md:h-16 h-24 mx-auto max-w-7xl px-6 py-6 md:flex md:items-center md:justify-around lg:px-20">
                 <div className="flex justify-center items-center gap-x-6 md:order-2">
                     {navigation.map((item) => (
                         <a key={item.name} href={item.href} className="dark hover:text-accent">

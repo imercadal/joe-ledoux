@@ -11,15 +11,23 @@ export default async function AuthorPage(){
         const books = await response.json();
         
         return(
-            <main className="lg:px-56 md:px-24 ">
+            <main className="bg-lightText">
+                <div className="relative mb-8 h-40 bg-cover bg-center bg-[url('/310_Author_Books.webp')] flex items-center justify-center">
+                    <h3 className="font-bold">BOOKS</h3>
+                </div>
                 <BookList books={ books }/>
             </main>
     )
     } catch (error) {
         console.error("Error fetching books:", error);
         return (
-            <main className="p-32 justify-center"   >
-                <p className="text-dark text-4xl">Failed to load books. Please try again later.</p>
+            <main className="bg-lightText"   >
+                <div className="relative mb-8 h-40 bg-cover bg-center bg-[url('/310_Author_Books.webp')] flex items-center justify-center">
+                    <h3 className="font-bold">BOOKS</h3>
+                </div>
+                <div className="p-32 min-h-3/4 flex justify-center">
+                    <p className="text-dark text-3xl">Failed to load books. Please try again later.</p>
+                </div>
             </main>
         );
     }

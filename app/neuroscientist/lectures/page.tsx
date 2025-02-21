@@ -1,33 +1,26 @@
-import PublicationList from "./PublicationsList";
-import { Publication } from "./publication-data";
+import LectureList from './LectureList';//
+import { lectures, Lecture } from './lecture-data';
 
+export default function LecturesPage(){
 
-export default async function NeuroscientistPage(){
-    const response = await fetch('http://localhost:3000/api/publications');
-    const publicationsData = await response.json()
-
-    const publications = publicationsData.map((pub: any) => ({
-        ...pub,
-        date: new Date(pub.date)
-      }));
-
-      const publicationsByYear = publications.reduce((acc, publication) => {
-        const year = publication.date.getFullYear();
+    const lecturesByYear = lectures.reduce((acc, lecture) => {
+        const year = lecture.date.getFullYear();
         if (!acc[year]) {
           acc[year] = [];
         }
-        acc[year].push(publication);
+        acc[year].push(lecture);
         return acc;
-      }, {} as Record<number, typeof publications>);
-    
-      const years = Object.keys(publicationsByYear)
+      }, {} as Record<number, Lecture[]>);
+
+    const years = Object.keys(lecturesByYear)
         .map(Number)
         .sort((a, b) => b - a);
 
     return(
         <main>
-            <div className="relative h-40 bg-cover bg-center bg-[url('/210_Neuro_Pubs.webp')] flex items-center justify-center">
-                <h3 className="font-bold">PUBLICATIONS</h3>
+            {/* Header Banner */}
+            <div className="relative h-40 bg-cover bg-center bg-[url('/220_Neuro_Lectures.webp')] flex items-center justify-center">
+                <h3 className="font-bold">LECTURES</h3>
             </div>
 
             {/* Navigation for Years */}
@@ -46,7 +39,7 @@ export default async function NeuroscientistPage(){
                 {years.map((year) => (
                     <div key={year} id={`year-${year}`} className='mb-8'>
                         <p className="mb-4 px-1 inline-block text-sm font-azeret font-bold bg-accent text-lightText">{year}</p>
-                        <PublicationList publications={ publicationsByYear[year] }/>
+                        <LectureList lectures={ lecturesByYear[year] }/>
                     </div>
                 ))}
             </div>

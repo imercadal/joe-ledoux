@@ -14,32 +14,47 @@ use('joeledoux');
 
 db.getCollection('publications').insertMany([{
     title: "Metacognition as a window into subjective affective experience",
-    authors: "Cody A. Cushing PhD, Hakwan Lau PhD, Stefan G. Hoffman PhD, Joseph E. LeDoux PhD, Vincent Taschereau-Dumouchel PhD.",
-    date: new Date("2024-02-14"),
+    authors: "Cody A. Cushing PhD, Hakwan Lau PhD, Stefan G. Hoffman PhD, Joseph E. LeDoux PhD, Vincent Taschereau-Dumouchel PhD",
+    date: new Date("2024-06-17"),
     journal : "Psychiatry and Clinical Neurosciences,",
-    abstract : "In this study blah blah blah",
-    link : "temp link"
-}, {
-    title: "Consciousness, the affectome, and human life",
-    authors: "Joseph E. LeDoux",
-    date: new Date("2024-02-14"),
-    journal : "Neuroscience & Behavioral Reviews",
-    abstract : "Another paper bloh bloh bloh",
-    link : "temp link"
-}, {
-    title: "Scaffolding + Support + Problem-Driven Learning = A Recipe for Effective Group Work in the Biomedical Engineering Classroom",
-    authors: "Mahauganee D. Shaw Bonds, Wendy C. Newstetter, Madison Kukura, Megha Desai, Joseph E. LeDoux.",
-    date: new Date("2024-02-14"),
-    journal : "Journal on Excellence in College Teaching",
-    abstract : "This is an abstract of the paper mentioned",
-    link : "temp link"
+    link : "https://onlinelibrary.wiley.com/doi/full/10.1111/pcn.13683",
 }
 ]);
 
+
+
 console.log(db.getCollection('publications').find({}));
 
-// Insert a few documents into the sales collection.
 /*
+// 
+// , {
+    title: "TITLE",
+    authors: "Joseph E. LeDoux",
+    date: new Date("2021-12-02"),
+    journal : "JOURNAL",
+    link : "",
+}, {
+    title: "TITLE",
+    authors: "Joseph E. LeDoux",
+    date: new Date("2021-12-02"),
+    journal : "JOURNAL",
+    link : "",
+}, {
+    title: "TITLE",
+    authors: "Joseph E. LeDoux",
+    date: new Date("2021-12-02"),
+    journal : "JOURNAL",
+    link : "",
+}, {
+    title: "TITLE",
+    authors: "AUTHORS",
+    date: new Date("2021-12-02"),
+    journal : "JOURNAL",
+    link : "",
+}
+
+Insert a few documents into the sales collection.
+
 db.getCollection('books').insertMany([{
     id: "1",
     title: "The four realms of existence",
