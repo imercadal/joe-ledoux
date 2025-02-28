@@ -2,12 +2,12 @@ import { NextRequest } from 'next/server';
 import { connectToDb } from '../../db';
 
 type Params = {
-    id: string;
+    _id: string;
 }
 
 export async function GET(request: NextRequest, { params } : {params: Params }) {
     const { db } = await connectToDb();
-    const bookId = params.id
+    const bookId = params._id
 
     const book = await db.collection('books').findOne({ id: bookId })
 

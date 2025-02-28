@@ -13,7 +13,7 @@ body {
 }
 
 h1 {
-  @apply text-3xl font-cardo font-bold text-accent;
+  @apply text-3xl font-cardo font-bold text-accent tracking-wider;
 }
 
 h2 {
@@ -21,7 +21,7 @@ h2 {
 }
 
 h3{
-  @apply text-xl font-cardo text-white;
+  @apply text-xl font-cardo text-white tracking-wide;
 }
 
 h4 {
@@ -31,6 +31,11 @@ h4 {
 h5{
   @apply text-xs text-darker;
 }
+
+h6{
+  @apply text-lightText font-bold;
+}
+
 p{
   @apply text-sm
 }
@@ -48,14 +53,6 @@ nav h2{
   @apply mb-2;
 }
 
-nav a, nav span {
-  @apply 
-    text-gray-500
-    text-sm
-}
-nav a:hover {
-  @apply text-darkest;
-}
 main nav {
   @apply border-0;
 }
@@ -63,7 +60,6 @@ main nav {
 button {
   @apply 
     px-3 py-2 
-    rounded-sm 
     flex justify-between items-center gap-2
     text-sm;
 }

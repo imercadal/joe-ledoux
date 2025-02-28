@@ -17,3 +17,7 @@ export async function POST(){
         status: 200
     })
 }
+
+export async function PUT(){
+    
+}

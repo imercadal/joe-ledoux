@@ -7,7 +7,7 @@ export default function PostList({ posts }: { posts: Post[]}) {
     const personalBlogPosts = posts.filter((post) => post.mediaCompany === "Personal Blog");
 
     return(
-        <main className='container mx-auto flex max-w-5xl flex-row items-start justify-center'> 
+        <main className='container mx-auto flex max-w-5xl flex-col items-start justify-center'> 
             <div className="">
                 <div>
                     <div className='flex gap-x-4 mb-4 items-center'>    

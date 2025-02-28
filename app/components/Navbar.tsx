@@ -10,6 +10,7 @@ export default function Navbar() {
             </div>
             <div className='flex justify-center gap-16 items-baseline'>
                 <Link href="/about" className="hover:opacity-75"><h2>about</h2></Link>
+{/* neuroscientist popover*/}
                 <Popover className="relative">
                     <PopoverButton className="inline-flex items-center gap-x-1 text-sm/6 font-semibold text-dark hover:opacity-75">
                         <span><h2>neuroscientist</h2></span>
@@ -37,13 +38,13 @@ export default function Navbar() {
                     
                                             <PopoverPanel className="absolute left-full top-0 ml-2 w-20 bg-subMenu p-1 shadow-lg ring-1 ring-gray-900/5">
                                                 
-                                                <PopoverButton as={Link} href="/media/watch" className="text-lightText block p-1 hover:text-dark">
+                                                <PopoverButton as={Link} href="/media/watch?tag=neuroscience" className="text-lightText block p-1 hover:text-dark">
                                                     <p className="text-left">watch</p>
                                                 </PopoverButton>
-                                                <PopoverButton as={Link} href="/media/listen" className="text-lightText block p-1 hover:text-dark">
+                                                <PopoverButton as={Link} href="/media/listen?tag=neuroscience" className="text-lightText block p-1 hover:text-dark">
                                                     <p className="text-left">listen</p>
                                                 </PopoverButton>
-                                                <PopoverButton as={Link} href="/media/read" className="text-lightText block p-1 hover:text-dark">
+                                                <PopoverButton as={Link} href="/media/read?tag=neuroscience" className="text-lightText block p-1 hover:text-dark">
                                                     <p className="text-left">read</p>
                                                 </PopoverButton>
                                                 
@@ -59,6 +60,7 @@ export default function Navbar() {
                     </PopoverPanel>
                 </Popover>
 
+{/* author popover*/}
                 <Popover className="relative">
                     <PopoverButton className="inline-flex items-center gap-x-1 text-sm/6 font-semibold text-dark hover:opacity-75">
                         <span><h2>author</h2></span>
@@ -86,13 +88,13 @@ export default function Navbar() {
                     
                                             <PopoverPanel className="absolute left-full top-0 ml-2 w-20 bg-subMenu p-1 shadow-lg ring-1 ring-gray-900/5">
                                                 
-                                                <PopoverButton as={Link} href="/media/watch" className="text-lightText block p-1 hover:text-dark">
+                                                <PopoverButton as={Link} href="/media/watch?tag=books" className="text-lightText block p-1 hover:text-dark">
                                                     <p className="text-left">watch</p>
                                                 </PopoverButton>
-                                                <PopoverButton as={Link} href="/media/listen" className="text-lightText block p-1 hover:text-dark">
+                                                <PopoverButton as={Link} href="/media/listen?tag=books" className="text-lightText block p-1 hover:text-dark">
                                                     <p className="text-left">listen</p>
                                                 </PopoverButton>
-                                                <PopoverButton as={Link} href="/media/read" className="text-lightText block p-1 hover:text-dark">
+                                                <PopoverButton as={Link} href="/media/read?tag=books" className="text-lightText block p-1 hover:text-dark">
                                                     <p className="text-left">read</p>
                                                 </PopoverButton>
                                                 
@@ -107,8 +109,88 @@ export default function Navbar() {
 
                     </PopoverPanel>
                 </Popover>
-                <Link href="/musician"><h2>musician</h2></Link>
-                <Link href="/media"><h2>media</h2></Link>
+                                
+{/* musician popover*/}
+                <Popover className="relative">
+                    <PopoverButton className="inline-flex items-center gap-x-1 text-sm/6 font-semibold text-dark hover:opacity-75">
+                        <span><h2>musician</h2></span>
+                    </PopoverButton>
+
+                    <PopoverPanel
+                        transition
+                        className="absolute left-0 z-10 mt-0 -translate-y-3 flex w-screen max-w-min px-1 transition data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in"    
+                    >
+                        <div className="w-36 shrink bg-accent p-1 text-sm/6 font-semibold ring-1 shadow-lg ring-gray-900/5">
+                            
+                                <div>
+                                    <PopoverButton as={Link} href="/musician" className="text-lightText block p-1 hover:text-dark">
+                                        <p className='text-left'>the amygdaloids</p>
+                                    </PopoverButton>
+                                    <PopoverButton as={Link} href="/musician/soweare" className="text-lightText block p-1 hover:text-dark">
+                                        <p className='text-left'>so we are</p>
+                                    </PopoverButton>
+                                    <PopoverButton as={Link} href="/musician/soloprojects" className="text-lightText block p-1 hover:text-dark">
+                                        <p className='text-left'>solo projects</p>
+                                    </PopoverButton>
+                                    <PopoverButton as={Link} href="/media" className="text-lightText block p-1 hover:text-dark">
+                                        <Popover className="relative">
+                                            <PopoverButton className="text-lightText block p-1 hover:text-dark">
+                                                <p className='text-left'>media <ChevronDownIcon aria-hidden="true" className=" inline size-5" /></p>
+                                                
+                                            </PopoverButton>
+                    
+                                            <PopoverPanel className="absolute left-full top-0 ml-2 w-20 bg-subMenu p-1 shadow-lg ring-1 ring-gray-900/5">
+                                                
+                                                <PopoverButton as={Link} href="/media/watch?tag=music" className="text-lightText block p-1 hover:text-dark">
+                                                    <p className="text-left">watch</p>
+                                                </PopoverButton>
+                                                <PopoverButton as={Link} href="/media/listen?tag=music" className="text-lightText block p-1 hover:text-dark">
+                                                    <p className="text-left">listen</p>
+                                                </PopoverButton>
+                                                <PopoverButton as={Link} href="/media/read?tag=music" className="text-lightText block p-1 hover:text-dark">
+                                                    <p className="text-left">read</p>
+                                                </PopoverButton>
+                                                
+                                            </PopoverPanel>
+                                        </Popover>
+                                    </PopoverButton>
+                                    
+                                    
+                                </div>
+                            
+                        </div> 
+
+                    </PopoverPanel>
+                </Popover>
+{/* media popover*/}
+                <Popover className="relative">
+                    <PopoverButton className="inline-flex items-center gap-x-1 text-sm/6 font-semibold text-dark hover:opacity-75">
+                        <span><h2>media</h2></span>
+                    </PopoverButton>
+
+                    <PopoverPanel
+                        transition
+                        className="absolute left-0 z-10 mt-0 -translate-y-3 flex w-screen max-w-min px-1 transition data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in"    
+                    >
+                        <div className="w-36 shrink bg-accent p-1 text-sm/6 font-semibold ring-1 shadow-lg ring-gray-900/5">
+                            
+                                <div>
+                                    <PopoverButton as={Link} href="/media/watch" className="text-lightText block p-1 hover:text-dark">
+                                        <p className='text-left'>watch</p>
+                                    </PopoverButton>
+                                    <PopoverButton as={Link} href="/media/listen" className="text-lightText block p-1 hover:text-dark">
+                                        <p className='text-left'>listen</p>
+                                    </PopoverButton>
+                                    <PopoverButton as={Link} href="/media/read" className="text-lightText block p-1 hover:text-dark">
+                                        <p className='text-left'>read</p>
+                                    </PopoverButton>
+                                    
+                                </div>
+                            
+                        </div> 
+
+                    </PopoverPanel>
+                </Popover>
             </div>
         </nav>
     )
