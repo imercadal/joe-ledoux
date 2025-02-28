@@ -6,6 +6,7 @@ export interface MediaItem {
     type: string;
     tags: string[];
     urlToItem: string;
+    embedUrl?: string;
 }
 
 

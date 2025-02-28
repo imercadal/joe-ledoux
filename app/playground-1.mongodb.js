@@ -14,75 +14,13 @@ use('joeledoux');
 
 db.getCollection('media').insertMany([
   {
-    title: "Emotions are key to understanding consciousness",
-    mediaCompany: "Psychology Today",
-    date: new Date("2024-09-16"),
-    type: "read",
-    tags: ["neuroscience"],
-    urlToItem: "https://www.psychologytoday.com/ca/blog/finding-purpose/202409/emotions-are-key-to-understanding-consciousness",
-  }, {
-    title: "Heavy Mental: Music about Mind and Brain and Mental Disorders",
-    mediaCompany: "Karolinska Institute, Sweden",
-    date: new Date("2023-04-28"),
-    type: "read",
-    tags: ["neuroscience", "music"],
-    urlToItem: "https://www.facebook.com/photo/?fbid=10159452967687253&set=a.36984067252",
-  }, {
-    title: "Progress at Philosophical Psychology",
-    mediaCompany: "Daily Nous",
-    date: new Date("2022-11-21"),
-    type: "read",
-    tags: ["books"],
-    urlToItem: "https://dailynous.com/2022/11/21/progress-at-philosophical-psychology-guest-post/",
-  }, {
-    title: "On role models and Joe LeDoux",
-    mediaCompany: "Oxford Academic Journal",
-    date: new Date("2025-01-01"),
-    type: "read",
-    tags: ["neuroscience"],
-    urlToItem: "https://academic.oup.com/cercor/article/35/1/15/7824640?guestAccessKey=938e4415-211d-4de4-abc0-f57b349bbd93&login=false&utm_source=authortollfreelink&utm_campaign=cercor&utm_medium=email",
-  }, {
-    title: "Doutoramento Honoris Causa atribuído a Joseph E. LeDoux",
-    mediaCompany: "Universidade Fernando Pessoa",
-    date: new Date("2024-10-10"),
-    type: "read",
-    tags: ["neuroscience"],
-    urlToItem: "https://www.ufp.pt/doutoramento-honoris-causa-atribuido-a-joseph-e-ledoux-na-ufp/",
-  }, {
-    title: "S2E3 Joseph LeDoux, The Amygdaloids",
-    mediaCompany: "All in a Days Work Podcast",
-    date: new Date("2024-12-15"),
-    type: "listen",
-    tags: ["neuroscience", "music"],
-    urlToItem: "https://open.spotify.com/episode/7fQozfcXLVlowiBXaN4iF2?si=j6VTMJSuTDCj-fQfytP4ww",
-  }, {
-    title: "Scientific Method: How we understand anxiety",
-    mediaCompany: "WAMU & NPR BRAIN",
-    date: new Date("2022-02-21"),
-    type: "listen",
-    tags: ["neuroscience"],
-    urlToItem: "https://the1a.org/segments/the-scientific-method-the-science-of-anxiety/",
-  }, {
-    title: "The amygdala",
-    mediaCompany: "Anxiety Bites",
-    date: new Date("2022-07-20"),
-    type: "listen",
-    tags: ["neuroscience"],
-    urlToItem: "https://www.iheart.com/podcast/1119-anxiety-bites-87432530/episode/the-amygdala-99631905/",
-  }, {
-    title: "Emotion, Cognition, Consciousness, Behavior & Brain Evolution",
-    mediaCompany: "Mind & Matter",
-    date: new Date("2022-06-02"),
-    type: "listen",
-    tags: ["neuroscience"],
-    urlToItem: "https://open.spotify.com/episode/4ICBPuectMk5ijLTUpY2iE?si=0f05810a58874aef",
-  }, {
     title: "Our Realms of Existence: A Fresh Look at the Science of What and Who We Are",
     mediaCompany: "Association for the Scientific Study of Consciousness",
     date: new Date("2023-07-24"),
     type: "watch",
     tags: ["neuroscience, books"],
-    urlToItem: "https://youtu.be/jjjDx_fGIYY",
+    urlToItem: "https://www.youtube.com/watch?v=jjjDx_fGIYY",
+    embedUrl: "https://www.youtube.com/embed/jjjDx_fGIYY?si=XKo3scPTZYUQsiIe"
   }, {
     title: "LBI Masters of the Mind lecture by Prof Joseph LeDoux",
     mediaCompany: "Leuven Brain Institute",
@@ -90,6 +28,7 @@ db.getCollection('media').insertMany([
     type: "watch",
     tags: ["neuroscience"],
     urlToItem: "https://www.youtube.com/watch?v=CA8AFWizMVM",
+    embedUrl: "https://www.youtube.com/embed/CA8AFWizMVM?si=_EGqAuP4mQeB5nrg"
   }, {
     title: "Richard Hill catches up with Joseph LeDoux",
     mediaCompany: "The Science of Psychotherapy",
@@ -97,27 +36,48 @@ db.getCollection('media').insertMany([
     type: "watch",
     tags: ["neuroscience"],
     urlToItem: "https://www.youtube.com/watch?v=VDm4YJqgVJI",
+    embedUrl: "https://www.youtube.com/embed/VDm4YJqgVJI?si=7KX3A9_G0czfcQcN"
   }, {
     title: "A made up media item for books and music",
     mediaCompany: "Manana Media",
     date: new Date("2022-08-28"),
     type: "watch",
     tags: ["books", "music"],
+    urlToItem: "https://www.youtube.com/watch?v=jjjDx_fGIYY",
+    embedUrl: "https://www.youtube.com/embed/VDm4YJqgVJI?si=VydVlCWmE7A-K2pn"
+  }, {
+    title: "Our Realms of Existence: A Fresh Look at the Science of What and Who We Are",
+    mediaCompany: "Association for the Scientific Study of Consciousness",
+    date: new Date("2023-07-24"),
+    type: "watch",
+    tags: ["neuroscience", "books"],
+    urlToItem: "https://www.youtube.com/watch?v=jjjDx_fGIYY",
+    embedUrl: "https://www.youtube.com/embed/jjjDx_fGIYY?si=XKo3scPTZYUQsiIe"
+  }, {
+    title: "LBI Masters of the Mind lecture by Prof Joseph LeDoux",
+    mediaCompany: "Leuven Brain Institute",
+    date: new Date("2022-11-28"),
+    type: "watch",
+    tags: ["books"],
+    urlToItem: "https://www.youtube.com/watch?v=jjjDx_fGIYY",
+    embedUrl: "https://www.youtube.com/embed/CA8AFWizMVM?si=_EGqAuP4mQeB5nrg"
+  }, {
+    title: "Richard Hill catches up with Joseph LeDoux",
+    mediaCompany: "The Science of Psychotherapy",
+    date: new Date("2022-08-28"),
+    type: "watch",
+    tags: ["music", "neuroscience", "books"],
     urlToItem: "https://www.youtube.com/watch?v=VDm4YJqgVJI",
+    embedUrl: "https://www.youtube.com/embed/VDm4YJqgVJI?si=7KX3A9_G0czfcQcN",
+
   }, {
     title: "A made up media item for books and music",
-    mediaCompany: "Desvelo Media",
+    mediaCompany: "Manana Media",
     date: new Date("2022-08-28"),
-    type: "listen",
-    tags: ["neuroscience", "music"],
-    urlToItem: "https://www.youtube.com/watch?v=VDm4YJqgVJI",
-  }, {
-    title: "A made up media item for books and music",
-    mediaCompany: "Omaigosh Media",
-    date: new Date("2022-08-28"),
-    type: "listen",
+    type: "watch",
     tags: ["books", "music"],
-    urlToItem: "https://www.youtube.com/watch?v=VDm4YJqgVJI",
+    urlToItem: "https://www.youtube.com/watch?v=jjjDx_fGIYY",
+    embedUrl: "https://www.youtube.com/embed/VDm4YJqgVJI?si=VydVlCWmE7A-K2pn"
   }
 
   
