@@ -3,12 +3,14 @@ import { Popover, PopoverButton, PopoverPanel } from '@headlessui/react';
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
 
 export default function Navbar() {
+
+    
     return (
-        <nav className="items-center">
+        <nav aria-label="Global" className="items-center">
             <div className='p-4'>
                 <Link href='/'><h1>JOSEPH LEDOUX</h1></Link>
             </div>
-            <div className='flex justify-center gap-16 items-baseline'>
+            <div className='flex w-full justify-between gap-1 md:gap-16 items-baseline'>
                 <Link href="/about" className="hover:opacity-75"><h2>about</h2></Link>
 {/* neuroscientist popover*/}
                 <Popover className="relative">
@@ -18,7 +20,7 @@ export default function Navbar() {
 
                     <PopoverPanel
                         transition
-                        className="absolute left-0 z-10 mt-0 -translate-y-3 flex w-screen max-w-min px-1 transition data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in"    
+                        className="absolute left-0 z-10 mt-0 -translate-y-3 flex w-full max-w-min px-1 transition data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in"    
                     >
                         <div className="w-36 shrink bg-accent p-1 text-sm/6 font-semibold ring-1 shadow-lg ring-gray-900/5">
                             
@@ -68,7 +70,7 @@ export default function Navbar() {
 
                     <PopoverPanel
                         transition
-                        className="absolute left-0 z-10 mt-0 -translate-y-3 flex w-screen max-w-min px-1 transition data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in"    
+                        className="absolute left-0 z-10 mt-0 -translate-y-3 flex w-full max-w-min px-1 transition data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in"    
                     >
                         <div className="w-36 shrink bg-accent p-1 text-sm/6 font-semibold ring-1 shadow-lg ring-gray-900/5">
                             
@@ -118,7 +120,7 @@ export default function Navbar() {
 
                     <PopoverPanel
                         transition
-                        className="absolute left-0 z-10 mt-0 -translate-y-3 flex w-screen max-w-min px-1 transition data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in"    
+                        className="absolute left-0 z-10 mt-0 -translate-y-3 flex w-full max-w-min px-1 transition data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in"    
                     >
                         <div className="w-36 shrink bg-accent p-1 text-sm/6 font-semibold ring-1 shadow-lg ring-gray-900/5">
                             
@@ -170,7 +172,7 @@ export default function Navbar() {
 
                     <PopoverPanel
                         transition
-                        className="absolute left-0 z-10 mt-0 -translate-y-3 flex w-screen max-w-min px-1 transition data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in"    
+                        className="absolute left-0 z-10 mt-0 -translate-y-3 flex w-full max-w-min px-1 transition data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in"    
                     >
                         <div className="w-36 shrink bg-accent p-1 text-sm/6 font-semibold ring-1 shadow-lg ring-gray-900/5">
                             
@@ -195,54 +197,3 @@ export default function Navbar() {
         </nav>
     )
 }
-
-/*
-<nav className="items-center">
-            <div className='p-4'>
-                <Link href='/'><h1>JOSEPH LEDOUX</h1></Link>
-            </div>
-            <div className='flex justify-center gap-16 items-baseline'>
-                <Link href="/about"><h2>about</h2></Link>
-                <Link href="/neuroscientist"><h2>neuroscientist</h2></Link>
-                <Popover className="relative">
-                    <PopoverButton className="inline-flex items-center gap-x-1 text-sm/6 font-semibold text-dark">
-                        <span><h2>author</h2></span>
-                    </PopoverButton>
-
-                    <PopoverPanel
-                        transition
-                        className="absolute left-0 z-10 mt-0 -translate-y-3 flex w-screen max-w-min px-1 transition data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in"    
-                    >
-                        <div className="w-36 shrink bg-accent p-1 text-sm/6 font-semibold ring-1 shadow-lg ring-gray-900/5">
-                            {pages.map((item) => (
-                                <div>
-                                    <PopoverButton as={Link} key={item.name} href={item.href} className="text-lightText block p-1 hover:text-dark">
-                                        <p className='text-left'>{item.name}</p>
-                                    </PopoverButton>
-
-                                    {item.media && (
-                                        <Popover className="relative">
-                                            <PopoverButton className="text-lightText block p-1 hover:text-dark">
-                                                <ChevronDownIcon aria-hidden="true" className="size-5" />
-                                            </PopoverButton>
-                    
-                                            <PopoverPanel className="absolute left-full top-0 ml-2 w-24 bg-subMenu p-1 shadow-lg ring-1 ring-gray-900/5">
-                                                {subpages.map((subpage) => (
-                                                <PopoverButton as={Link} key={subpage.name} href={subpage.href} className="text-lightText block p-1 hover:text-dark">
-                                                    <p className="text-left">{subpage.name}</p>
-                                                </PopoverButton>
-                                                ))}
-                                            </PopoverPanel>
-                                        </Popover>
-                                    )}
-                                </div>
-                            ))}
-                        </div> 
-
-                    </PopoverPanel>
-                </Popover>
-                <Link href="/musician"><h2>musician</h2></Link>
-                <Link href="/media"><h2>media</h2></Link>
-            </div>
-        </nav>
-*/
