@@ -35,4 +35,5 @@ export const publications : Publication[] = [{
     link : "temp link"
 }
 ]
-*/{}
+*/
+
