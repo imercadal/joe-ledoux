@@ -4,8 +4,8 @@ import Image from 'next/image';
 
 export default function AlbumList({ albums }: {albums: Album[]}){
     return(
-                <main className='container py-6 md:py-20 mx-auto flex max-w-4xl flex-row items-start justify-center'> 
-                    <ul role="list" className="grid grid-cols-2 gap-x-4 gap-y-8 grid-cols-3 sm:gap-x-6 xl:gap-x-8">
+                <main className='container py-6 md:py-20 px-4 mx-auto flex max-w-4xl flex-row items-start justify-center'> 
+                    <ul role="list" className="grid grid-cols-2 gap-x-4 gap-y-8 md:grid-cols-3 sm:gap-x-6 xl:gap-x-8">
                     {albums.map((album) => (
                         <li key={album.id} className="relative">
                         <a 

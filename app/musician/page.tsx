@@ -10,11 +10,11 @@ export default function MusicianPage(){
             <div className={`relative inset-0 md:left-0 -left-40 bg-cover bg-center bg-[url('/410_Music_Amygdaloids.webp')]`}></div>
             <div
                 style={{ backgroundImage: `url('/410_Music_Amygdaloids.webp')` }}
-                className="w-full flex bg-cover bg-center"
+                className="w-full flex bg-cover bg-[21%] md:bg-center -left-40"
                 >
             <div className='relative w-1/2'></div>
             <div 
-                className="relative w-1/2 items-center bg-lightAccent bg-opacity-25 lg:px-24 md:pw-20 px-10 md:py-12 py-10 flex justify-start text-lightText"
+                className="relative md:w-1/2 items-center bg-lightAccent bg-opacity-25 lg:px-24 md:pw-20 px-10 md:py-12 py-10 flex justify-start text-lightText"
                 style={{
                     background: "linear-gradient(to right, rgba(216,245,250,0) 0%,rgba(216,245,250,0.5) 100%)"
                 }}           
@@ -56,15 +56,15 @@ export default function MusicianPage(){
                                 </a>
                             </li>
                     </ul>
-                    <ul className="text-accent flex gap-4 items-between md:my-12 my-3 hover:opacity-75">
+                    <ul className="w-full mt-8 italic text-white flex gap-4 items-between md:my-12 my-3 hover:opacity-75">
                             <li>
-                                <Link href="#albums"><strong>Albums</strong></Link>
+                                <Link href="#albums"><strong>ALBUMS</strong></Link>
                             </li>
                             <li>
-                                <Link href="#shows"><strong>Shows</strong></Link>
+                                <Link href="#shows"><strong>SHOWS</strong></Link>
                             </li>
                             <li>
-                                <Link href="#gallery"><strong>Gallery</strong></Link>
+                                <Link href="#gallery"><strong>GALLERY</strong></Link>
                             </li>
 
                                ᐧ   
@@ -76,9 +76,9 @@ export default function MusicianPage(){
                 <AlbumList albums={ albums }/>
             </section>
 
-            <section id="shows" className="container px-8 md:px-20 my-12 py-6 md:py-12 mx-auto flex-col justify-center">
+            <section id="shows" className="container px-8 md:px-20 my-6 md:my-12 py-6 md:py-12 mx-auto flex-col justify-center">
                 <h2 className="text-2xl font-bold mb-4">Shows</h2>
-                <ul role="list" className="grid grid-cols-2 gap-x-4 gap-y-8 grid-cols-3 sm:gap-x-6 xl:gap-x-8">
+                <ul role="list" className="grid grid-cols-1 gap-x-4 gap-y-8 md:grid-cols-3 sm:gap-x-6 xl:gap-x-8">
                     <li className="sm:flex border p-4 rounded shadow">
                         <div>
                             <p>Date of show</p>

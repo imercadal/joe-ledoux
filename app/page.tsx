@@ -1,9 +1,20 @@
 "use client"
 
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
 
 export default function Home() {
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(min-width: 768px)");
+    setIsDesktop(mediaQuery.matches);
+    const handler = (e) => setIsDesktop(e.matches);
+    mediaQuery.addEventListener("change", handler);
+    return () => mediaQuery.removeEventListener("change", handler);
+  }, []);
+
   return (
     <>
       <Script
@@ -16,48 +27,62 @@ export default function Home() {
         }}
       />
 
-    <main className=" relative items-center justify-center min-h-screen p-8 gap-12 sm:p-20 font-[family-name:Cardo, serif]">
-
+    <main className=" relative items-center justify-center min-h-screen p-0 md:p-8 gap-12  font-[family-name:Cardo, serif]">
+    <picture className="block md:absolute md:inset-0">
+      {/* For medium screens and up */}
+      <source media="(min-width: 768px)" srcSet="000_Doors_Background.webp" />
+      {/* For smaller screens */}
+      <source media="(max-width: 767px)" srcSet="000_Doors_Background_small.webp" />
       <img 
         src="000_Doors_Background.webp" 
         useMap="#image-map"
-        className='absolute inset-0 w-full h-full object-cover'
+        className='w-full h-auto md:h-full md:object-cover'
+        alt="Doors Background"
       />
+    </picture>
         <div 
-          className="absolute transform -translate-x-1/2 -translate-y-1/2"
+          className="absolute w-full flex justify-center transform -translate-x-1/2 -translate-y-1/2"
           style={{
             left: "50%",
-            top: "10%"
+            top: "8%"
           }}
         >
-          <h3 className="tracking-wide"><i>· Click a door and explore ·</i></h3>
+          <span className="font-cardo text-white tracking-wide font-sm md:font-lg"><i>· Click a door and explore ·</i></span>
         </div>
 
         <div 
-          className="absolute transform -translate-x-1/2 -translate-y-1/2 left-[20%] top-[20%] md:left-[29%] md:top-[23%]"
+          className="absolute transform -translate-x-1/2 -translate-y-1/2 left-[22%] top-[15%] md:left-[28%] md:top-[17%]"
         >
-          <h3>NEUROSCIENTIST</h3>
+          <span className='font-cardo text-white tracking-wide font-xs md:font-lg'>NEUROSCIENTIST</span>
         </div>
 
         <div 
-          className="absolute transform -translate-x-1/2 -translate-y-1/2 left-[50%] top-[20%] md:top-[23%]"
+          className="absolute transform -translate-x-1/2 -translate-y-1/2 left-[55%] top-[15%] md:left-[50%] md:top-[17%]"
         >
-          <h3>AUTHOR</h3>
+          <span className='font-cardo text-white tracking-wide font-xs md:font-lg'>AUTHOR</span>
         </div>
 
         <div 
-          className="absolute transform -translate-x-1/2 -translate-y-1/2 left-[75%] top-[20%] md:left-[71%] md:top-[23%]"
+          className="absolute transform -translate-x-1/2 -translate-y-1/2 left-[82%] top-[15%] md:left-[72%] md:top-[17%]"
 
         >
-          <h3>MUSICIAN</h3>
+          <span className='font-cardo text-white tracking-wide font-xs md:font-lg'>MUSICIAN</span>
         </div>
 
-        <map name="image-map">
-          <area target="" alt="Go to Neuroscientist's Page" title="Go to Neuroscientist's Page" href="/neuroscientist" coords="449,395,679,909" shape="rect"/>
-          <area target="" alt="Go to Author's Page" title="Go to Author's Page" href="/author" coords="840,399,1076,913" shape="0"/>
-          <area target="" alt="Go to Musician's Page" title="Go to Musician's Page" href="/musician" coords="1261,401,1478,920" shape="0"/>
-        </map>
-
+        {isDesktop ? (
+          <map name="image-map">
+            <area target="" alt="Go to Neuroscientist's Page" title="Go to Neuroscientist's Page" href="/neuroscientist" coords="447,205,683,724" shape="rect"/>
+            <area target="" alt="Go to Author's Page" title="Go to Author's Page" href="/author" coords="842,207,1083,727" shape="rect"/>
+            <area target="" alt="Go to Musician's Page" title="Go to Musician's Page" href="/musician" coords="1258,210,1480,722" shape="rect"/>
+          </map>
+        ) : (
+          <map name="image-map">
+              <area target="" alt="Go to Neuroscientist's Page" title="Go to Neuroscientist's Page" href="/neuroscientist" coords="74,396,308,915" shape="rect"/>
+              <area target="" alt="Go to Author's Page" title="Go to Author's Page" href="/author" coords="468,398,706,914" shape="rect"/>
+              <area target="" alt="Go to Musician's Page" title="Go to Musician's Page" href="/musician" coords="886,401,1102,917" shape="rect"/>
+          </map>
+        )
+      }
     </main>
     </>
   );

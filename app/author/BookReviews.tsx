@@ -12,8 +12,8 @@ export default function BookReviews({ reviews }: {reviews: Review[]}) {
         <div className='w-2/3 text-lightText md:pw-12'>
             {reviewsToShow.map((review, index) => (
                 <div key={index} className='mt-6 flex flex-col gap-4'>
-                    <p className='self-center'><b>"{review.content}"</b></p>
-                    <p className='self-end italic'>{review.author}</p>
+                    <p className='self-center italic font-semibold'>"{review.content}"</p>
+                    <p className='self-end'>{review.author}</p>
                 </div>
             ))}
             {reviews.length > 2 && !showAllReviews && (

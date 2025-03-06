@@ -25,3 +25,7 @@ export async function GET(request: NextRequest, { params } : {params: Params }) 
     })
 }
 
+/*
+const { _id } = req.query; // or however you extract the parameter
+const book = await Book.findOne({ _id: new ObjectId(_id) });
+ */
