@@ -1,6 +1,5 @@
 import TagSidebar from '../components/TagSidebar';
 import MediaList from './MediaList';
-import { MediaItem } from './media-data';
 import Link from 'next/link';
 
 interface MediaPageProps {

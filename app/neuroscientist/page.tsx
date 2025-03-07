@@ -5,7 +5,7 @@ export default async function NeuroscientistPage(){
     const response = await fetch('http://localhost:3000/api/publications');
     const publicationsData = await response.json()
 
-    const publications: Publication[] = publicationsData.map((pub: any) => ({
+    const publications: Publication[] = publicationsData.map((pub: Publication) => ({
         ...pub,
         date: new Date(pub.date),
     }));

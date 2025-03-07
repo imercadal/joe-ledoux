@@ -1,10 +1,13 @@
 import Image from 'next/image';
+import React from 'react';
+
+type IconProps = React.SVGProps<SVGSVGElement>;
 
 const navigation = [
     {
       name: 'Facebook',
       href: 'https://www.facebook.com/TheAmygdaloids/',
-      icon: (props) => (
+      icon: (props: IconProps) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props} style={{ color: "#0E3A4E" }}>
           <path
             fillRule="evenodd"
@@ -17,7 +20,7 @@ const navigation = [
     {
       name: 'Bluesky',
       href: 'https://bsky.app/profile/theamygdaloid.bsky.social',
-      icon: (props) => (
+      icon: (props: any) => (
         <Image 
             src='/Footer_Logos-02.png'
             alt='Bluesky Logo'
@@ -29,7 +32,7 @@ const navigation = [
     {
       name: 'LinkedIn',
       href: 'https://www.linkedin.com/in/joseph-ledoux/',
-      icon: (props) => (
+      icon: (props: any) => (
         <Image 
             src='/Footer_Logos-03.png'
             alt='LinkedIn Logo'
@@ -41,7 +44,7 @@ const navigation = [
     {
       name: 'Email',
       href: 'mailto:ledoux@cns.nyu.edu',
-      icon: (props) => (
+      icon: (props: any) => (
         <Image 
             src='/Footer_Logos-04.png'
             alt='Email Logo'
@@ -78,21 +81,3 @@ export default function Footer() {
 
     )
 }
-
-/*
-<footer className="bg-blue">
-  <div className="bg-blue mx-auto max-w-7xl px-6 py-4 md:flex md:items-center md:justify-around lg:px-20">
-    <div className="flex justify-center gap-x-6 md:order-2">
-      {navigation.map((item) => (
-        <a key={item.name} href={item.href} className="dark hover:text-lightText">
-          <span className="sr-only">{item.name}</span>
-          <item.icon aria-hidden="true" className="size-6" />
-        </a>
-      ))}
-    </div>
-    <p className="mt-2 text-center text-sm text-dark md:order-1 md:mt-0">
-      &copy; Copyright ©2025 Joseph E. LeDoux. All rights reserved.
-    </p>
-  </div>
-</footer>
-*/

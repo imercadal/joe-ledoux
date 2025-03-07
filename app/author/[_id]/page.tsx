@@ -1,6 +1,5 @@
 import { Store } from '../book-data'; 
 import BookReviews from '../BookReviews';
-import { AdvancedPraise } from '../book-data';
 
 import Image from 'next/image';
 import Link from 'next/link';
