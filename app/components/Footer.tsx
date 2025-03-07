@@ -20,7 +20,7 @@ const navigation = [
     {
       name: 'Bluesky',
       href: 'https://bsky.app/profile/theamygdaloid.bsky.social',
-      icon: (props: any) => (
+      icon: () => (
         <Image 
             src='/Footer_Logos-02.png'
             alt='Bluesky Logo'
@@ -32,7 +32,7 @@ const navigation = [
     {
       name: 'LinkedIn',
       href: 'https://www.linkedin.com/in/joseph-ledoux/',
-      icon: (props: any) => (
+      icon: () => (
         <Image 
             src='/Footer_Logos-03.png'
             alt='LinkedIn Logo'
@@ -44,7 +44,7 @@ const navigation = [
     {
       name: 'Email',
       href: 'mailto:ledoux@cns.nyu.edu',
-      icon: (props: any) => (
+      icon: () => (
         <Image 
             src='/Footer_Logos-04.png'
             alt='Email Logo'
