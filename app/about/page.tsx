@@ -20,35 +20,7 @@ export default function AboutPage() {
         }, 5000);
 
         return () => clearInterval(interval);
-    }, []);
-
-    /* 
-        const [nextImage, setNextImage] = useState(1);
-    const [fade, setFade] = useState(false);
-
-        useEffect(() => {
-        const interval = setInterval(() => {
-            setFade(true);
-            setTimeout(() => {
-                setCurrentImage((prev) => (prev + 1) % images.length);
-          
-                setTimeout(() => {
-                  setFade(false); 
-                }, 200);
-                
-            }, 1000);
-        }, 5000);
-
-        return () => clearInterval(interval);
-    }, []);
-
-     useEffect(() => {
-    const interval = setInterval(() => {
-      setMessage('breathe out');
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
-    */
+    }, [images.length]);
 
     return (
         <>
@@ -84,15 +56,3 @@ export default function AboutPage() {
         </>
     );
 }
-
-
-/*
-                <div className="absolute inset-0 flex flex-col justify-center items-center text-white bg-black/40">
-                </div>
-
-
-            <div
-                className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${fade ? "opacity-100" : "opacity-0"}`}
-                style={{ backgroundImage: `url(${images[image]})` }}
-            />
-            */

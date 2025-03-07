@@ -8,7 +8,7 @@ export default function PostList({ posts }: { posts: Post[]}) {
 
     return(
         <main className='container mx-auto flex max-w-5xl flex-col items-start justify-center'> 
-            <div className="">
+            <div>
                 <div>
                     <div className='flex gap-x-4 mb-4 items-center'>    
                         <Image alt="Psychology Today Logo" src='/970_PsycToday.png' className="size-10 rounded-full bg-gray-50" width={10} height={10} />
@@ -61,7 +61,7 @@ export default function PostList({ posts }: { posts: Post[]}) {
                     <div className='flex gap-x-4 mb-4 items-center'>    
                         <Image alt="Personal Blog Logo" src='/950_Blogspot.png' className="size-10 rounded-full bg-gray-50" width={10} height={10} />
                         <div>
-                            <h4 className="mt-3 font-bold group-hover:text-gray-600">For What It's Worth</h4>
+                            <h4 className="mt-3 font-bold group-hover:text-gray-600">For What It&apos;s Worth</h4>
                             <h4>Personal Blog</h4>
                         </div>
                     </div>

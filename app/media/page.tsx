@@ -1,4 +1,3 @@
-import { notFound } from 'next/navigation';
 import TagSidebar from '../components/TagSidebar';
 import MediaList from './MediaList';
 import { MediaItem } from './media-data';
@@ -6,6 +5,7 @@ import Link from 'next/link';
 
 interface MediaPageProps {
   searchParams: { tag?: string };
+  currentTag?: string;
 }
 
 export default async function MediaPage({ searchParams }: MediaPageProps) {
@@ -13,9 +13,9 @@ export default async function MediaPage({ searchParams }: MediaPageProps) {
 
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
   const apiUrl = new URL('/api/media', baseUrl);
-
-  
-  const query = tag ? { tags: tag } : {}
+  if (tag) {
+    apiUrl.searchParams.append('tags', tag);
+  }
 
   try{
     const response = await fetch('http://localhost:3000/api/media', { cache: "no-store"});
@@ -27,7 +27,7 @@ export default async function MediaPage({ searchParams }: MediaPageProps) {
   
     return(
       <main className="bg-lightText">
-        <TagSidebar currentTag={tag} />
+        <TagSidebar selectedTags={tag ? [tag] : []} availableTags={[]} onToggleTag={() => {}}/>
         <div className="relative mb-8 h-40 bg-cover bg-center bg-[url('/310_Author_Books.webp')] flex items-center justify-center">
           <h3 className="font-bold">MEDIA</h3>
         </div>

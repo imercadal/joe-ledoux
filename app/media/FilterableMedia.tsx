@@ -31,7 +31,7 @@ export default function FilterableMedia({ initialMedia }: FilterableMediaProps) 
     if (initialTag && !selectedTags.includes(initialTag)) {
       setSelectedTags((prev) => [...prev, initialTag]);
     }
-  }, [initialTag]);
+  }, [initialTag, selectedTags]);
 
   // Filter media: if no tags are selected, show all; otherwise, show items that include ALL selected tags.
   const filteredMedia = useMemo(() => {

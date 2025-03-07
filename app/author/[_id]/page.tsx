@@ -115,7 +115,7 @@ export default async function BookDetails({ params }: { params: {_id: string} })
             <section className='w-3/5 mx-auto text-lightText pb-6'>
                 {book.advancedPraise.map((advancedPraise, index) => (
                     <div key={index} className='my-8 flex flex-col gap-2'>
-                        <p className='self-center italic'>"{advancedPraise.praise}"</p>
+                        <p className='self-center italic'>{`"${advancedPraise.praise}"`}</p>
                         <p className='self-end'>{advancedPraise.author}{advancedPraise.role}</p>
                     </div>
                 ))}

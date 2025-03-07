@@ -1,24 +1,23 @@
 import PublicationList from "./PublicationsList";
-import { Publication } from "./publication-data";
-
+import { Publication } from './publication-data';
 
 export default async function NeuroscientistPage(){
     const response = await fetch('http://localhost:3000/api/publications');
     const publicationsData = await response.json()
 
-    const publications = publicationsData.map((pub: any) => ({
+    const publications: Publication[] = publicationsData.map((pub: any) => ({
         ...pub,
-        date: new Date(pub.date)
-      }));
+        date: new Date(pub.date),
+    }));
 
-      const publicationsByYear = publications.reduce((acc, publication) => {
+    const publicationsByYear = publications.reduce((acc, publication) => {
         const year = publication.date.getFullYear();
         if (!acc[year]) {
           acc[year] = [];
         }
         acc[year].push(publication);
         return acc;
-      }, {} as Record<number, typeof publications>);
+    }, {} as Record<number, Publication[]>);
     
       const years = Object.keys(publicationsByYear)
         .map(Number)

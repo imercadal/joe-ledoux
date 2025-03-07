@@ -1,14 +1,12 @@
 import React from "react";
-import Image from 'next/image';
 import { MediaItem } from './media-data'; 
 
 
 interface MediaListProps {
     media: MediaItem[];
-    mediaType: string;
 }
 
-export default function MediaList({ media, mediaType }: MediaListProps){
+export default function MediaList({ media }: MediaListProps){
     if (media.length === 0) {
         return <p className="text-lightText text-center">No media items found for this tag.</p>;
     }

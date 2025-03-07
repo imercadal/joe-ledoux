@@ -9,7 +9,7 @@ export default function LectureList({ lectures }: { lectures: Lecture[]}) {
                         <p>{lecture.date.toLocaleDateString('en-US', { month: 'long', day: 'numeric' })}</p>
                     <Link href={`/neuroscience/lectures/${lecture.id}`} className='hover:opacity-75'>
                         <p>{lecture.event}</p>
-                        <p><strong>"{lecture.title}"</strong></p>
+                        <p><strong> {`"${lecture.title}"`}</strong></p>
                     </Link>
                 </div>
             ))}

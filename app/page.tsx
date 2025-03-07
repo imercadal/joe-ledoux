@@ -1,7 +1,6 @@
 "use client"
 
 import { useState, useEffect } from 'react';
-import Link from 'next/link';
 import Script from 'next/script';
 
 export default function Home() {
@@ -10,7 +9,7 @@ export default function Home() {
   useEffect(() => {
     const mediaQuery = window.matchMedia("(min-width: 768px)");
     setIsDesktop(mediaQuery.matches);
-    const handler = (e) => setIsDesktop(e.matches);
+    const handler = (e: MediaQueryListEvent) => setIsDesktop(e.matches);
     mediaQuery.addEventListener("change", handler);
     return () => mediaQuery.removeEventListener("change", handler);
   }, []);
