@@ -1,15 +1,14 @@
 import { NextRequest } from 'next/server';
 import { connectToDb } from '../../db';
+import { ObjectId } from 'mongodb';
 
 type Params = {
-    _id: string;
+    id: string;
 }
 
 export async function GET(request: NextRequest, { params } : {params: Params }) {
     const { db } = await connectToDb();
-    const bookId = params._id
-
-    const book = await db.collection('books').findOne({ id: bookId })
+    const book = await db.collection('books').findOne({ _id: new ObjectId(params.id) });
 
     if (!book) {
         return new Response('Book not found', {
@@ -24,8 +23,3 @@ export async function GET(request: NextRequest, { params } : {params: Params }) 
         }
     })
 }
-
-/*
-const { _id } = req.query; // or however you extract the parameter
-const book = await Book.findOne({ _id: new ObjectId(_id) });
- */
