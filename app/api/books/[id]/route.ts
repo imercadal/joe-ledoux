@@ -11,8 +11,9 @@ export async function GET(_request: NextRequest, { params } : {params: Params })
     let book;
     try {
         book = await db.collection('books').findOne({ _id: new ObjectId(params.id) });
-      } catch (error) {
-        return new Response('Invalid book id', { status: 400 });
+      } catch (error: unknown) {
+        const message = error instanceof Error ? error.message : 'Unknown error';
+        return new Response(`Invalid book id: ${message}`, { status: 400 });
       }
 
     if (!book) {
