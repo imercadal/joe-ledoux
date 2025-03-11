@@ -6,9 +6,14 @@ type Params = {
     id: string;
 }
 
-export async function GET(request: NextRequest, { params } : {params: Params }) {
+export async function GET(_request: NextRequest, { params } : {params: Params }) {
     const { db } = await connectToDb();
-    const book = await db.collection('books').findOne({ _id: new ObjectId(params.id) });
+    let book;
+    try {
+        book = await db.collection('books').findOne({ _id: new ObjectId(params.id) });
+      } catch (error) {
+        return new Response('Invalid book id', { status: 400 });
+      }
 
     if (!book) {
         return new Response('Book not found', {
