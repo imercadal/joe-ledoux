@@ -1,13 +1,12 @@
-import { Store } from '../book-data'; 
+import { Book, Store } from '../book-data'; 
 import BookReviews from '../BookReviews';
-
 import Image from 'next/image';
 import Link from 'next/link';
 
 
 export default async function BookDetails({ params }: { params: {_id: string} }) {
     const response = await fetch('http://localhost:3000/api/books/' + params._id, { cache: 'no-store' });
-    const book = await response.json();
+    const book: Book = await response.json();
     console.log(params)
     
     if (!book) {
@@ -108,7 +107,9 @@ export default async function BookDetails({ params }: { params: {_id: string} })
                                     type="button"
                                     className="px-6 py-2 w-full relative -ml-px inline-flex items-center text-sm font-semibold hover:bg-darkest focus:z-10 italic"
                                 >
+                                    <Link href='/author'>
                                     Back to Books
+                                    </Link>
                                 </button>
             </div>
             <section className='w-3/5 mx-auto text-lightText pb-6'>
