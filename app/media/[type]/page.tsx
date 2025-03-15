@@ -5,11 +5,13 @@ import { MediaItem } from '../media-data';
 import Banner from '../../components/Banner';
 import { bannerImages } from '@/config/bannerConfig';
 
-interface MediaPageProps {
-  params: { type: string };
-}
+export default async function MediaPage({ 
+params,
+} : {
+  params: Promise<{ type: string }>;
+}) {
+  const { type } = await params;
 
-export default async function MediaPage({ params: { type } }: MediaPageProps) {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
   const apiUrl = new URL('/api/media', baseUrl);
   apiUrl.searchParams.set('type', type);

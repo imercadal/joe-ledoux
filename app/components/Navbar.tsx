@@ -63,50 +63,48 @@ export default function Navbar() {
             >
               <div className="w-36 shrink bg-accent p-1 text-sm font-semibold shadow-xl">
                 <div>
-                  <PopoverButton
-                    as={Link}
+                  <Link
                     href="/neuroscientist"
                     className="text-lightText block p-1 hover:text-dark"
                   >
                     <p className="text-left">publications</p>
-                  </PopoverButton>
-                  <PopoverButton
-                    as={Link}
+                  </Link>
+                  <Link
                     href="/neuroscientist/lectures"
                     className="text-lightText block p-1 hover:text-dark"
                   >
                     <p className="text-left">lectures</p>
-                  </PopoverButton>
+                  </Link>
                   <span
                     className="text-lightText block hover:text-dark"
                   >
                     <Popover className="relative">
-                      <PopoverButton className="text-lightText block p-1 hover:text-dark">
-                        <p className="text-left"> media <ChevronDownIcon aria-hidden="true" className="inline h-5 w-5" />
+                      <PopoverButton 
+                        className="text-lightText block p-1 hover:text-dark"
+                      >
+                        <p className="text-left"> 
+                          media <ChevronDownIcon aria-hidden="true" className="inline h-5 w-5" />
                         </p>
                       </PopoverButton>
-                      <PopoverPanel className="absolute left-full top-0 ml-2 w-20 bg-subMenu p-1 shadow-lg ring-1 ring-gray-900/5">
-                        <PopoverButton
-                          as={Link}
+                      <PopoverPanel className="absolute left-full top-0 ml-2 w-20 p-1 shadow-lg">
+                        <Link
                           href="/media/watch?tag=neuroscience"
                           className="text-lightText block p-1 hover:text-dark"
                         >
                           <p>watch</p>
-                        </PopoverButton>
-                        <PopoverButton
-                          as={Link}
+                        </Link>
+                        <Link
                           href="/media/listen?tag=neuroscience"
                           className="text-lightText block p-1 hover:text-dark"
                         >
                           <p>listen</p>
-                        </PopoverButton>
-                        <PopoverButton
-                          as={Link}
+                        </Link>
+                        <Link
                           href="/media/read?tag=neuroscience"
                           className="text-lightText block p-1 hover:text-dark"
                         >
                           <p>read</p>
-                        </PopoverButton>
+                        </Link>
                       </PopoverPanel>
                     </Popover>
                   </span>
@@ -149,7 +147,7 @@ export default function Navbar() {
                         <p className='text-left'>media <ChevronDownIcon aria-hidden="true" className="inline h-5 w-5" />
                         </p>
                       </PopoverButton>
-                      <PopoverPanel className="absolute left-full top-0 ml-2 w-20 bg-subMenu p-1 shadow-lg ring-1 ring-gray-900/5">
+                      <PopoverPanel className="absolute left-full top-0 ml-2 w-20 bg-subMenu p-1 shadow-lg">
                         <PopoverButton
                           as={Link}
                           href="/media/watch?tag=books"
@@ -221,7 +219,7 @@ export default function Navbar() {
                           media <ChevronDownIcon aria-hidden="true" className="inline h-5 w-5" />
                         </p>
                       </PopoverButton>
-                      <PopoverPanel className="absolute left-full top-0 ml-2 w-20 bg-subMenu p-1 shadow-lg ring-1 ring-gray-900/5">
+                      <PopoverPanel className="absolute left-full top-0 ml-2 w-20 bg-subMenu p-1 shadow-lg">
                         <PopoverButton
                           as={Link}
                           href="/media/watch?tag=music"
@@ -261,7 +259,7 @@ export default function Navbar() {
                          data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out
                          data-leave:duration-150 data-leave:ease-in"
             >
-              <div className="w-36 shrink bg-accent p-1 text-sm font-semibold ring-1 shadow-lg ring-gray-900/5">
+              <div className="w-36 shrink bg-accent p-1 text-sm font-semibold shadow-lg">
                 <div>
                   <PopoverButton
                     as={Link}
