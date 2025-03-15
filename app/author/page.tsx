@@ -1,9 +1,8 @@
 import BookList from "./BookList";
 
-
 export default async function AuthorPage(){
     try{
-        const response = await fetch('http://localhost:3000/api/books', { cache: "no-store" });
+        const response = await fetch('/api/books');
         
         if (!response.ok) {
             throw new Error(`Failed to fetch books: ${response.statusText}`);

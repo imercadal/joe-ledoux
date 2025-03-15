@@ -2,7 +2,9 @@ import PublicationList from "./PublicationsList";
 import { Publication } from './publication-data';
 
 export default async function NeuroscientistPage(){
-    const response = await fetch('http://localhost:3000/api/publications');
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
+    const apiUrl = new URL('/api/books', baseUrl).toString();
+    const response = await fetch(apiUrl);
     const publicationsData = await response.json()
 
     const publications: Publication[] = publicationsData.map((pub: Publication) => ({

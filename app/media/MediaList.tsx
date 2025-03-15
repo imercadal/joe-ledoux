@@ -1,7 +1,6 @@
 import React from "react";
 import { MediaItem } from './media-data'; 
 
-
 interface MediaListProps {
     media: MediaItem[];
 }
