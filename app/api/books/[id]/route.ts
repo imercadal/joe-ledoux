@@ -1,26 +1,29 @@
 import { NextRequest } from 'next/server';
 import { connectToDb } from '../../db';
+import { ObjectId } from 'mongodb';
 
-type Params = {
-    id: string
-}
+export async function GET(
+  _request: NextRequest,
+  { params, searchParams }: { params: { id: string }; searchParams: URLSearchParams }
+) {
+  const { id } = params;
+  const { db } = await connectToDb();
+  let book;
+  try {
+    book = await db.collection('books').findOne({ _id: new ObjectId(id) });
+  } catch (error: unknown) {
+    const message = error instanceof Error ? error.message : 'Unknown error';
+    return new Response(`Invalid book id: ${message}`, { status: 400 });
+  }
 
-export async function GET(_request: NextRequest, { params } : {params: Params}) {
-    const { db } = await connectToDb();
-    const bookId = params.id;
-    
-    const book = await db.collection('books').findOne({id: bookId});
+  if (!book) {
+    return new Response('Book not found', { status: 404 });
+  }
 
-    if (!book) {
-        return new Response('Book not found', {
-            status: 404,
-        })
-    }
-
-    return new Response(JSON.stringify(book), {
-        status: 200,
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    })
+  return new Response(JSON.stringify(book), {
+    status: 200,
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
 }
