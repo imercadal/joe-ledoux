@@ -7,7 +7,9 @@ export default function BookList({ books }: { books: Book[]}) {
 
     return(
         <main className='container grid grid-cols-2 mx-auto max-w-5xl gap-8 items-start justify-center'> 
-            {books.map(book => (
+            {[...books]
+            .sort((a, b) => b.year - a.year)
+            .map((book) => (
                 <div key={book._id} className='flex'>
                     <Link href={`/author/${book._id}`} className='flex'>
                     <div className='w-2/5'>
@@ -15,7 +17,7 @@ export default function BookList({ books }: { books: Book[]}) {
                     </div>
                     <div className='pl-5 w-3/5'>
 
-                        <h2 className='pb-3 font-bold'>{book.title} {book.year}</h2>
+                        <h2 className='pb-3 font-bold'>{book.title} ({book.year})</h2>
                         <p>{book.synopsis}</p>
 
                         <button className='text-accent font-bold'>

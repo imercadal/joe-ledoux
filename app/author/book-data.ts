@@ -15,6 +15,11 @@ export interface Store {
     url: string;
   }
 
+export interface Document {
+    document: string;
+    file: string;
+}
+
 export interface Book {
     _id?: number;
     title: string;
@@ -29,6 +34,7 @@ export interface Book {
     reviews: Review[];
     advancedPraise: AdvancedPraise[];
     stores: Store[];
+    documents?: Document[];
 }
 
 

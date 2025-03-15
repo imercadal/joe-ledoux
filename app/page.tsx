@@ -70,9 +70,9 @@ export default function Home() {
 
         {isDesktop ? (
           <map name="image-map">
-            <area target="" alt="Go to Neuroscientist's Page" title="Go to Neuroscientist's Page" href="/neuroscientist" coords="447,205,683,724" shape="rect"/>
-            <area target="" alt="Go to Author's Page" title="Go to Author's Page" href="/author" coords="842,207,1083,727" shape="rect"/>
-            <area target="" alt="Go to Musician's Page" title="Go to Musician's Page" href="/musician" coords="1258,210,1480,722" shape="rect"/>
+            <area target="" alt="Go to Neuroscientist's Page" title="Go to Neuroscientist's Page" href="/neuroscientist" coords="444,209,678,720" shape="rect"/>
+            <area target="" alt="Go to Author's Page" title="Go to Author's Page" href="/author" coords="845,209,1077,722" shape="rect"/>
+            <area target="" alt="Go to Musician's Page" title="Go to Musician's Page" href="/musician" coords="1260,210,1476,726" shape="rect"/>
           </map>
         ) : (
           <map name="image-map">
