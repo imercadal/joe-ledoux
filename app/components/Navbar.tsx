@@ -59,9 +59,9 @@ export default function Navbar() {
               transition
               className="absolute left-0 z-10 mt-0 -translate-y-2 flex w-full max-w-min px-1 transition
                          data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out
-                         data-leave:duration-150 data-leave:ease-in"
+                         data-leave:duration-150 data-leave:ease-in shadow-xl"
             >
-              <div className="w-36 shrink bg-accent p-1 text-sm font-semibold ring-1 shadow-lg ring-gray-900/5">
+              <div className="w-36 shrink bg-accent p-1 text-sm font-semibold shadow-xl">
                 <div>
                   <PopoverButton
                     as={Link}
@@ -77,9 +77,7 @@ export default function Navbar() {
                   >
                     <p className="text-left">lectures</p>
                   </PopoverButton>
-                  <PopoverButton
-                    as={Link}
-                    href="/media"
+                  <span
                     className="text-lightText block hover:text-dark"
                   >
                     <Popover className="relative">
@@ -111,7 +109,7 @@ export default function Navbar() {
                         </PopoverButton>
                       </PopoverPanel>
                     </Popover>
-                  </PopoverButton>
+                  </span>
                 </div>
               </div>
             </PopoverPanel>
@@ -123,11 +121,11 @@ export default function Navbar() {
             </PopoverButton>
             <PopoverPanel
               transition
-              className="absolute w-40 left-0 z-10 mt-0 -translate-y-2 flex w-full px-1 transition
+              className="absolute w-fit left-0 z-10 mt-0 -translate-y-2 flex px-1 transition
                          data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out
                          data-leave:duration-150 data-leave:ease-in"
             >
-              <div className="w-full bg-accent px-1 text-sm font-semibold shadow-lg">
+              <div className="w-36 bg-accent px-1 text-sm font-semibold shadow-lg">
                 <div>
                   <PopoverButton
                     as={Link}
@@ -143,9 +141,7 @@ export default function Navbar() {
                   >
                     <p className='text-left'>columns &amp; blog</p>
                   </PopoverButton>
-                  <PopoverButton
-                    as={Link}
-                    href="/media"
+                  <span
                     className="text-lightText block hover:text-dark"
                   >
                     <Popover className="relative">
@@ -177,7 +173,7 @@ export default function Navbar() {
                         </PopoverButton>
                       </PopoverPanel>
                     </Popover>
-                  </PopoverButton>
+                  </span>
                 </div>
               </div>
             </PopoverPanel>
@@ -189,11 +185,11 @@ export default function Navbar() {
             </PopoverButton>
             <PopoverPanel
               transition
-              className="absolute w-40 left-0 z-10 mt-0 -translate-y-2 flex w-full max-w-min px-1 transition
+              className="absolute w-fit left-0 z-10 mt-0 -translate-y-2 flex max-w-min px-1 transition
                          data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out
                          data-leave:duration-150 data-leave:ease-in"
             >
-              <div className="w-36 shrink bg-accent p-1 text-sm font-semibold ring-1 shadow-lg ring-gray-900/5">
+              <div className="w-36 shrink bg-accent p-1 text-sm font-semibold shadow-xl">
                 <div>
                   <PopoverButton
                     as={Link}
@@ -216,9 +212,7 @@ export default function Navbar() {
                   >
                     <p className='text-left'>solo projects</p>
                   </PopoverButton>
-                  <PopoverButton
-                    as={Link}
-                    href="/media"
+                  <span
                     className="text-lightText block hover:text-dark"
                   >
                     <Popover className="relative">
@@ -251,7 +245,7 @@ export default function Navbar() {
                         </PopoverButton>
                       </PopoverPanel>
                     </Popover>
-                  </PopoverButton>
+                  </span>
                 </div>
               </div>
             </PopoverPanel>
@@ -263,32 +257,32 @@ export default function Navbar() {
             </PopoverButton>
             <PopoverPanel
               transition
-              className="transition absolute left-0 z-10 mt-0 -translate-y-2 flex w-full transition
+              className="absolute w-full left-0 z-10 mt-0 -translate-y-2 flex transition
                          data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out
                          data-leave:duration-150 data-leave:ease-in"
             >
-              <div className="w-full shrink bg-accent p-1 text-sm font-semibold ring-1 shadow-lg ring-gray-900/5">
+              <div className="w-36 shrink bg-accent p-1 text-sm font-semibold ring-1 shadow-lg ring-gray-900/5">
                 <div>
                   <PopoverButton
                     as={Link}
                     href="/media/watch"
-                    className="text-lightText block py-1 hover:text-dark"
+                    className="text-lightText block p-1 hover:text-dark"
                   >
-                    <p>watch</p>
+                    <p className='text-left'>watch</p>
                   </PopoverButton>
                   <PopoverButton
                     as={Link}
                     href="/media/listen"
                     className="text-lightText block p-1 hover:text-dark"
                   >
-                    <p>listen</p>
+                    <p className='text-left'>listen</p>
                   </PopoverButton>
                   <PopoverButton
                     as={Link}
                     href="/media/read"
                     className="text-lightText block p-1 hover:text-dark"
                   >
-                    <p>read</p>
+                    <p className='text-left'>read</p>
                   </PopoverButton>
                 </div>
               </div>
