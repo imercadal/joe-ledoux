@@ -2,15 +2,12 @@ import { NextRequest } from 'next/server';
 import { connectToDb } from '../../db';
 import { ObjectId } from 'mongodb';
 
-type Params = {
-    id: string;
-}
-
-export async function GET(_request: NextRequest, { params } : {params: Params }) {
+export async function GET(_request: NextRequest, context: { params : {id: string}}) {
+    const { id } = context.params;
     const { db } = await connectToDb();
     let book;
     try {
-        book = await db.collection('books').findOne({ _id: new ObjectId(params.id) });
+        book = await db.collection('books').findOne({ _id: new ObjectId(id) });
       } catch (error: unknown) {
         const message = error instanceof Error ? error.message : 'Unknown error';
         return new Response(`Invalid book id: ${message}`, { status: 400 });
