@@ -1,5 +1,4 @@
-import { Book, Store } from '../book-data'; 
-import BookReviews from '../BookReviews';
+import { Book, Store } from '../book-data';
 import BookContentTabs from './BookContentTabs';
 import Image from 'next/image';
 import Link from 'next/link';
