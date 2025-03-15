@@ -3,12 +3,14 @@ import MediaList from './MediaList';
 import Link from 'next/link';
 
 interface MediaPageProps {
-  searchParams: { tag?: string };
+  searchParams: Promise<{ tag?: string }>;
   currentTag?: string;
 }
 
-export default async function MediaPage({ searchParams }: MediaPageProps) {
-  const { tag } = searchParams;
+export default async function MediaPage({
+  searchParams,
+}: MediaPageProps) {
+  const { tag } = await searchParams;
 
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
   const apiUrl = new URL('/api/media', baseUrl);

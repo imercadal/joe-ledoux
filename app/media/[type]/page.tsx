@@ -5,9 +5,7 @@ import { MediaItem } from '../media-data';
 import Banner from '../../components/Banner';
 import { bannerImages } from '@/config/bannerConfig';
 
-export default async function MediaPage({ 
-params,
-} : {
+export default async function MediaPage({ params,} : {
   params: Promise<{ type: string }>;
 }) {
   const { type } = await params;
