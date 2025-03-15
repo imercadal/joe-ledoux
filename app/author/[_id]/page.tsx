@@ -4,10 +4,17 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 
-export default async function BookDetails({ params }: { params: {_id: string} }) {
-    const response = await fetch('http://localhost:3000/api/books/' + params._id, { cache: 'no-store' });
-    const book: Book = await response.json();
-    console.log(params)
+export default async function BookDetails({
+params,
+}: {
+    params: Promise<{ _id: string }>;
+}) {
+    const { _id } = await params;
+    const response = await fetch("http://localhost:3000/api/books/" + _id, {
+        cache: "no-store",
+      });
+      const book: Book = await response.json();
+      console.log(_id);
     
     if (!book) {
         return (
