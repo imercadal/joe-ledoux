@@ -21,8 +21,6 @@ export default async function AuthorPage() {
   try {
     books = await response.json();
   } catch (err) {
-    const text = await response.text();
-    console.log("Response textt:", text)
     console.error("JSON parsing error:", err);
     throw new Error("Error parsing JSON response from books API");
   }
