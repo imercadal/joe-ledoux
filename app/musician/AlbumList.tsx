@@ -27,7 +27,7 @@ export default function AlbumList({ albums }: {albums: Album[]}){
                         {album.links.map((link) => (
                             <a key={link.platform} href={link.url} target="_blank" rel="noopener noreferrer" className="hover:opacity-75">
                             <Image
-                                src={`/icons/${link.platform.toLowerCase()}.png`}
+                                src={`/icons/${link.platform}.png`}
                                 alt={link.platform}
                                 width={20}
                                 height={20}

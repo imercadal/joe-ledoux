@@ -46,7 +46,7 @@ export default function Home() {
             top: "8%"
           }}
         >
-          <span className="font-cardo text-white tracking-wide font-sm md:font-lg"><i>· Click a door and explore ·</i></span>
+          <span className="font-cardo text-white tracking-wide font-sm md:font-lg"><i>· Click on a door and explore ·</i></span>
         </div>
 
         <div 
