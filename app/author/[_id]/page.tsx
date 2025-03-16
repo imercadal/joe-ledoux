@@ -10,9 +10,9 @@ params,
     params: Promise<{ _id: string }>;
 }) {
     const { _id } = await params;
-    const response = await fetch("http://localhost:3000/api/books/" + _id, {
-        cache: "no-store",
-      });
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
+    const apiUrl = new URL('/api/books', baseUrl).toString();
+    const response = await fetch(`${apiUrl}/${_id}`);
       const book: Book = await response.json();
       console.log(_id);
     

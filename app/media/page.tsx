@@ -18,7 +18,7 @@ export default async function MediaPage({ params, searchParams }: MediaPageProps
   }
 
   try{
-    const response = await fetch('http://localhost:3000/api/media', { cache: "no-store"});
+    const response = await fetch(apiUrl.toString());
   
     if(!response.ok) {
       throw new Error(`Failed to fetch media: ${response.statusText}`)

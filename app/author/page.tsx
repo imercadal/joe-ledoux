@@ -2,7 +2,9 @@ import BookList from "./BookList";
 
 export default async function AuthorPage(){
     try{
-        const response = await fetch('/api/books');
+        const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
+        const apiUrl = new URL('/api/books', baseUrl).toString();
+        const response = await fetch(apiUrl);
         
         if (!response.ok) {
             throw new Error(`Failed to fetch books: ${response.statusText}`);

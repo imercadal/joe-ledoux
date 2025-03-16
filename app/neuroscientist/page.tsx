@@ -3,7 +3,7 @@ import { Publication } from './publication-data';
 
 export default async function NeuroscientistPage(){
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
-    const apiUrl = new URL('/api/books', baseUrl).toString();
+    const apiUrl = new URL('/api/publications', baseUrl).toString();
     const response = await fetch(apiUrl);
     const publicationsData = await response.json()
 
