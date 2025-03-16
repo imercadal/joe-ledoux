@@ -13,7 +13,7 @@ body {
 }
 
 h1 {
-  @apply text-2xl md:text-3xl font-cardo font-bold text-accent tracking-wider;
+  @apply text-2xl md:text-2xl font-cardo font-bold text-accent tracking-wider;
 }
 
 h2 {
