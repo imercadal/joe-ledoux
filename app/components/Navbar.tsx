@@ -86,7 +86,7 @@ export default function Navbar() {
                           media <ChevronDownIcon aria-hidden="true" className="inline h-5 w-5" />
                         </p>
                       </PopoverButton>
-                      <PopoverPanel className="absolute left-full top-0 ml-2 w-20 p-1 shadow-lg">
+                      <PopoverPanel transition className="absolute bg-accent left-full top-0 ml-2 w-20 p-1 shadow-lg">
                         <Link
                           href="/media/watch?tag=neuroscience"
                           className="text-lightText block p-1 hover:text-dark"

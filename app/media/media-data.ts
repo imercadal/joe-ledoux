@@ -8,7 +8,3 @@ export interface MediaItem {
     urlToItem: string;
     embedUrl?: string;
 }
-
-
-// #FALTA HACER ESTO
-// UX: url a youtube que se pueda hacer click desde el nombre y bajada
