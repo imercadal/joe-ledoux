@@ -11,16 +11,3 @@ export default function ColumnPage(){
         </main>
     )
 }
-
-/*
-        <main className='relative'>
-            <div className='relative mb-8 h-40 bg-red-200 justify-center'>
-                <div
-                        className={`absolute w-full h-full inset-0 bg-cover bg-center`}
-                        style={{ backgroundImage: `url(/320_Author_Columns.webp)` }}
-                />
-                <h3 className='absolute inset-0  items-center'>Columns and Blogs</h3>
-            </div>
-            <PostList posts={ posts }/>
-        </main>
-*/

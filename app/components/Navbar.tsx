@@ -134,7 +134,7 @@ export default function Navbar() {
                   </PopoverButton>
                   <PopoverButton
                     as={Link}
-                    href="/columns"
+                    href="/author/columns"
                     className="text-lightText block p-1 hover:text-dark"
                   >
                     <p className='text-left'>columns &amp; blog</p>

@@ -7,8 +7,31 @@ export default function PostList({ posts }: { posts: Post[]}) {
     const personalBlogPosts = posts.filter((post) => post.mediaCompany === "Personal Blog");
 
     return(
-        <main className='container mx-auto flex max-w-5xl flex-col items-start justify-center'> 
+        <main className='container mx-auto flex gap-6 max-w-5xl items-start justify-center'> 
             <div>
+                <div className='mb-10'>
+                    <div className='flex gap-x-4 mb-4 items-center'>    
+                        <Image alt="New York Times Logo" src='/960_NYTimes.png' className="size-10 rounded-full bg-gray-50" width={10} height={10} />
+                        <div>
+                            <h4 className="mt-3 font-bold group-hover:text-gray-600">Opinion Column & Opinionator</h4>
+                            <h4>New York Times</h4>
+                        </div>
+                    </div>
+                    {newYorkTimesPosts.map((post) => (
+                        <article key={post.id} className="flex max-w-xl flex-col items-start justify-between">
+                            <div className='flex items-left'>
+                                <a href={post.urlToPost}>
+                                    <h5 className="mt-3 inline-flex font-bold group-hover:text-gray-600">
+                                        {post.title}
+                                    </h5>
+                                    <span className="ml-1 text-xs text-darker">
+                                        {post.date.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
+                                    </span>
+                                </a>    
+                            </div>
+                        </article>
+                    ))}
+                </div>
                 <div>
                     <div className='flex gap-x-4 mb-4 items-center'>    
                         <Image alt="Psychology Today Logo" src='/970_PsycToday.png' className="size-10 rounded-full bg-gray-50" width={10} height={10} />
@@ -31,29 +54,6 @@ export default function PostList({ posts }: { posts: Post[]}) {
                     </div>
                 </article>
             ))}
-                </div>
-                <div className='mt-10'>
-                    <div className='flex gap-x-4 mb-4 items-center'>    
-                        <Image alt="New York Times Logo" src='/960_NYTimes.png' className="size-10 rounded-full bg-gray-50" width={10} height={10} />
-                        <div>
-                            <h4 className="mt-3 font-bold group-hover:text-gray-600">Opinion Column & Opinionator</h4>
-                            <h4>New York Times</h4>
-                        </div>
-                    </div>
-                    {newYorkTimesPosts.map((post) => (
-                        <article key={post.id} className="flex max-w-xl flex-col items-start justify-between">
-                            <div className='flex items-left'>
-                                <a href={post.urlToPost}>
-                                    <h5 className="mt-3 inline-flex font-bold group-hover:text-gray-600">
-                                        {post.title}
-                                    </h5>
-                                    <span className="ml-1 text-xs text-darker">
-                                        {post.date.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
-                                    </span>
-                                </a>    
-                            </div>
-                        </article>
-                    ))}
                 </div>
             </div>
 
