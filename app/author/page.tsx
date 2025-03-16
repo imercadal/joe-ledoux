@@ -1,35 +1,40 @@
 import BookList from "./BookList";
 
-export default async function AuthorPage(){
-    try{
-        const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
-        const apiUrl = new URL('/api/books', baseUrl).toString();
-        const response = await fetch(apiUrl);
+export default async function AuthorPage() {
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
+  const apiUrl = new URL('/api/books', baseUrl).toString();
+  
+  let response;
+  try {
+    response = await fetch(apiUrl);
+  } catch (err) {
+    console.log("Network error:", err);
+    throw new Error("Network error while fetching books");
+  }
+      
+  if (!response.ok) {
+    const errorText = await response.text();
+    console.log("Fetch error:", response.status, errorText);
+    throw new Error(`Failed to fetch books: ${response.statusText}`);
+  }
+
+  let books;
+  try {
+    books = await response.json();
+  } catch (err) {
+    const text = await response.text();
+    console.error("JSON parsing error:", err, text);
+    throw new Error("Error parsing JSON response from API");
+  }
+  
+  console.log("Base URL:", baseUrl);
         
-        if (!response.ok) {
-            throw new Error(`Failed to fetch books: ${response.statusText}`);
-        }
-        const books = await response.json();
-        
-        return(
-            <main className="bg-lightText">
-                <div className="relative mb-8 h-40 bg-cover bg-center bg-[url('/310_Author_Books.webp')] flex items-center justify-center">
-                    <h3 className="font-bold">BOOKS</h3>
-                </div>
-                <BookList books={ books }/>
-            </main>
-    )
-    } catch (error) {
-        console.error("Error fetching books:", error);
-        return (
-            <main className="bg-lightText"   >
-                <div className="relative mb-8 h-40 bg-cover bg-center bg-[url('/310_Author_Books.webp')] flex items-center justify-center">
-                    <h3 className="font-bold">BOOKS</h3>
-                </div>
-                <div className="p-32 min-h-3/4 flex justify-center">
-                    <p className="text-dark text-3xl">Failed to load books. Please try again later.</p>
-                </div>
-            </main>
-        );
-    }
+  return (
+    <main className="bg-lightText">
+      <div className="relative mb-8 h-40 bg-cover bg-center bg-[url('/310_Author_Books.webp')] flex items-center justify-center">
+        <h3 className="font-bold">BOOKS</h3>
+      </div>
+      <BookList books={books} />
+    </main>
+  );
 }
