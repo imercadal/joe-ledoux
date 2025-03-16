@@ -4,8 +4,31 @@ import { Publication } from './publication-data';
 export default async function NeuroscientistPage(){
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
     const apiUrl = new URL('/api/publications', baseUrl).toString();
-    const response = await fetch(apiUrl);
-    const publicationsData = await response.json()
+    
+    let response;
+    try { 
+        response = await fetch(apiUrl);
+    } catch (err) {
+        console.log("Network error:", err);
+        throw new Error("Network error while fetching publications")
+    }
+
+    if(!response.ok){
+        const errorText = await response.text();
+        console.log("Fetch error:", response.status, errorText);
+        throw new Error(`Failed to fetch books: ${response.statusText}`)
+    }
+    
+    let publicationsData;
+    try {
+        publicationsData = await response.json()
+    } catch (err) {
+        const text = await response.text();
+        console.error("JSON parsing error:", err, text);
+        throw new Error("Error parsing JSON response from API");
+    }
+    
+    console.log("Base URL:", baseUrl)
 
     const publications: Publication[] = publicationsData.map((pub: Publication) => ({
         ...pub,
