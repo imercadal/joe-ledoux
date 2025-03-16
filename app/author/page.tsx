@@ -13,8 +13,7 @@ export default async function AuthorPage() {
   }
       
   if (!response.ok) {
-    const errorText = await response.text();
-    console.log("Fetch error:", response.status, errorText);
+    console.log("Fetch error:", response.status);
     throw new Error(`Failed to fetch books: ${response.statusText}`);
   }
 
@@ -22,8 +21,10 @@ export default async function AuthorPage() {
   try {
     books = await response.json();
   } catch (err) {
+    const text = await response.text();
+    console.log("Response textt:", text)
     console.error("JSON parsing error:", err);
-    throw new Error("Error parsing JSON response from API");
+    throw new Error("Error parsing JSON response from books API");
   }
   
   console.log("Base URL:", baseUrl);
