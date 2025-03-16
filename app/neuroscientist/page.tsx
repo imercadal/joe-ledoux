@@ -23,8 +23,7 @@ export default async function NeuroscientistPage(){
     try {
         publicationsData = await response.json()
     } catch (err) {
-        const text = await response.text();
-        console.error("JSON parsing error:", err, text);
+        console.error("JSON parsing error:", err);
         throw new Error("Error parsing JSON response from API");
     }
     
