@@ -1,9 +1,12 @@
 import BookList from "./BookList";
 
 export default async function AuthorPage() {
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
+  const apiUrl = new URL('/api/books', baseUrl).toString();
+  
   let response;
   try {
-    response = await fetch('/api/books');
+    response = await fetch(apiUrl);
   } catch (err) {
     console.log("Network error:", err);
     throw new Error("Network error while fetching books");
@@ -21,6 +24,8 @@ export default async function AuthorPage() {
     console.error("JSON parsing error:", err);
     throw new Error("Error parsing JSON response from books API");
   }
+  
+  console.log("Base URL:", baseUrl);
         
   return (
     <main className="bg-lightText">
