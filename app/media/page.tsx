@@ -7,6 +7,8 @@ interface MediaPageProps {
   searchParams: Promise<{ tag?: string }>;
 }
 
+export const dynamic = 'force-dynamic';
+
 export default async function MediaPage({ params, searchParams }: MediaPageProps) {
   await params;
   const { tag } = await searchParams;
