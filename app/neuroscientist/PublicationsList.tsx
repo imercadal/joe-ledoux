@@ -2,7 +2,7 @@ import { Publication } from './publication-data';
 
 export default function PublicationList({ publications }: { publications: Publication[]}) {
     return(
-        <main> 
+        <main className='max-w-4xl'> 
             {publications.map(publication => (
                 <div key={publication.id} className='mb-8'>
                     <a 

@@ -18,11 +18,11 @@ export default function BookContentTabs({ book }: BookContentTabsProps) {
   return (
     <div className="max-w-5xl">
       {/* Navigation for switching tabs */}
-      <nav className="isolate w-full mx-auto pb-6 pl-8 flex justify-around items-center shadow-xs text-accent">
+      <nav className="isolate w-full mx-auto pb-6 pl-8 flex justify-around items-start shadow-xs text-accent">
         <button
           type="button"
           onClick={() => setActiveTab("book")}
-          className={`py-2 w-full inline-flex items-center justify-center text-sm hover:bg-darkest focus:z-10 ${
+          className={`py-2 w-full inline-flex items-center justify-center text-sm hover:text-white focus:z-10 ${
             activeTab === "book" ? "font-bold underline underline-offset-8" : ""
           }`}
         >
@@ -31,7 +31,7 @@ export default function BookContentTabs({ book }: BookContentTabsProps) {
         <button
           type="button"
           onClick={() => setActiveTab("praise")}
-          className={`py-2 w-full inline-flex items-center justify-center text-sm hover:bg-darkest focus:z-10 ${
+          className={`py-2 w-full inline-flex items-center justify-center text-sm hover:text-white focus:z-10 ${
             activeTab === "praise" ? "font-bold underline underline-offset-8" : ""
           }`}
         >
@@ -40,7 +40,7 @@ export default function BookContentTabs({ book }: BookContentTabsProps) {
         <button
           type="button"
           onClick={() => setActiveTab("citations")}
-          className={`py-2 w-full inline-flex items-center justify-center text-sm hover:bg-darkest focus:z-10 ${
+          className={`py-2 w-full inline-flex items-center justify-center text-sm hover:text-white focus:z-10 ${
             activeTab === "citations" ? "font-bold underline underline-offset-8" : ""
           }`}
         >

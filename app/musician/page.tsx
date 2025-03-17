@@ -76,7 +76,7 @@ export default function MusicianPage(){
                 <AlbumList albums={ albums }/>
             </section>
 
-            <section id="shows" className="container px-8 md:px-20 my-6 md:my-12 py-6 md:py-12 mx-auto flex-col justify-center">
+            <section id="shows" className="container px-4 my-6 md:my-12 py-6 md:py-12 mx-auto flex-col justify-center max-w-4xl">
                 <h2 className="text-2xl font-bold mb-4">Shows</h2>
                 <ul role="list" className="grid grid-cols-1 gap-x-4 gap-y-8 md:grid-cols-3 sm:gap-x-6 xl:gap-x-8">
                     <li className="sm:flex border p-4 rounded shadow">
@@ -115,14 +115,14 @@ export default function MusicianPage(){
                 </ul>
             </section>
 
-            <section id="gallery" className="container px-8 md:px-20 py-12 mx-auto">
+            <section id="gallery" className="container px-4 py-12 mx-auto max-w-4xl">
                 <h2 className="text-2xl font-bold mb-4">Gallery</h2>
                 {/* Replace the following with your carousel implementation */}
                 <div className="border p-4 rounded shadow">
                 <p>Gallery Carousel Placeholder</p>
                 </div>
             </section>
-            <section className="container px-8 md:px-20 mx-auto">
+            <section className="container px-4 mx-auto max-w-4xl">
                 <Link href="/media/musician" className='text-dark font-bold hover:opacity-75'>
                     <ArrowLongRightIcon className='inline h-4 w-5'/>
                     <i>Go to MEDIA </i>
