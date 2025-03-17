@@ -8,11 +8,10 @@ import {
   Disclosure,
   DisclosureButton,
   DisclosurePanel,
-  PopoverGroup,
 } from "@headlessui/react";
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import NavbarPopover from "./NavbarPopover";
+import NavbarMenu from "./NavbarMenu";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -86,18 +85,18 @@ export default function Navbar() {
           </button>
         </div>
         {/* Desktop navigation */}
-        <PopoverGroup className="hidden md:flex md:gap-x-12 items-center">
+        <div className="hidden md:flex md:gap-x-12 items-center">
           <Link
             href="/about"
             className="text-sm font-semibold text-accent underline-offset-8 hover:underline hover:opacity-75"
           >
             about
           </Link>
-          <NavbarPopover title="neuroscientist" items={neuroscientistItems} />
-          <NavbarPopover title="author" items={authorItems} />
-          <NavbarPopover title="musician" items={musicianItems} />
-          <NavbarPopover title="media" items={mediaItems} />
-        </PopoverGroup>
+          <NavbarMenu title="neuroscientist" items={neuroscientistItems} />
+          <NavbarMenu title="author" items={authorItems} />
+          <NavbarMenu title="musician" items={musicianItems} />
+          <NavbarMenu title="media" items={mediaItems} />
+        </div>
       </nav>
 {/* Mobile Navigation */}
       <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="md:hidden">
@@ -355,7 +354,7 @@ export default function Navbar() {
           </button>
         </div>
         {/* Desktop navigation *
-        <PopoverGroup className="hidden md:flex md:gap-x-12 items-center">
+        <PopoverGroup className="md:flex md:gap-x-12 items-center">
           <Link
             href="/about"
             className="text-base font-semibold text-accent underline-offset-8 hover:underline hover:opacity-75"
@@ -364,7 +363,7 @@ export default function Navbar() {
           </Link>
           {/* Neuroscientist *
           <Popover className="relative">
-            <PopoverButton className="flex items-center gap-x-1 text-base font-semibold text-accent underline-offset-8 hover:underline hover:opacity-75">
+            <PopoverButton className="flex items-center gap-x-1 font-semibold text-accent underline-offset-8 hover:underline hover:opacity-75">
               neuroscientist
             </PopoverButton>
             
