@@ -14,11 +14,11 @@ export default function TagSidebar({ availableTags, selectedTags, onToggleTag }:
       <h2 className="pl-2 text-sm text-lightText font-bold mb-2">Filter by Category</h2>
       <ul>
         {availableTags.map((tag) => (
-          <li key={tag} className="text-xs">
+          <li key={tag}>
             <button
               onClick={() => onToggleTag(tag)}
-              className={`inline px-2 cursor-pointer ${
-                selectedTags.includes(tag) ? 'text-accent font-bold ml-2' : 'text-lightText'
+              className={`inline px-2 text-xs leading-none cursor-pointer ${
+                selectedTags.includes(tag) ? 'text-accent font-bold' : 'text-lightText'
               }`}
             >
               { selectedTags.includes(tag) ? 

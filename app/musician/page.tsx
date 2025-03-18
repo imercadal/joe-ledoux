@@ -1,26 +1,38 @@
 import AlbumList from './AlbumList';
+import SubMenu from '../components/SubMenu';
 import { albums } from './album-data';
 import { ArrowLongRightIcon } from "@heroicons/react/16/solid";
 import Link from 'next/link';
 import Image from 'next/image';
 
 export default function MusicianPage(){
+    const musicianMediaItems = [
+        { label: "albums", href:"#albums" },
+        { label: "shows", href:"#shows" },
+        { label: "otherprojects", href:"#otherprojects" },
+        { label: "media", submenu: [
+            { label: "watch", href: "/media/watch?tag=music" },
+            { label: "listen", href: "/media/listen?tag=music" },
+            { label: "read", href: "/media/read?tag=music" }
+        ] },
+      ];
+
     return(
         <main className='bg-lightText pb-8'>
+            <SubMenu items={ musicianMediaItems }/>
             <div className={`relative inset-0 md:left-0 -left-40 bg-cover bg-center bg-[url('/410_Music_Amygdaloids.webp')]`}></div>
             <div
                 style={{ backgroundImage: `url('/410_Music_Amygdaloids.webp')` }}
                 className="w-full flex bg-cover bg-[21%] md:bg-center -left-40"
                 >
-            <div className='relative w-1/2'></div>
+            <div className='relative w-2/5'></div>
             <div 
-                className="relative md:w-1/2 items-center bg-lightAccent bg-opacity-25 lg:px-24 md:pw-20 px-10 md:py-12 py-10 flex justify-start text-lightText"
+                className="relative md:w-3/5 items-center bg-lightAccent bg-opacity-25 lg:px-24 md:pw-20 px-10 md:py-12 py-10 flex justify-start text-lightText"
                 style={{
                     background: "linear-gradient(to right, rgba(216,245,250,0) 0%,rgba(216,245,250,0.5) 100%)"
                 }}           
             >
-
-                <div className='px-2 md:px-4'>
+                <div className='px-2 md:px-4 md:pl-36 py-8 md:py-16'>
                     <h3 className='text-darker mb-5 font-bold italic'>THE AMYGDALOIDS</h3>
                     <p className='text-darker'>The Amygdaloids are a New York City band made up of scientists who shed their scientific garb at night and take to the stage with songs about love and life peppered with insights drawn from research about mind and brain and mental disorders. NYU neuroscientist Joseph LeDoux, a pioneer in the study of the brain mechanisms of emotion and memory, is the lead singer, songwriter and rhythm guitarist. He is the best-selling author of two books, <i>The Emotional Brain</i> and <i>Synaptic Self</i>. <i>Theory of My Mind</i>, their second CD, was released in 2010 and features Grammy Award winner Rosanne Cash on backing vocals for two songs (<i>Mind Over Matter</i>, and <i>Crime of Passion</i>).  
                     </p>
@@ -56,19 +68,7 @@ export default function MusicianPage(){
                                 </a>
                             </li>
                     </ul>
-                    <ul className="w-full mt-8 italic text-white flex gap-4 items-between md:my-12 my-3 hover:opacity-75">
-                            <li>
-                                <Link href="#albums"><strong>ALBUMS</strong></Link>
-                            </li>
-                            <li>
-                                <Link href="#shows"><strong>SHOWS</strong></Link>
-                            </li>
-                            <li>
-                                <Link href="#gallery"><strong>GALLERY</strong></Link>
-                            </li>
 
-                               ᐧ   
-                    </ul>
                 </div>
             </div>
       </div>
