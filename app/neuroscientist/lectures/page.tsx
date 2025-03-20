@@ -17,14 +17,14 @@ export default function LecturesPage(){
         .sort((a, b) => b - a);
 
     return(
-        <main>
+        <main className='bg-darkest'>
             {/* Header Banner */}
             <div className="relative h-40 bg-cover bg-center bg-[url('/220_Neuro_Lectures.webp')] flex items-center justify-center">
                 <h3 className="font-bold">LECTURES</h3>
             </div>
 
             {/* Navigation for Years */}
-            <div className="h-12 flex justify-center items-center bg-lightAccent">
+            <div className="h-12 sticky top-0 flex justify-center items-center bg-lightAccent">
                 <ul className="flex gap-4 text-xs text-accent font-azeret">
                     {years.map((year) => (
                         <li key={year} className='hover:underline'>
@@ -35,7 +35,7 @@ export default function LecturesPage(){
             </div>
 
             {/* Lecture Groups by Year */}
-            <div className='px-12 py-6 md:px-64 text-lightText bg-darkest'>
+            <div className='p-6 md:px-16 mx-auto max-w-3xl text-lightText'>
                 {years.map((year) => (
                     <div key={year} id={`year-${year}`} className='mb-8'>
                         <p className="mb-4 px-1 inline-block text-sm font-azeret font-bold bg-accent text-lightText">{year}</p>

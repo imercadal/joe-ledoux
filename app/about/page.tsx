@@ -24,15 +24,15 @@ export default function AboutPage() {
 
     return (
         <>
-            <div className="relative h-screen w-full md:p-24">
+            <div className="relative h-screen w-full px-4 md:px-24 md:py-12">
                 <div
                     className={`absolute inset-0 md:left-0 -left-40 bg-cover bg-center`}
                     style={{ backgroundImage: `url(${images[image]})` }}
                 />
                 
 
-                <div className="relative w-3/4 lg:px-32 md:pw-24 px-10 md:py-12 py-10 flex justify-start text-lightText">
-                    <div className="w-9/12">
+                <div className="relative max-w-3xl py-10 md:py-10 flex justify-center text-lightText">
+                    <div className="w-8/12 pl-0 md:pl-12 flex flex-col justify-start">
                         <p>Joseph LeDoux is a Professor of Neural Science at New York University. His work, which has spanned the topics of emotion, memory, and consciousness, and their interaction in the brain. He is an elected member of the National Academy of Sciences and the American Academy of Arts and Sciences. He has received a numerous awards for his work and is the author of several acclaimed books, including <i>The Emotional Brain, Synaptic Self, Anxious, The Deep History of Ourselves</i>, and <i>The Four Realms of Existence</i>.  He is also the lead singer and songwriter in the rock band, The Amygdaloids. His music has been the subject of a play, Map of Your Mind, and was featured in Werner Herzog’s 2024 film, Theatre of Thought.  A documentary on Amazon, Neuroscience and Emotions, explores his Life, work and music.  
                         </p>
                         <p className="mt-6"><strong>Contact:</strong></p>

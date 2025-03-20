@@ -41,7 +41,7 @@ params,
 
         {/*Banner */}
         <div 
-            className="relative h-40 font-bold bg-cover bg-center flex flex-col justify-center items-center gap-1"
+            className="relative h-40 z-10 font-bold bg-cover bg-center flex flex-col justify-center items-center gap-1"
             style={{ backgroundImage: `url(/${book.bannerUrl})` }}
         >
             <h3 className="m-0 text-xl">

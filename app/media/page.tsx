@@ -28,7 +28,7 @@ export default async function MediaPage({ params, searchParams }: MediaPageProps
     const media = await response.json()
   
     return(
-      <main className="bg-lightText">
+      <main className="bg-lightText flex-grow">
         <TagSidebar selectedTags={tag ? [tag] : []} availableTags={[]} onToggleTag={() => {}}/>
         <div className="relative mb-8 h-40 bg-cover bg-center bg-[url('/310_Author_Books.webp')] flex items-center justify-center">
           <h3 className="font-bold">MEDIA</h3>

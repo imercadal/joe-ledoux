@@ -1,38 +1,28 @@
 import AlbumList from './AlbumList';
-import SubMenu from '../components/SubMenu';
+import ImageGallery from '../components/ImageGallery';
 import { albums } from './album-data';
 import { ArrowLongRightIcon } from "@heroicons/react/16/solid";
 import Link from 'next/link';
 import Image from 'next/image';
 
 export default function MusicianPage(){
-    const musicianMediaItems = [
-        { label: "albums", href:"#albums" },
-        { label: "shows", href:"#shows" },
-        { label: "otherprojects", href:"#otherprojects" },
-        { label: "media", submenu: [
-            { label: "watch", href: "/media/watch?tag=music" },
-            { label: "listen", href: "/media/listen?tag=music" },
-            { label: "read", href: "/media/read?tag=music" }
-        ] },
-      ];
+    const imageNames = ["MusicPhoto_1", "MusicPhoto_2", "MusicPhoto_3", "MusicPhoto_4", "MusicPhoto_5", "MusicPhoto_6", "MusicPhoto_7", "MusicPhoto_8", "MusicPhoto_9"];
 
     return(
         <main className='bg-lightText pb-8'>
-            <SubMenu items={ musicianMediaItems }/>
             <div className={`relative inset-0 md:left-0 -left-40 bg-cover bg-center bg-[url('/410_Music_Amygdaloids.webp')]`}></div>
             <div
                 style={{ backgroundImage: `url('/410_Music_Amygdaloids.webp')` }}
                 className="w-full flex bg-cover bg-[21%] md:bg-center -left-40"
-                >
+            >
             <div className='relative w-2/5'></div>
             <div 
-                className="relative md:w-3/5 items-center bg-lightAccent bg-opacity-25 lg:px-24 md:pw-20 px-10 md:py-12 py-10 flex justify-start text-lightText"
+                className="relative md:w-4/5 items-center bg-lightAccent bg-opacity-50 lg:px-24 md:pw-20 px-10 md:py-12 py-10 flex justify-start text-lightText"
                 style={{
                     background: "linear-gradient(to right, rgba(216,245,250,0) 0%,rgba(216,245,250,0.5) 100%)"
                 }}           
             >
-                <div className='px-2 md:px-4 md:pl-36 py-8 md:py-16'>
+                <div className='px-2 md:px-4 md:pl-56 py-8 md:py-16' id="description">
                     <h3 className='text-darker mb-5 font-bold italic'>THE AMYGDALOIDS</h3>
                     <p className='text-darker'>The Amygdaloids are a New York City band made up of scientists who shed their scientific garb at night and take to the stage with songs about love and life peppered with insights drawn from research about mind and brain and mental disorders. NYU neuroscientist Joseph LeDoux, a pioneer in the study of the brain mechanisms of emotion and memory, is the lead singer, songwriter and rhythm guitarist. He is the best-selling author of two books, <i>The Emotional Brain</i> and <i>Synaptic Self</i>. <i>Theory of My Mind</i>, their second CD, was released in 2010 and features Grammy Award winner Rosanne Cash on backing vocals for two songs (<i>Mind Over Matter</i>, and <i>Crime of Passion</i>).  
                     </p>
@@ -116,16 +106,16 @@ export default function MusicianPage(){
             </section>
 
             <section id="gallery" className="container px-4 py-12 mx-auto max-w-4xl">
-                <h2 className="text-2xl font-bold mb-4">Gallery</h2>
+                <h2 className="text-2xl font-bold mb-4 tracking-wider">Gallery</h2>
                 {/* Replace the following with your carousel implementation */}
-                <div className="border p-4 rounded shadow">
-                <p>Gallery Carousel Placeholder</p>
+                <div>
+                <ImageGallery images={imageNames} folder="musicianPictures"/>
                 </div>
             </section>
             <section className="container px-4 mx-auto max-w-4xl">
-                <Link href="/media/musician" className='text-dark font-bold hover:opacity-75'>
+                <Link href="#description" className='text-dark font-bold hover:opacity-75'>
                     <ArrowLongRightIcon className='inline h-4 w-5'/>
-                    <i>Go to MEDIA </i>
+                    <i>Go to top </i>
                 </Link>
             </section>
 

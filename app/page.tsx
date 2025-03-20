@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Script from 'next/script';
+import Link from 'next/link';
 
 export default function Home() {
   const [isDesktop, setIsDesktop] = useState(false);
@@ -52,20 +53,20 @@ export default function Home() {
         <div 
           className="absolute transform -translate-x-1/2 -translate-y-1/2 left-[22%] top-[15%] md:left-[28%] md:top-[17%]"
         >
-          <span className='font-cardo text-white tracking-wide font-xs md:font-lg'>NEUROSCIENTIST</span>
+          <Link href="/neuroscientist" className='font-cardo text-white tracking-wide font-xs md:font-lg'>NEUROSCIENTIST</Link>
         </div>
 
         <div 
           className="absolute transform -translate-x-1/2 -translate-y-1/2 left-[55%] top-[15%] md:left-[50%] md:top-[17%]"
         >
-          <span className='font-cardo text-white tracking-wide font-xs md:font-lg'>AUTHOR</span>
+          <Link href='/author' className='font-cardo text-white tracking-wide font-xs md:font-lg'>AUTHOR</Link>
         </div>
 
         <div 
           className="absolute transform -translate-x-1/2 -translate-y-1/2 left-[82%] top-[15%] md:left-[72%] md:top-[17%]"
 
         >
-          <span className='font-cardo text-white tracking-wide font-xs md:font-lg'>MUSICIAN</span>
+          <Link href='/musician' className='font-cardo text-white tracking-wide font-xs md:font-lg'>MUSICIAN</Link>
         </div>
 
         {isDesktop ? (

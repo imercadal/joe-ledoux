@@ -1,9 +1,10 @@
-import PublicationList from "./PublicationsList";
-import { Publication } from './publication-data';
+import ImageGrid from '../components/ImageGrid';
+import { Publication } from './publications/publication-data';
 
 export const dynamic = 'force-dynamic';
 
 export default async function NeuroscientistPage(){
+    const imageNames=["SciencePhoto_1", "SciencePhoto_2", "SciencePhoto_3", "SciencePhoto_4", "SciencePhoto_5", "SciencePhoto_6", "SciencePhoto_7", "SciencePhoto_8", "SciencePhoto_9"]
  
     let response;
     try { 
@@ -45,31 +46,8 @@ export default async function NeuroscientistPage(){
         .sort((a, b) => b - a);
 
     return(
-        <main>
-            <div className="relative h-40 bg-cover bg-center bg-[url('/210_Neuro_Pubs.webp')] flex items-center justify-center">
-                <h3 className="font-bold">PUBLICATIONS</h3>
-            </div>
-
-            {/* Navigation for Years */}
-            <div className="h-12 flex justify-center items-center bg-lightAccent">
-                <ul className="flex gap-4 text-xs text-accent font-azeret">
-                    {years.map((year) => (
-                        <li key={year} className='hover:underline'>
-                            <a href={`#year-${year}`}>{year}</a>
-                        </li>
-                    ))}
-                </ul>
-            </div>
-
-            {/* Lecture Groups by Year */}
-            <div className='px-12 py-6 md:px-64 text-lightText bg-darkest'>
-                {years.map((year) => (
-                    <div key={year} id={`year-${year}`} className='mb-8'>
-                        <p className="mb-4 px-1 inline-block text-sm font-azeret font-bold bg-accent text-lightText">{year}</p>
-                        <PublicationList publications={ publicationsByYear[year] }/>
-                    </div>
-                ))}
-            </div>
+        <main className='p-4'>
+            <ImageGrid images={imageNames} folder="scientistPictures" />
         </main>
     )
 }
