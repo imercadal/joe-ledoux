@@ -188,7 +188,7 @@ export default function Navbar() {
               <Link
                 key={media.label}
                 href={media.href ?? "#"}
-                className="px-3 py-1 text-xs text-gray-600 hover:text-dark"
+                className="px-3 py-1 text-xs text-darkest hover:text-dark"
               >
                 {media.label}
               </Link>
