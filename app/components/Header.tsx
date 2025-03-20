@@ -133,9 +133,20 @@ export default function Navbar() {
         <div className="hidden md:flex md:gap-x-12 my-2 items-center">
           {mainNavItems.map((item) => (
             <div key={item.label} className="relative group">
-              <Link href={item.href ?? "#"} className="font-medium text-accent underline-offset-8 hover:underline hover:opacity-75 flex items-center">
-                {item.label}
-              </Link>
+<Link 
+  href={item.href ?? "#"} 
+  className={`
+    font-medium text-accent underline-offset-8 flex items-center hover:opacity-75 
+    hover:relative hover:before:content-[''] hover:before:absolute hover:before:bottom-[-4px] hover:before:left-[25%] hover:before:w-[50%] hover:before:h-px hover:before:border-b hover:before:border-accent
+    ${ item.href && 
+      (pathname === item.href || pathname.startsWith(item.href + "/"))
+      ? "relative before:content-[''] before:absolute before:bottom-[-4px] before:left-[25%] before:w-[50%] before:h-[2px] before:border-b before:border-accent"
+      : ""
+    }
+  `}
+>
+  {item.label}
+</Link>
             </div>
           ))}
         </div>

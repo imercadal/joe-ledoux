@@ -44,7 +44,7 @@ export default function BookContentTabs({ book }: BookContentTabsProps) {
             activeTab === "citations" ? "font-bold underline underline-offset-8" : ""
           }`}
         >
-            Citations
+            Bibliography & Notes
         </button>
       </nav>
 
