@@ -1,4 +1,4 @@
-import { Publication } from './publications/publication-data';
+import { Publication } from './publication-data';
 
 export default function PublicationList({ publications }: { publications: Publication[]}) {
     return(
