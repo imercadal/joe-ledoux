@@ -1,5 +1,6 @@
 import PublicationList from "./PublicationsList";
 import { Publication } from './publication-data';
+import ScrollToTopButton from "@/app/components/ScrollToTop";
 
 export const dynamic = 'force-dynamic';
 
@@ -51,8 +52,8 @@ export default async function PublicationsPage(){
             </div>
 
             {/* Navigation for Years */}
-            <div className="h-12 sticky top-0 flex justify-center items-center bg-lightAccent">
-                <ul className="flex gap-4 text-xs text-accent font-azeret">
+            <div className="sticky top-0 py-2 md:py-3 flex justify-center items-center bg-lightAccent">
+                <ul className="flex flex-wrap gap-x-4 gap-y-2 w-full mx-auto max-w-2xl justify-center text-xs text-accent font-azeret">
                     {years.map((year) => (
                         <li key={year} className='hover:underline'>
                             <a href={`#year-${year}`}>{year}</a>
@@ -70,6 +71,7 @@ export default async function PublicationsPage(){
                     </div>
                 ))}
             </div>
+            <ScrollToTopButton />
         </main>
     )
 }

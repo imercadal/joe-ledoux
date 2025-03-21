@@ -11,7 +11,7 @@ export default function PublicationList({ publications }: { publications: Public
                         rel='noopener noreferrer'
                     >
                         <p>{publication.authors}.</p>
-                        <p><strong>{publication.title}</strong>. {publication.date.toLocaleDateString('en-US', { month: 'long', day: 'numeric' })}.</p>
+                        <p><strong>{publication.title}</strong>, {publication.journal}, {publication.date.toLocaleDateString('en-US', { month: 'long', day: 'numeric' })}.</p>
                     </a>
                 </div>
                 
