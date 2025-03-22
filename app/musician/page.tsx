@@ -1,6 +1,8 @@
 import AlbumList from './AlbumList';
-import ImageGallery from '../components/ImageGallery';
 import { albums } from './album-data';
+import ShowList from './ShowList';
+import { shows } from './show-data';
+import ImageGallery from '../components/ImageGallery';
 import { ArrowLongRightIcon } from "@heroicons/react/16/solid";
 import Link from 'next/link';
 import Image from 'next/image';
@@ -68,41 +70,7 @@ export default function MusicianPage(){
 
             <section id="shows" className="container px-4 my-6 md:my-12 py-6 md:py-12 mx-auto flex-col justify-center max-w-4xl">
                 <h2 className="text-2xl font-bold mb-4">Shows</h2>
-                <ul role="list" className="grid grid-cols-1 gap-x-4 gap-y-8 md:grid-cols-3 sm:gap-x-6 xl:gap-x-8">
-                    <li className="sm:flex border p-4 rounded shadow">
-                        <div>
-                            <p>Date of show</p>
-                            <p>BAND NAME</p>
-                            <h4 className="text-lg font-bold">Show 1</h4>
-                            <p className="mt-1">
-                            Repudiandae sint consequuntur vel. Amet ut nobis explicabo numquam expedita quia omnis voluptatem. Minus
-                            quidem ipsam quia iusto.
-                            </p>
-                        </div>
-                    </li>
-                    <li className="sm:flex border p-4 rounded shadow">
-                        <div>
-                            <p>Date of show</p>
-                            <p>BAND NAME</p>
-                            <h4 className="text-lg font-bold">Show 2</h4>
-                            <p className="mt-1">
-                            Repudiandae sint consequuntur vel. Amet ut nobis explicabo numquam expedita quia omnis voluptatem. Minus
-                            quidem ipsam quia iusto.
-                            </p>
-                        </div>
-                    </li>
-                    <li className="sm:flex border p-4 rounded shadow">
-                        <div>
-                            <p>Date of show</p>
-                            <p>BAND NAME</p>
-                            <h4 className="text-lg font-bold">Show 3</h4>
-                            <p className="mt-1">
-                            Repudiandae sint consequuntur vel. Amet ut nobis explicabo numquam expedita quia omnis voluptatem. Minus
-                            quidem ipsam quia iusto.
-                            </p>
-                        </div>
-                    </li>
-                </ul>
+                <ShowList shows={ shows }/>
             </section>
 
             <section id="gallery" className="container px-4 py-12 mx-auto max-w-4xl">
