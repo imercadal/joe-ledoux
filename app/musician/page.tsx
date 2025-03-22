@@ -64,16 +64,17 @@ export default function MusicianPage(){
                 </div>
             </div>
       </div>
-            <section id="albums">
+            <section id="albums" className='container mt-4 md:mt-8 py-3 max-w-4xl mx-auto'>
+                <h2 className="text-2xl font-bold px-4 ">Albums</h2>
                 <AlbumList albums={ albums }/>
             </section>
 
-            <section id="shows" className="container px-4 my-6 md:my-12 py-6 md:py-12 mx-auto flex-col justify-center max-w-4xl">
+            <section id="shows" className="container px-4 my-4 py-3 md:py-6 mx-auto flex-col justify-center max-w-4xl">
                 <h2 className="text-2xl font-bold mb-4">Shows</h2>
                 <ShowList shows={ shows }/>
             </section>
 
-            <section id="gallery" className="container px-4 py-12 mx-auto max-w-4xl">
+            <section id="gallery" className="container px-4 py-6 mx-auto max-w-4xl mb-4">
                 <h2 className="text-2xl font-bold mb-4 tracking-wider">Gallery</h2>
                 {/* Replace the following with your carousel implementation */}
                 <div>
@@ -81,7 +82,7 @@ export default function MusicianPage(){
                 </div>
             </section>
             <section className="container px-4 mx-auto max-w-4xl">
-                <Link href="#description" className='text-dark font-bold hover:opacity-75'>
+                <Link href="#description" className='text-accent font-bold hover:opacity-75'>
                     <ArrowLongRightIcon className='inline h-4 w-5'/>
                     <i>Go to top </i>
                 </Link>

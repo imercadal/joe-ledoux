@@ -7,9 +7,10 @@ export default function ShowList({ shows }: {shows: Show[]}){
 
                 <li key={show._id} className="sm:flex border p-4 rounded shadow">
                 <div>
-                    <p>{show.date.toLocaleDateString('en-US', { month: 'long', day: 'numeric' })} · <i>{show.band}</i></p>
+                    <p><strong>{show.date.toLocaleDateString('en-US', { month: 'long', day: 'numeric' })} {show.date.toLocaleTimeString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true }).replace(' ', '').toLowerCase()}</strong></p>
+                    <p className='text-xs mb-2'>{show.band}</p>
                     <h4 className="text-lg font-bold">{show.title}</h4>
-                    <h2>{show.venue}</h2>
+                    <h2 className='mb-2'>{show.venue}</h2>
                     <p className='text-xs'>{show.address ? show.address : null }</p>
                     <p className="text-xs mt-1">
                     {show.notes}
