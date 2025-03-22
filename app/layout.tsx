@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import NewsBanner from "./components/NewsBanner";
+import ClientCopyHandler from "./components/ClientCopyHandler";
 
 
 export const metadata: Metadata = {
@@ -23,6 +24,7 @@ export default function RootLayout({
       >
         <NewsBanner />
         <Header />
+        <ClientCopyHandler />
         {children}
         <Footer />
       </body>
