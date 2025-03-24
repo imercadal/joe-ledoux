@@ -53,7 +53,7 @@ export const albums: Album[] = [{
     id: "1",
     title: "Heavy Mental",
     year: 2007,
-    coverUrl: "/411_Cover_Heavy_Mental.webp",
+    coverUrl: "/411_Cover_Heavy_Mental-2.webp",
     links: [
         { platform: "Spotify", url: "https://open.spotify.com/intl-es/album/0ry3qLWCnI1AlLdb8vzM5M?si=sorSby70QGqtHbvWMfArKA" },
         { platform: "AppleMusic", url: "https://music.apple.com/album/xyz" },

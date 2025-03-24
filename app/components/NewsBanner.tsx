@@ -45,7 +45,7 @@ export default function NewsBanner() {
           <svg viewBox="0 0 2 2" aria-hidden="true" className="mx-2 inline size-0.5 fill-current">
             <circle r={1} cx={1} cy={1} />
           </svg>
-          The Neuroscience Behind Doors
+          <i>Starting Over</i>
         </p>
         <a
           href="#"

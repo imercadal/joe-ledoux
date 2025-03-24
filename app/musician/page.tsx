@@ -19,14 +19,25 @@ export default function MusicianPage(){
             >
             <div className='relative w-2/5'></div>
             <div 
-                className="relative md:w-4/5 items-center bg-lightAccent bg-opacity-50 lg:px-24 md:pw-20 px-10 md:py-12 py-10 flex justify-start text-lightText"
+                className="relative md:w-4/5 items-center bg-lightAccent bg-opacity-100 lg:px-24 md:pw-20 px-10 md:py-12 py-10 flex justify-start text-lightText"
                 style={{
-                    background: "linear-gradient(to right, rgba(216,245,250,0) 0%,rgba(216,245,250,0.5) 100%)"
+                    background: "linear-gradient(to right, rgba(216,245,250,0) 0%, rgba(216,245,250,0.7) 40%,rgba(216,245,250,0.8) 100%)"
                 }}           
             >
-                <div className='px-2 md:px-4 md:pl-56 py-8 md:py-16' id="description">
+                <div className='px-2 md:px-4 md:pl-44 py-8 md:py-16 pt-24' id="description">
                     <h3 className='text-darker mb-5 font-bold italic'>THE AMYGDALOIDS</h3>
-                    <p className='text-darker'>The Amygdaloids are a New York City band made up of scientists who shed their scientific garb at night and take to the stage with songs about love and life peppered with insights drawn from research about mind and brain and mental disorders. NYU neuroscientist Joseph LeDoux, a pioneer in the study of the brain mechanisms of emotion and memory, is the lead singer, songwriter and rhythm guitarist. He is the best-selling author of two books, <i>The Emotional Brain</i> and <i>Synaptic Self</i>. <i>Theory of My Mind</i>, their second CD, was released in 2010 and features Grammy Award winner Rosanne Cash on backing vocals for two songs (<i>Mind Over Matter</i>, and <i>Crime of Passion</i>).  
+                    <p className='text-darker leading-6'>The Amygdaloids are a New York City band formed in 2006, and made up of
+scientists at New York University: Jospeh LeDoux (guitar, singer, song writer);
+Tyler Volk (led guitar); Daniela Schiller (drums), and Nina Curly (bass). They
+created their own genera, <i>Heavy MeNtal</i>, love songs about mind and brain and
+mental disorders, and released five albums of such songs between 2007 and
+2015. The bass position has changed over the years in the hands of Gerald
+McCollum, Amanda Thorpe, and Colin Dempsey. The band has played with
+such musicians as Rosanne Cash, Lenny Kaye (Patti Smith Group), Eric Ambel
+(Joan Jett and the Blackhearts), Richard Barone (the Bongos), and others.
+The band continues to perform, especially LeDoux and Dempsey. And
+when LeDoux is invited to give lectures on his work he is often asked to also play
+his music. He and Dempsey have traveled the world spreading their Heavy Meatal, gospel. The Amygdaloids have been continuously written about extensively and featured on many podcasts. LeDoux’s songs have also been the basis of a musical called Map of Your Mind, and appear in Werner Herzog’s 2024 documentary, <i>Theatre of Thought</i>. Hi blending pop music and neuroscience led to him receive the 2023 Music has Power Award, and his life, work and music are the subject of a documentary on Amazon called “Neuroscience and Emotions”.  
                     </p>
                     <ul className='flex mt-3 md:mt-6 py-2 gap-4'>
                             <li>
@@ -90,12 +101,4 @@ export default function MusicianPage(){
 
         </main>
     )
-}
-
-/*
-    <div
-        className={`absolute inset-0 bg-cover bg-center h-4/5`}
-        style={{ backgroundImage: `url(/410_Music_Amygdaloids.webp)` }}
-    />
- */
-
+};

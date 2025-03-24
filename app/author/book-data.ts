@@ -1,6 +1,7 @@
 export interface Review {
     content: string;
     author: string;
+    date?: Date;
     reviewUrl: string;
 }
   
@@ -28,11 +29,8 @@ export interface Book {
     synopsis: string;
     imageUrl: string;
     bannerUrl: string;
-    allCitationsDownload: string;
-    citationsByPartDownload: string;
-    notesDownload: string;
-    reviews: Review[];
-    advancedPraise: AdvancedPraise[];
+    reviews?: Review[];
+    advancedPraise?: AdvancedPraise[];
     stores: Store[];
     documents?: Document[];
 }
