@@ -8,7 +8,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 export default function MusicianPage(){
-    const imageNames = ["MusicPhoto_1", "MusicPhoto_2", "MusicPhoto_3-2", "MusicPhoto_4-2", "MusicPhoto_5", "MusicPhoto_6", "MusicPhoto_7", "MusicPhoto_8", "MusicPhoto_9"];
+    const imageNames = ["MusicPhoto_1", "MusicPhoto_2", "MusicPhoto_3", "MusicPhoto_4", "MusicPhoto_5", "MusicPhoto_6", "MusicPhoto_7", "MusicPhoto_8", "MusicPhoto_9"];
 
     return(
         <main className='bg-lightText pb-8'>
