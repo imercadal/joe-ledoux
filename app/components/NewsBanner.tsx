@@ -48,10 +48,10 @@ export default function NewsBanner() {
           <i>Starting Over</i>
         </p>
         <a
-          href="#"
+          href="/author/67e455e79d343bd2f8bfe258"
           className="flex-none rounded-full bg-accent px-3.5 py-1 text-xs font-semibold text-white shadow-xs hover:bg-subMenu focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900"
         >
-          Pre-order now <span aria-hidden="true">&rarr;</span>
+          Read more <span aria-hidden="true">&rarr;</span>
         </a>
       </div>
 

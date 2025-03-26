@@ -56,9 +56,11 @@ params,
         <div className='flex justify-center mx-auto max-w-5xl pb-16 gap-6'>
             <BookContentTabs book={book} />
             {/*Side bar with links */}
+            {book.stores && book.stores.length > 0 && (
             <div className="w-[12.5%] pt-16 sticky flex flex-col items-start">
                 <h6 className="text-accent text-sm font-bold mb-4">Get the book</h6>
-                {book.stores.map((store: Store, index: number) => (
+
+                {(book.stores ?? []).map((store: Store, index: number) => (
                     <a 
                     key={index} 
                     href={store.url} 
@@ -76,65 +78,10 @@ params,
                     </a>
                 ))}
             </div>
-
+            )}
+            
         </div>
 
         </main>
     )
 };
-
-/*bg-darker ring-1 ring-darkest ring-inset  
-
-
-        {/* The Book - Praise - Citations *
-        <nav className="isolate w-2/5 mx-auto pb-6 flex justify-around items-center shadow-xs text-accent">
-            <button
-                type="button"
-                className="py-2 w-full relative inline-flex items-center text-sm font-bold hover:bg-darkest focus:z-10"
-            >
-                The Book
-            </button>
-            <button
-                type="button"
-                className="px-6 py-2 w-full relative -ml-px inline-flex items-center text-sm font-bold hover:bg-darkest focus:z-10"
-            >
-                Praise 
-            </button>
-
-            <a
-                href="/LeDoux_CV.pdf"
-                className="px-6 py-2 w-full relative -ml-px inline-flex items-center text-sm font-bold hover:bg-darkest focus:z-10"
-            >
-                Citations
-            </a>
-        </nav>
-
-                {/*Content *
-                <div className='w-3/5 ml-24 md:flex'>
-                
-                    <div className='w-2/5'>
-                        <Image src={`/${book.imageUrl}`} alt={`${book.title} cover`} height={1000} width={663} className='object-contain'/>
-                    </div>
-                    <div className='w-3/5 ml-8 mr-2'>
-                        <p className='text-lightText'>{book.synopsis}</p>
-                        <div className='pt-4 flex justify-center'>
-                            <BookReviews reviews={book.reviews} />
-                        </div>
-
-
-                    </div>
-                    
-
-                </div>
-
-                            <section className='w-3/5 mx-auto text-lightText pb-6'>
-                {book.advancedPraise.map((advancedPraise, index) => (
-                    <div key={index} className='my-8 flex flex-col gap-2'>
-                        <p className='self-center italic'>{`"${advancedPraise.praise}"`}</p>
-                        <p className='self-end'>{advancedPraise.author}{advancedPraise.role}</p>
-                    </div>
-                ))}
-
-
-            </section>
-*/

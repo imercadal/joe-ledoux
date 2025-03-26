@@ -31,7 +31,7 @@ export interface Book {
     bannerUrl: string;
     reviews?: Review[];
     advancedPraise?: AdvancedPraise[];
-    stores: Store[];
+    stores?: Store[];
     documents?: Document[];
 }
 

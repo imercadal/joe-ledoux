@@ -92,7 +92,7 @@ export default function ImageGrid({ images, folder }: ImageGridProps){
                             </button>
                             <img 
                                 alt="Selected gallery photo"
-                                src={`/${folder}/${selectedImage}.jpg`}
+                                src={`/${folder}/${selectedImage}.png`}
                                 className="h-[30rem] w-full object-cover object-top rounded-lg object-center"
                             />
                         </div>
@@ -109,7 +109,7 @@ export default function ImageGrid({ images, folder }: ImageGridProps){
             >
                 <img 
                     className="h-40 w-full max-w-full rounded-lg object-cover object-top" 
-                    src={`/${folder}/${img}.jpg`}
+                    src={`/${folder}/${img}.png`}
                     alt="gallery-photo" />
             </div>
             ))}

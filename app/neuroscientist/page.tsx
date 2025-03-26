@@ -1,11 +1,62 @@
 import ImageGrid from '../components/ImageGrid';
+import NeuroImageGrid from './NeuroImageGrid';
 import { Publication } from './publications/publication-data';
 
 export const dynamic = 'force-dynamic';
 
 export default async function NeuroscientistPage(){
-    const imageNames=["SciencePhoto_1", "SciencePhoto_2", "SciencePhoto_3", "SciencePhoto_4", "SciencePhoto_5", "SciencePhoto_6", "SciencePhoto_7", "SciencePhoto_8", "SciencePhoto_9"]
- 
+    const images = [
+        {
+            id: "1",
+            src: "/scientistPictures/SciencePhoto_1.png",
+            alt: "Microscope",
+            width: 2240,
+            height: 1075,
+        },
+        {
+            id: "2",
+            src: "/scientistPictures/SciencePhoto_2.png",
+            alt: "Microscope",
+            width: 1168,
+            height: 1064,
+        },
+        {
+            id: "3",
+            src: "/scientistPictures/SciencePhoto_3.png",
+            alt: "Microscope",
+            width: 436,
+            height: 542,
+        },
+        {
+            id: "4",
+            src: "/scientistPictures/SciencePhoto_4.png",
+            alt: "Microscope",
+            width: 1272,
+            height: 1032,
+        },
+        {
+            id: "5",
+            src: "/scientistPictures/SciencePhoto_5.png",
+            alt: "Microscope",
+            width: 1234,
+            height: 986,
+        },
+        {
+            id: "6",
+            src: "/scientistPictures/SciencePhoto_6.png",
+            alt: "Microscope",
+            width: 462,
+            height: 482,
+        },
+        {
+            id: "7",
+            src: "/scientistPictures/SciencePhoto_7.png",
+            alt: "Microscope",
+            width: 1006,
+            height: 754,
+        },
+    ]
+
     let response;
     try { 
         response = await fetch(process.env.NEXT_PUBLIC_SITE_URL + '/api/publications');
@@ -47,7 +98,7 @@ export default async function NeuroscientistPage(){
 
     return(
         <main className='p-4'>
-            <ImageGrid images={imageNames} folder="scientistPictures" />
+            <NeuroImageGrid images={images} />
         </main>
     )
 }
