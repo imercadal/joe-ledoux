@@ -116,7 +116,7 @@ export default function Navbar() {
       <nav className="mx-auto max-w-4xl flex md:flex-col items-center justify-between pt-4 pb-1 lg:px-8">
         <div className="pt-3">
           <Link href="/" className="text-lg font-extrabold text-dark">
-            <h1>JOSEPH LEDOUX</h1>
+            <h1>Joseph LeDoux</h1>
           </Link>
         </div>
         {/* Mobile menu button */}
