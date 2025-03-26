@@ -52,7 +52,7 @@ export default async function PublicationsPage(){
             </div>
 
             {/* Navigation for Years */}
-            <div className="sticky top-0 py-2 md:py-3 flex justify-center items-center bg-lightAccent">
+            <div className="sticky top-0 py-2 md:py-3 px-4 md:px-0 flex justify-center items-center bg-lightAccent">
                 <ul className="flex flex-wrap gap-x-4 gap-y-2 w-full mx-auto max-w-2xl justify-center text-xs text-accent font-azeret">
                     {years.map((year) => (
                         <li key={year} className='hover:underline'>

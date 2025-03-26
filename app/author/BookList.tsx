@@ -6,7 +6,7 @@ import { ArrowLongRightIcon } from "@heroicons/react/16/solid";
 export default function BookList({ books }: { books: Book[]}) {
 
     return(
-        <main className='container grid grid-cols-2 mx-auto max-w-4xl pb-6 gap-12 items-start justify-center'> 
+        <main className='container px-3 md:px-0 grid grid-cols-1 sm:grid-cols-2 mx-auto max-w-4xl pb-6 gap-12 items-start justify-center'> 
             {[...books]
             .sort((a, b) => b.year - a.year)
             .map((book) => (

@@ -42,16 +42,14 @@ export default function NewsBanner() {
       <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
         <p className="text-xs text-lightText">
           <strong className="font-semibold">New book coming soon!</strong>
-          <svg viewBox="0 0 2 2" aria-hidden="true" className="mx-2 inline size-0.5 fill-current">
-            <circle r={1} cx={1} cy={1} />
-          </svg>
-          <i>Starting Over</i>
+          <i></i>
         </p>
         <a
           href="/author/67e455e79d343bd2f8bfe258"
-          className="flex-none rounded-full bg-accent px-3.5 py-1 text-xs font-semibold text-white shadow-xs hover:bg-subMenu focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900"
+          className="flex-none italic rounded-full bg-accent px-3.5 py-1 text-xs font-semibold text-white shadow-xs hover:bg-subMenu focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900"
         >
-          Read more <span aria-hidden="true">&rarr;</span>
+          &rarr;
+          Starting Over <span aria-hidden="true"></span>
         </a>
       </div>
 

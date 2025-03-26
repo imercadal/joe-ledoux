@@ -113,10 +113,10 @@ export default function Navbar() {
   return (
     <header className="bg-white shadow-md z-50">
       {/* Desktop Navigation */}
-      <nav className="mx-auto max-w-4xl flex md:flex-col items-center justify-between pt-4 pb-1 lg:px-8">
-        <div className="pt-3">
-          <Link href="/" className="text-lg font-extrabold text-dark">
-            <h1>Joseph LeDoux</h1>
+      <nav className="mx-auto max-w-4xl flex md:flex-col items-center justify-between pt-4 pb-1 px-4 lg:px-8">
+        <div className="pt-3 pb-3 md:pb-0">
+          <Link href="/" className="font-extrabold text-dark">
+            <h1 className="text-3xl">Joseph LeDoux</h1>
           </Link>
         </div>
         {/* Mobile menu button */}
@@ -154,7 +154,7 @@ export default function Navbar() {
 
 {/* Horizontal Submenu Bar */}
 {activeSubmenu?.submenu && (
-  <div className="sticky top-0 bg-accent py-1 flex tracking-wide justify-center items-center shadow-md z-50">
+  <div className="sticky top-0 bg-accent py-1 flex tracking-wide justify-center items-center shadow-md z-40">
     {activeSubmenu.submenu.map((sub) => (
       <div key={sub.label} className="relative z-50">
         {sub.mediamenu ? (
@@ -213,13 +213,13 @@ export default function Navbar() {
 
 
       {/* Mobile Navigation */}
-      <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="md:hidden">
+      <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="md:hidden z-50">
         <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full max-w-sm bg-white p-6 shadow-lg">
           <nav className="mt-6">
             {mainNavItems.map((item) => (
               <Disclosure as="div" key={item.label} className="border-b border-gray-200 py-2">
                 <DisclosureButton className="flex w-full items-center justify-between text-base font-semibold text-accent hover:opacity-75">
-                  {item.label}
+                  <Link href={item.href as string}>{item.label}</Link>
                 </DisclosureButton>
               </Disclosure>
             ))}
