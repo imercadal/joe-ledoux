@@ -42,8 +42,10 @@ export default function AboutPage() {
                         <p className="flex items-center md:mt-8 mt-3 hover:opacity-75">
                             <ArrowLongRightIcon className="inline h-5 w-5 text-lightText" />
                             <a
-                                href="/LeDoux_CV.pdf"
+                                href="LeDoux_CV.pdf"
                                 download="Joe_LeDoux_CV.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="inline"
                             >
                                 <strong>View full resume</strong>

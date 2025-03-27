@@ -53,17 +53,17 @@ export default function Home() {
           </div>
 
           {/* Navigation links positioned on top of the image */}
-          <div className="absolute left-[5%] sm:left[21%] md:left-[19%] top-[20%] md:top-[12%] lg:top-[15%]">
+          <div className="absolute left-[5%] sm:left[21%] md:left-[19%] lg:left-[23%] top-[20%] md:top-[12%] lg:top-[15%]">
             <Link href="/neuroscientist" className="font-cardo text-white tracking-wide text-xs sm:text-lg">
               NEUROSCIENTIST
             </Link>
           </div>
-          <div className="absolute left-[42%] sm:left-[44%] top-[20%] md:top-[12%] lg:top-[15%]">
+          <div className="absolute left-[42%] sm:left-[44%] lg:left-[46.5%] top-[20%] md:top-[12%] lg:top-[15%]">
             <Link href="/author" className="font-cardo text-white tracking-wide text-xs sm:text-lg">
               AUTHOR
             </Link>
           </div>
-          <div className="absolute left-[75%] sm:left-[77%] md:left-[65%] top-[20%] md:top-[12%] lg:top-[15%]">
+          <div className="absolute left-[75%] sm:left-[77%] md:left-[65%] lg:left-[67.5%] top-[20%] md:top-[12%] lg:top-[15%]">
             <Link href="/musician" className="font-cardo text-white tracking-wide text-xs sm:text-lg">
               MUSICIAN
             </Link>

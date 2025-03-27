@@ -107,9 +107,6 @@ export default function Navbar() {
     setActiveSubmenu(parentNavItem || null);
   }, [pathname]);
 
-  console.log("Active Submenu:", activeSubmenu);
-  console.log("Current Pathname:", pathname);
-
   return (
     <header className="bg-white shadow-md z-50">
       {/* Desktop Navigation */}
