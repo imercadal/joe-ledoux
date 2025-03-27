@@ -12,7 +12,7 @@ import Image from 'next/image';
 
 export default function MusicianPage(){
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const imageNames = ["MusicPhoto_1", "MusicPhoto_2", "MusicPhoto_3", "MusicPhoto_4", "MusicPhoto_5", "MusicPhoto_6", "MusicPhoto_7", "MusicPhoto_8", "MusicPhoto_9"];
+    const imageNames = ["MusicPhoto_1", "MusicPhoto_2", "MusicPhoto_3", "MusicPhoto_4", "MusicPhoto_5", "MusicPhoto_6", "MusicPhoto_7", "MusicPhoto_8", "MusicPhoto_9", "MusicPhoto_10", "MusicPhoto_11", "MusicPhoto_12", "MusicPhoto_13", "MusicPhoto_14"];
 
     return(
         <main className='bg-lightText pb-8'>
