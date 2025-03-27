@@ -83,7 +83,7 @@ export default function NeuroImageGrid({images, className = ""}: PhotoGalleryPro
               alt={selectedPhoto.alt}
               width={selectedPhoto.width}
               height={selectedPhoto.height}
-              className="object-contain w-full h-full"
+              className="object-contain rounded-lg w-full h-full"
             />
           </div>
         </div>

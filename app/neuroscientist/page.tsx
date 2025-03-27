@@ -17,8 +17,8 @@ export default async function NeuroscientistPage(){
             id: "2",
             src: "/scientistPictures/SciencePhoto_2.png",
             alt: "Picture of Snake",
-            width: 2450,
-            height: 2233,
+            width: 2448,
+            height: 2231,
         },
         {
             id: "3",
