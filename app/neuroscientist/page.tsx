@@ -9,16 +9,16 @@ export default async function NeuroscientistPage(){
         {
             id: "1",
             src: "/scientistPictures/SciencePhoto_1.png",
-            alt: "Microscope",
-            width: 2240,
-            height: 1075,
+            alt: "Picture of Molecules",
+            width: 1120, 
+            height: 537,
         },
         {
             id: "2",
             src: "/scientistPictures/SciencePhoto_2.png",
-            alt: "Microscope",
-            width: 1168,
-            height: 1064,
+            alt: "Picture of Snake",
+            width: 2336,
+            height: 2128,
         },
         {
             id: "3",
@@ -44,7 +44,7 @@ export default async function NeuroscientistPage(){
         {
             id: "6",
             src: "/scientistPictures/SciencePhoto_6.png",
-            alt: "Microscope",
+            alt: "Picture of Tissue under Microscope",
             width: 462,
             height: 482,
         },
@@ -97,7 +97,7 @@ export default async function NeuroscientistPage(){
         .sort((a, b) => b - a);
 
     return(
-        <main className='p-4'>
+        <main className='p-4 bg-lightText'>
             <NeuroImageGrid images={images} />
         </main>
     )

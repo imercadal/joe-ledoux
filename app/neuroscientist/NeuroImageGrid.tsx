@@ -23,18 +23,27 @@ export default function NeuroImageGrid({images, className = ""}: PhotoGalleryPro
     const getSpanSize = (width: number, height: number) => {
         const aspectRatio = width / height
     
-        if (aspectRatio > 1.5) return "col-span-2" // Wide images
-        if (aspectRatio < 0.7) return "row-span-2" // Tall images
-        return "" // Standard images
+        if (aspectRatio > 1.5)  return "col-span-2"
+        if (aspectRatio < 0.7) return "row-span-2" 
+        return ""
     }
 
     return(
 <div className={`w-full max-w-4xl mx-auto ${className}`}>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 auto-rows-min">
-        {images.map((image) => (
+        {images.map((image) => {
+          let spanClass = "";
+          if (image.id === "1") {
+            spanClass = "col-span-1";
+          } else if (image.id === "2") {
+            spanClass = "col-span-2";
+          } else {
+            spanClass = getSpanSize(image.width, image.height);
+          }
+          return(
           <div
             key={image.id}
-            className={`relative overflow-hidden rounded-lg cursor-pointer transition-transform hover:scale-[1.02] ${getSpanSize(image.width, image.height)}`}
+            className={`relative overflow-hidden rounded-lg cursor-pointer transition-transform hover:scale-[1.02] ${spanClass}`}
             onClick={() => setSelectedPhoto(image)}
           >
             <div className="aspect-[auto] h-full w-full">
@@ -47,7 +56,8 @@ export default function NeuroImageGrid({images, className = ""}: PhotoGalleryPro
               />
             </div>
           </div>
-        ))}
+          )
+        })}
       </div>
 
       {/* Lightbox for selected image */}
