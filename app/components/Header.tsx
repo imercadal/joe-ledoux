@@ -108,16 +108,16 @@ export default function Navbar() {
   }, [pathname]);
 
   return (
-    <header className="bg-white shadow-md z-50">
+    <header className="relative bg-white shadow-md z-50">
       {/* Desktop Navigation */}
-      <nav className="mx-auto max-w-4xl flex md:flex-col items-center justify-between pt-4 pb-1 px-4 lg:px-8">
-        <div className="pt-3 pb-3 md:pb-0">
+      <nav className="mx-auto max-w-4xl flex sm:flex-col items-center justify-between pt-4 pb-1 px-4 lg:px-8">
+        <div className="pt-3 pb-3 sm:pb-0">
           <Link href="/" className="font-extrabold text-dark">
             <h1 className="text-3xl">Joseph LeDoux</h1>
           </Link>
         </div>
         {/* Mobile menu button */}
-        <div className="md:hidden">
+        <div className="sm:hidden">
           <button
             type="button"
             onClick={() => setMobileMenuOpen(true)}
@@ -127,7 +127,7 @@ export default function Navbar() {
           </button>
         </div>
         {/* Desktop Navigation */}
-        <div className="hidden md:flex md:gap-x-12 my-2 items-center">
+        <div className="hidden sm:flex sm:gap-x-12 my-2 items-center">
           {mainNavItems.map((item) => (
             <div key={item.label} className="relative group">
 <Link 
@@ -210,7 +210,7 @@ export default function Navbar() {
 
 
       {/* Mobile Navigation */}
-      <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="md:hidden z-50">
+      <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="sm:hidden z-50">
         <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full max-w-sm bg-white p-6 shadow-lg">
           <nav className="mt-6">
             {mainNavItems.map((item) => (

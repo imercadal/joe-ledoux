@@ -8,7 +8,7 @@ export default async function NeuroscientistPage(){
     const images = [
         {
             id: "1",
-            src: "/scientistPictures/SciencePhoto_1.png",
+            src: "/scientistPictures/SciencePhoto_5.png",
             alt: "Picture of Molecules",
             width: 1120, 
             height: 537,
@@ -17,8 +17,8 @@ export default async function NeuroscientistPage(){
             id: "2",
             src: "/scientistPictures/SciencePhoto_2.png",
             alt: "Picture of Snake",
-            width: 2336,
-            height: 2128,
+            width: 2450,
+            height: 2233,
         },
         {
             id: "3",
@@ -29,21 +29,21 @@ export default async function NeuroscientistPage(){
         },
         {
             id: "4",
+            src: "/scientistPictures/SciencePhoto_1.png",
+            alt: "Microscope",
+            width: 1234,
+            height: 986,
+        },
+        {
+            id: "5",
             src: "/scientistPictures/SciencePhoto_4.png",
             alt: "Microscope",
             width: 1272,
             height: 1032,
         },
         {
-            id: "5",
-            src: "/scientistPictures/SciencePhoto_5.png",
-            alt: "Microscope",
-            width: 1234,
-            height: 986,
-        },
-        {
             id: "6",
-            src: "/scientistPictures/SciencePhoto_6.png",
+            src: "/scientistPictures/SciencePhoto_8.png",
             alt: "Picture of Tissue under Microscope",
             width: 462,
             height: 482,
