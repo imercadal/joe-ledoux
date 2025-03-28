@@ -114,3 +114,14 @@ button:hover {
   opacity: 0;
   z-index: 1; /* Old image fades out below */
 }
+
+@media (min-width: 1024px) {
+  .lg-gradient {
+    background: linear-gradient(
+      to right,
+      rgba(216,245,250,0) 0%,
+      rgba(216,245,250,0.7) 40%,
+      rgba(216,245,250,0.8) 100%
+    );
+  }
+}

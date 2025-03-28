@@ -10,7 +10,7 @@ interface TagSidebarProps {
 
 export default function TagSidebar({ availableTags, selectedTags, onToggleTag }: TagSidebarProps) {
   return (
-    <aside className="w-44 py-2 md:p-4 border-r border-lightText border-opacity-75">
+    <aside className="w-24 sm:w-36 md:w-44 py-2 md:p-4 border-r border-lightText border-opacity-75">
       <h2 className="pl-2 text-sm text-lightText font-bold mb-2">Filter by Category</h2>
       <ul>
         {availableTags.map((tag) => (

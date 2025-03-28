@@ -42,7 +42,7 @@ export default function FilterableMedia({ initialMedia }: FilterableMediaProps) 
   }, [initialMedia, selectedTags]);
 
   return (
-    <div className="flex px-6 md:px-32 xl:px-56">
+    <div className="flex px-6 md:px-16 lg:px-32 xl:px-56">
       <TagSidebar
         availableTags={availableTags} 
         selectedTags={selectedTags}

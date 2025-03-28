@@ -151,9 +151,9 @@ export default function Navbar() {
 
 {/* Horizontal Submenu Bar */}
 {activeSubmenu?.submenu && (
-  <div className="sticky top-0 bg-accent py-1 flex tracking-wide justify-center items-center shadow-md z-40">
+  <div className="sticky h-8 top-0 bg-accent py-1 flex tracking-wide justify-center items-center shadow-lg z-40">
     {activeSubmenu.submenu.map((sub) => (
-      <div key={sub.label} className="relative z-50">
+      <div key={sub.label} className="relative z-40">
         {sub.mediamenu ? (
           // Render as a toggle button if a mediamenu exists.
           <button
@@ -163,7 +163,7 @@ export default function Navbar() {
                 prev === sub.label ? null : sub.label
               )
             }
-            className={`px-4 py-2 text-white text-sm ${
+            className={`px-2 sm:px-4 py-2 text-white text-xs sm:text-sm ${
               openMediaMenu === sub.label
                 ? "font-bold text-dark opacity-100"
                 : "opacity-75 hover:text-dark"
@@ -176,7 +176,7 @@ export default function Navbar() {
           // Otherwise render a normal Link.
           <Link
             href={sub.href ?? "#"}
-            className={`px-4 py-2 text-white text-sm hover:text-dark ${
+            className={`px-2 sm:px-4 py-2 text-white text-xs sm:text-sm hover:text-dark ${
               sub.href &&
               (pathname === sub.href || pathname.startsWith(sub.href + "/"))
                 ? "font-bold opacity-100"
@@ -190,7 +190,7 @@ export default function Navbar() {
         {/* Second-Level Media Submenu */}
         {sub.mediamenu && openMediaMenu === sub.label && (
           <div
-            className="absolute z-50 left-0 top-full mt-1 flex space-x-2 bg-lightAccent shadow-md px-2"
+            className="absolute z-50 left-0 -translate-y-1 top-full flex space-x-2 bg-lightAccent shadow-md px-2"
           >
             {sub.mediamenu.map((media) => (
               <Link
