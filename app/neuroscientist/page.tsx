@@ -1,6 +1,4 @@
 import ImageGrid from '../components/ImageGrid';
-import NeuroImageGrid from './NeuroImageGrid';
-import { Publication } from './publications/publication-data';
 
 export const dynamic = 'force-dynamic';
 
@@ -8,7 +6,7 @@ export default async function NeuroscientistPage(){
     const images = [
         {
             id: "1",
-            src: "/scientistPictures/SciencePhoto_5.png",
+            src: "/scientistPictures/SciencePhoto_4.png",
             alt: "Picture of Molecules",
             width: 1120, 
             height: 537,
@@ -36,7 +34,7 @@ export default async function NeuroscientistPage(){
         },
         {
             id: "5",
-            src: "/scientistPictures/SciencePhoto_4.png",
+            src: "/scientistPictures/SciencePhoto_5.png",
             alt: "Microscope",
             width: 1272,
             height: 1032,
@@ -57,48 +55,9 @@ export default async function NeuroscientistPage(){
         },
     ]
 
-    let response;
-    try { 
-        response = await fetch(process.env.NEXT_PUBLIC_SITE_URL + '/api/publications');
-    } catch (err) {
-        console.log("Network error:", err);
-        throw new Error("Network error while fetching publications")
-    }
-
-    if(!response.ok){
-        console.log("Fetch error:", response.status);
-        throw new Error(`Failed to fetch books: ${response.statusText}`)
-    }
-    
-    let publicationsData;
-    try {
-        publicationsData = await response.json()
-    } catch (err) {
-        console.error("JSON parsing error:", err);
-        throw new Error("Error parsing JSON response from API");
-    }
-
-    const publications: Publication[] = publicationsData.map((pub: Publication) => ({
-        ...pub,
-        date: new Date(pub.date),
-    }));
-
-    const publicationsByYear = publications.reduce((acc, publication) => {
-        const year = publication.date.getFullYear();
-        if (!acc[year]) {
-          acc[year] = [];
-        }
-        acc[year].push(publication);
-        return acc;
-    }, {} as Record<number, Publication[]>);
-    
-      const years = Object.keys(publicationsByYear)
-        .map(Number)
-        .sort((a, b) => b - a);
-
     return(
         <main className='p-4 bg-lightText'>
-            <NeuroImageGrid images={images} />
+            <ImageGrid images={images} />
         </main>
     )
 }
