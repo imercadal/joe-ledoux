@@ -23,8 +23,8 @@ export default function ImageGrid({images, className = ""}: PhotoGalleryProps){
   const getSpanSize = (width: number, height: number) => {
       const aspectRatio = width / height
   
-      if (aspectRatio > 1.5)  return "col-span-2"
-      if (aspectRatio < 0.7) return "row-span-2" 
+      if (aspectRatio > 1.5)  return "col-span-1 sm:col-span-2"
+      if (aspectRatio < 0.7) return "row-span-1 sm:row-span-2" 
       return ""
   }
 
@@ -60,14 +60,14 @@ export default function ImageGrid({images, className = ""}: PhotoGalleryProps){
   }, [selectedPhoto, images]);
 
     return(
-<div className={`w-full max-w-4xl mx-auto ${className}`}>
+      <div className={`w-full max-w-4xl mx-auto ${className}`}>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 auto-rows-min">
         {images.map((image) => {
           let spanClass = "";
           if (image.id === "1") {
             spanClass = "col-span-1";
           } else if (image.id === "2") {
-            spanClass = "col-span-2";
+            spanClass = "col-span-1 sm:col-span-2";
           } else {
             spanClass = getSpanSize(image.width, image.height);
           }
