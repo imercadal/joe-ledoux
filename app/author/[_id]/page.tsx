@@ -40,13 +40,13 @@ params,
 
             {/*Banner */}
             <div 
-                className="relative h-40 z-10 font-bold bg-cover bg-center flex flex-col justify-center items-center gap-1"
+                className="relative h-40 z-10 font-bold bg-cover bg-center flex flex-col justify-center items-center gap-2"
                 style={{ backgroundImage: `url(/${book.bannerUrl})` }}
             >
-                <h3 className="m-0 text-xl px-6 md:px-0 justify-center">
+                <h3 className="m-0 text-xl px-6 md:px-0 text-center">
                     <i>{book.title.toUpperCase()}</i>
                 </h3>
-                <h3 className="m-0 px-6 md:px-0 text-base">
+                <h3 className="m-0 px-16 md:px-0 text-base text-center">
                     <i>{book.subhead}</i>
                 </h3>
             </div>

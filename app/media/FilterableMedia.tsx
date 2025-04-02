@@ -48,7 +48,7 @@ export default function FilterableMedia({ initialMedia }: FilterableMediaProps) 
         selectedTags={selectedTags}
         onToggleTag={toggleTag}
       />
-      <div className="flex-1 px-4 md:px-6 py-4">
+      <div className="flex-1 px-4 md:px-6 py-0">
         <MediaList media={filteredMedia} />
       </div>
     </div>
