@@ -58,8 +58,8 @@ export default function AboutPage() {
 
       {/* Content */}
       <div className="relative z-10">
-        <div className="relative max-w-xl xl:max-w-3xl sm:w-1/2 sm:w-3/5 py-10 md:py-16 lg:py-24 flex justify-start text-lightText">
-          <div className="px-8 sm:pl-16 md:pl-24 xl:pl-56 flex flex-col justify-start">
+        <div className="relative max-w-xl xl:max-w-3xl 2xl:max-w-4xl sm:w-1/2 sm:w-3/5 py-10 md:py-16 lg:py-24 flex justify-start text-lightText">
+          <div className="px-8 sm:pl-16 md:pl-24 xl:pl-56 2xl:pl-80 flex flex-col justify-start">
             <p>
             Joseph LeDoux is neuroscientist at New York University and an elected member of the National Academy of Sciences and the American Academy of Arts and Sciences. He has received numerous awards for his work and has written a number of well-received books. His work and writings have focused on the topics of emotion, memory, and consciousness, and their interaction in the brain. He is also the lead singer and songwriter in the rock band, the Amygdaloids. His music has been the subject of a play, <i>Map of Your Mind</i>, and was featured in Werner Herzog’s 2024 film, <i>Theatre of Thought</i>. A documentary on Amazon, <i>Neuroscience and Emotions</i>, explores his Life, work and music.
             </p>
@@ -113,19 +113,9 @@ export default function AboutPage() {
                       
                       <div className="mt-4 text-center p-4">
                           <p className="leading-relaxed text-lightText">
-                              The Amygdaloids are a New York City band formed in 2006, and made up of
-                              scientists at New York University: Jospeh LeDoux (guitar, singer, song writer);
-                              Tyler Volk (led guitar); Daniela Schiller (drums), and Nina Curly (bass). They
-                              created their own genera, <i>Heavy MeNtal</i>, love songs about mind and brain and
-                              mental disorders, and released five albums of such songs between 2007 and
-                              2015. The bass position has changed over the years in the hands of Gerald
-                              McCollum, Amanda Thorpe, and Colin Dempsey. The band has played with
-                              such musicians as Rosanne Cash, Lenny Kaye (Patti Smith Group), Eric Ambel
-                              (Joan Jett and the Blackhearts), Richard Barone (the Bongos), and others.
-                              The band continues to perform, especially LeDoux and Dempsey. And
-                              when LeDoux is invited to give lectures on his work he is often asked to also play
-                              his music. He and Dempsey have traveled the world spreading their Heavy MeNtal, gospel. The Amygdaloids have been continuously written about extensively and featured on many podcasts. LeDoux’s songs have also been the basis of a musical called Map of Your Mind, and appear in Werner Herzog’s 2024 documentary, <i>Theatre of Thought</i>. Hi blending pop music and neuroscience led to him receive the 2023 Music has Power Award, and his life, work and music are the subject of a documentary on Amazon called “Neuroscience and Emotions”. 
-
+                            (Pending long bio)
+                              Joseph LeDoux is neuroscientist at New York University and an elected member of the National Academy of Sciences and the American Academy of Arts and Sciences. He has received numerous awards for his work and has written a number of well-received books. His work and writings have focused on the topics of emotion, memory, and consciousness, and their interaction in the brain. He is also the lead singer and songwriter in the rock band, the Amygdaloids. His music has been the subject of a play, <i>Map of Your Mind</i>, and was featured in Werner Herzog’s 2024 film, <i>Theatre of Thought</i>. A documentary on Amazon, <i>Neuroscience and Emotions</i>, explores his Life, work and music.
+            
                           </p>
                       </div>
                   </div>
