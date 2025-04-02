@@ -15,7 +15,7 @@ export default function BookReviews({ reviews }: {reviews: Review[]}) {
     const reviewsToShow = showAllReviews ? reviews : reviews.slice(0, 2);
     
     return (
-        <div className="w-2/3 text-lightText md:pw-12">
+        <div className="w-full lg:w-11/12 text-lightText pl-0 xl:pl-12">
           {reviewsToShow.length > 0 &&
             reviewsToShow.map((review, index) => (
               <div key={index} className="mt-6 flex flex-col gap-4">

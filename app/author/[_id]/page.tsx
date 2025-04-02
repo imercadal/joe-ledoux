@@ -1,6 +1,5 @@
 import { Book, Store } from '../book-data';
 import BookContentTabs from './BookContentTabs';
-import Image from 'next/image';
 import Link from 'next/link';
 
 export const dynamic = 'force-dynamic';
@@ -37,51 +36,26 @@ params,
     };
 
     return(
-        <main className='bg-dark'>
+        <div className='bg-dark'>
 
-        {/*Banner */}
-        <div 
-            className="relative h-40 z-10 font-bold bg-cover bg-center flex flex-col justify-center items-center gap-1"
-            style={{ backgroundImage: `url(/${book.bannerUrl})` }}
-        >
-            <h3 className="m-0 text-xl">
-                <i>{book.title.toUpperCase()}</i>
-            </h3>
-            <h3 className="m-0 text-base">
-                <i>{book.subhead}</i>
-            </h3>
-        </div>
-
-        {/*Core */}
-        <div className='flex flex-col lg:flex-row justify-center mx-auto lg:max-w-5xl pb-16 gap-6'>
-            <BookContentTabs book={book} />
-            {/*Side bar with links */}
-            {book.stores && book.stores.length > 0 && (
-            <div className="w-[12.5%] pt-16 sticky flex flex-col items-start">
-                <h6 className="text-accent text-sm font-bold mb-4">Get the book</h6>
-
-                {(book.stores ?? []).map((store: Store, index: number) => (
-                    <a 
-                    key={index} 
-                    href={store.url} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="mb-3 flex items-center hover:opacity-75"
-                    >
-                    <Image 
-                        src={storeLogos[store.name] || '/logos/default.png'} 
-                        alt={`${store.name} logo`} 
-                        width={25} 
-                        height={25} 
-                    />
-                    <p className='text-xs text-lightText ml-2'>{store.name}</p>
-                    </a>
-                ))}
+            {/*Banner */}
+            <div 
+                className="relative h-40 z-10 font-bold bg-cover bg-center flex flex-col justify-center items-center gap-1"
+                style={{ backgroundImage: `url(/${book.bannerUrl})` }}
+            >
+                <h3 className="m-0 text-xl px-6 md:px-0 justify-center">
+                    <i>{book.title.toUpperCase()}</i>
+                </h3>
+                <h3 className="m-0 px-6 md:px-0 text-base">
+                    <i>{book.subhead}</i>
+                </h3>
             </div>
-            )}
-            
-        </div>
 
-        </main>
+            {/*Core */}
+            <div className='px-6 flex flex-col'>
+                <BookContentTabs book={book} />
+            </div>
+
+        </div>
     )
 };
