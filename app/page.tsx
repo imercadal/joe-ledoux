@@ -8,7 +8,7 @@ export default function Home() {
   const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(min-width: 768px)");
+    const mediaQuery = window.matchMedia("(min-width: 1024px)");
     setIsDesktop(mediaQuery.matches);
     const handler = (e: MediaQueryListEvent) => setIsDesktop(e.matches);
     mediaQuery.addEventListener("change", handler);
@@ -28,17 +28,17 @@ export default function Home() {
       />
 
       {/* Container that wraps the image and any overlay elements */}
-      <main className="relative bg-darker p-0 gap-12 font-[family-name:Cardo, serif]">
+      <div className="relative bg-[#012D42] p-0 gap-12 font-[family-name:Cardo, serif] min-h-[calc(100vh-210px)]">
         <div className="relative">
           <picture className="block">
             {/* For medium screens and up */}
-            <source media="(min-width: 768px)" srcSet="000_Doors_Background.webp" />
+            <source media="(min-width: 1024px)" srcSet="000_Doors_Background.webp" />
             {/* For smaller screens */}
-            <source media="(max-width: 767px)" srcSet="000_Doors_Background_small.webp" />
+            <source media="(max-width: 1023px)" srcSet="000_Doors_Background_small.webp" />
             <img 
               src="000_Doors_Background.webp" 
               useMap="#image-map"
-              className="w-full h-auto md:object-cover"
+              className="w-full h-auto lg:object-cover"
               alt="Doors Background"
             />
           </picture>
@@ -53,7 +53,7 @@ export default function Home() {
           </div>
 
           {/* Navigation links positioned on top of the image */}
-          <div className="absolute left-[5%] sm:left[21%] md:left-[19%] lg:left-[23%] top-[20%] md:top-[12%] lg:top-[15%]">
+          <div className="absolute left-[5%] sm:left[21%] md:left-[18%] lg:left-[22%] xl:left-[23%] top-[20%] md:top-[12%] lg:top-[15%] xl:top-[15%]">
             <Link href="/neuroscientist" className="font-cardo text-white tracking-wide text-xs sm:text-lg">
               NEUROSCIENTIST
             </Link>
@@ -83,7 +83,7 @@ export default function Home() {
             </map>
           )}
         </div>
-      </main>
+      </div>
     </>
   );
 }

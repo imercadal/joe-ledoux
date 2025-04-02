@@ -20,12 +20,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} ${azeretMono.className} antialiased`}
+        className={`${inter.className} ${azeretMono.className} antialiased min-h-screen flex flex-col`}
       >
         <NewsBanner />
         <Header />
         <ClientCopyHandler />
-        {children}
+        <main className="flex-grow">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

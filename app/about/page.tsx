@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ArrowLongRightIcon } from "@heroicons/react/16/solid";
 
 export default function AboutPage() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const images = [
     "/105_About_BG_05.webp",
     "/102_About_BG_02.webp",
@@ -23,7 +24,7 @@ export default function AboutPage() {
   }, [images.length]);
 
   return (
-    <main className="bg-darker relative">
+    <section className="bg-darker relative min-h-screen">
       {/* Background for devices sm and up */}
       <div className="hidden sm:block absolute inset-0">
         <AnimatePresence mode="wait">
@@ -60,20 +61,7 @@ export default function AboutPage() {
         <div className="relative max-w-xl xl:max-w-3xl sm:w-1/2 sm:w-3/5 py-10 md:py-16 lg:py-24 flex justify-start text-lightText">
           <div className="px-8 sm:pl-16 md:pl-24 xl:pl-56 flex flex-col justify-start">
             <p>
-              Joseph LeDoux is a University Professor and Professor of Neural
-              Science and Psychology at New York University, an elected member
-              of the National Academy of Sciences and the American Academy of
-              Arts and Sciences, has received numerous awards for his work,
-              and is the author of several books, including The Emotional Brain,
-              Synaptic Self, Anxious, The Deep History of Ourselves, and The Four
-              Realms of Existence. His work and writings have focused on the
-              topics of emotion, memory, and consciousness, and their
-              interaction in the brain. LeDoux is also the lead singer and
-              songwriter in the rock band, the Amygdaloids. His music has been
-              the subject of a play, Map of Your Mind, and was featured in
-              Werner Herzog’s 2024 film, Theatre of Thought. A documentary on
-              Amazon, Neuroscience and Emotions, explores his Life, work and
-              music.
+            Joseph LeDoux is neuroscientist at New York University and an elected member of the National Academy of Sciences and the American Academy of Arts and Sciences. He has received numerous awards for his work and has written a number of well-received books. His work and writings have focused on the topics of emotion, memory, and consciousness, and their interaction in the brain. He is also the lead singer and songwriter in the rock band, the Amygdaloids. His music has been the subject of a play, <i>Map of Your Mind</i>, and was featured in Werner Herzog’s 2024 film, <i>Theatre of Thought</i>. A documentary on Amazon, <i>Neuroscience and Emotions</i>, explores his Life, work and music.
             </p>
             <p className="mt-6">
               <strong>Contact:</strong>
@@ -83,6 +71,16 @@ export default function AboutPage() {
             <p>LinkedIn - @joseph-ledoux</p>
             <p className="flex items-center md:mt-8 mt-3 hover:opacity-75">
               <ArrowLongRightIcon className="inline h-5 w-5 text-lightText" />
+              <button
+                type="button"
+                onClick={() => setIsModalOpen(true)}
+                className="inline px-0"
+              >
+                <strong>Read more</strong>
+              </button>
+            </p>
+            <p className="flex items-center hover:opacity-75">
+              <ArrowLongRightIcon className="inline h-5 w-5 text-lightText" />
               <a
                 href="LeDoux_CV.pdf"
                 download="Joe_LeDoux_CV.pdf"
@@ -90,13 +88,53 @@ export default function AboutPage() {
                 rel="noopener noreferrer"
                 className="inline"
               >
-                <strong>View full resume</strong>
+                <strong>Download Curriculum Vitae</strong>
               </a>
             </p>
+                    {/* Modal */}
+                    {isModalOpen && (
+                    <div className="fixed inset-0 mt-20 md:mt-0 flex items-center justify-center z-50">
+                    {/* Dark background overlay */}
+                    <div
+                        className="fixed inset-0 bg-dark opacity-75"
+                        onClick={() => setIsModalOpen(false)}
+                    ></div>
+
+                    {/* Modal content */}
+                    <div className="bg-darker text-white p-6 rounded shadow-lg z-50 max-w-2xl mx-auto relative">
+                      <button
+                      onClick={() => setIsModalOpen(false)}
+                      className="absolute top-2 right-2 text-white focus:outline-none"
+                      >
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-8">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                        </svg>
+                      </button>
+                      
+                      <div className="mt-4 text-center p-4">
+                          <p className="leading-relaxed text-lightText">
+                              The Amygdaloids are a New York City band formed in 2006, and made up of
+                              scientists at New York University: Jospeh LeDoux (guitar, singer, song writer);
+                              Tyler Volk (led guitar); Daniela Schiller (drums), and Nina Curly (bass). They
+                              created their own genera, <i>Heavy MeNtal</i>, love songs about mind and brain and
+                              mental disorders, and released five albums of such songs between 2007 and
+                              2015. The bass position has changed over the years in the hands of Gerald
+                              McCollum, Amanda Thorpe, and Colin Dempsey. The band has played with
+                              such musicians as Rosanne Cash, Lenny Kaye (Patti Smith Group), Eric Ambel
+                              (Joan Jett and the Blackhearts), Richard Barone (the Bongos), and others.
+                              The band continues to perform, especially LeDoux and Dempsey. And
+                              when LeDoux is invited to give lectures on his work he is often asked to also play
+                              his music. He and Dempsey have traveled the world spreading their Heavy MeNtal, gospel. The Amygdaloids have been continuously written about extensively and featured on many podcasts. LeDoux’s songs have also been the basis of a musical called Map of Your Mind, and appear in Werner Herzog’s 2024 documentary, <i>Theatre of Thought</i>. Hi blending pop music and neuroscience led to him receive the 2023 Music has Power Award, and his life, work and music are the subject of a documentary on Amazon called “Neuroscience and Emotions”. 
+
+                          </p>
+                      </div>
+                  </div>
+                  </div>
+                  )}
           </div>
         </div>
       </div>
-    </main>
+    </section>
   );
 }
 

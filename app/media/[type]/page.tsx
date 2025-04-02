@@ -27,15 +27,15 @@ export default async function MediaPage({ params,} : {
     }
     
     return (
-      <main className="bg-darkest">
+      <section className="bg-darkest min-h-[calc(100vh-170px)]">
         <Banner imageUrl={bannerImage} title={type} />
         <FilterableMedia initialMedia={media} />
-      </main>
+      </section>
     );
   } catch (error) {
     console.log('Error fetching media:', error);
     return (
-      <main className="bg-darkest">
+      <section className="bg-darkest min-h-[calc(100vh-170px)]">
         <div className="relative mb-8 h-40 bg-cover bg-center bg-[url('/310_Author_Books.webp')] flex items-center justify-center">
           <h3 className="font-bold uppercase">{type}</h3>
         </div>
@@ -45,7 +45,7 @@ export default async function MediaPage({ params,} : {
             <p>Back to home</p>
           </Link>
         </div>
-      </main>
+      </section>
     );
   }
 }

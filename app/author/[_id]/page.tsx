@@ -53,7 +53,7 @@ params,
         </div>
 
         {/*Core */}
-        <div className='flex justify-center mx-auto max-w-5xl pb-16 gap-6'>
+        <div className='flex flex-col lg:flex-row justify-center mx-auto lg:max-w-5xl pb-16 gap-6'>
             <BookContentTabs book={book} />
             {/*Side bar with links */}
             {book.stores && book.stores.length > 0 && (

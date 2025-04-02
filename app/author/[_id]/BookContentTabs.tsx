@@ -20,13 +20,13 @@ export default function BookContentTabs({ book }: BookContentTabsProps) {
   const hasReviews = book.reviews && book.reviews.length > 0;
 
   return (
-    <div className="max-w-5xl">
+    <div className="max-w-screen md:max-w-5xl">
       {/* Navigation for switching tabs */}
-      <nav className="isolate w-full mx-auto pb-6 pl-8 flex justify-around items-start shadow-xs text-accent">
+      <nav className="isolate w-full mx-0 md:mx-auto pb-2 md:pb-6 lg:pl-8 flex justify-between md:justify-around items-start shadow-xs text-accent">
         <button
           type="button"
           onClick={() => setActiveTab("book")}
-          className={`py-2 w-full inline-flex items-center justify-center text-sm hover:text-white focus:z-10 ${
+          className={`py-2 px-0 inline-flex items-center justify-center text-sm hover:text-white focus:z-10 ${
             activeTab === "book" ? "font-bold underline underline-offset-8" : ""
           }`}
         >
@@ -36,7 +36,7 @@ export default function BookContentTabs({ book }: BookContentTabsProps) {
         <button
           type="button"
           onClick={() => setActiveTab("praise")}
-          className={`py-2 w-full inline-flex items-center justify-center text-sm hover:text-white focus:z-10 ${
+          className={`py-2 px-0 inline-flex items-center justify-center text-sm hover:text-white focus:z-10 ${
             activeTab === "praise" ? "font-bold underline underline-offset-8" : ""
           }`}
         >
@@ -47,7 +47,7 @@ export default function BookContentTabs({ book }: BookContentTabsProps) {
           <button
             type="button"
             onClick={() => setActiveTab("reviews")}
-            className={`py-2 w-full inline-flex items-center justify-center text-sm hover:text-white focus:z-10 ${
+            className={`py-2 px-0 inline-flex items-center justify-center text-sm hover:text-white focus:z-10 ${
               activeTab === "reviews" ? "font-bold underline underline-offset-8" : ""
             }`}
           >
@@ -58,7 +58,7 @@ export default function BookContentTabs({ book }: BookContentTabsProps) {
         <button
           type="button"
           onClick={() => setActiveTab("citations")}
-          className={`py-2 w-full inline-flex items-center justify-center text-sm hover:text-white focus:z-10 ${
+          className={`py-2 px-0 inline-flex items-center justify-center text-sm hover:text-white focus:z-10 ${
             activeTab === "citations" ? "font-bold underline underline-offset-8" : ""
           }`}
         >
@@ -70,7 +70,7 @@ export default function BookContentTabs({ book }: BookContentTabsProps) {
       {/* Conditional Content */}
       <div className="mx-auto text-lightText pb-6">
         {activeTab === "book" && (
-          <div className="flex justify-center mx-auto max-w-4xl pb-16 gap-8">
+          <div className="flex justify-center mx-auto lg:max-w-4xl pb-16 gap-8">
             {/* Content for "The Book" tab */}
             <div className="ml-8 md:flex">
               <div className="w-2/5">
