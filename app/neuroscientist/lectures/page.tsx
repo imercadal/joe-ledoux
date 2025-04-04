@@ -1,5 +1,6 @@
-import LectureList from './LectureList';//
+import LectureList from './LectureList';
 import { lectures, Lecture } from './lecture-data';
+import ScrollToTopButton from '@/app/components/ScrollToTop';
 
 export default function LecturesPage(){
 
@@ -43,6 +44,7 @@ export default function LecturesPage(){
                     </div>
                 ))}
             </div>
+            <ScrollToTopButton />
         </main>
     )
 }

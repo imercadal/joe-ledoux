@@ -178,7 +178,7 @@ export default function Navbar() {
             href={sub.href ?? "#"}
             className={`px-2 sm:px-4 py-2 text-white text-xs sm:text-sm hover:text-dark ${
               sub.href &&
-              (pathname === sub.href || pathname.startsWith(sub.href + "/"))
+              (pathname === sub.href)
                 ? "font-bold opacity-100"
                 : "opacity-75"
             }`}

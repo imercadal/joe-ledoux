@@ -7,10 +7,26 @@ export default function LectureList({ lectures }: { lectures: Lecture[]}) {
             {lectures.map(lecture => (
                 <div key={lecture.id} className='mb-8'>
                         <p>{lecture.date.toLocaleDateString('en-US', { month: 'long', day: 'numeric' })}</p>
-                    <Link href={`/neuroscience/lectures/${lecture.id}`} className='hover:opacity-75'>
-                        <p>{lecture.event}</p>
-                        <p><strong> {`"${lecture.title}"`}</strong></p>
-                    </Link>
+                        {lecture.urlToLecture ? (
+                            <Link
+                            href={lecture.urlToLecture}
+                            rel="noopener noreferrer"
+                            target="_blank"
+                            className="hover:opacity-75"
+                            >
+                            <p>{lecture.event}</p>
+                            <p>
+                                <strong>{`"${lecture.title}"`}</strong>
+                            </p>
+                            </Link>
+                        ) : (
+                            <>
+                            <p>{lecture.event}</p>
+                            <p>
+                                <strong>{`"${lecture.title}"`}</strong>
+                            </p>
+                            </>
+                        )}
                 </div>
             ))}
         </main>
