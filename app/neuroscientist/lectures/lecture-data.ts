@@ -332,7 +332,7 @@ export const lectures : Lecture[] = [{
     event: "Italian Academy of Sciences, Turin, Italy",
     urlToLecture: ""
   },
-   // 2018
+
   {
     id: "47",
     title: "Putting Emotion into Consciousness",
@@ -368,7 +368,7 @@ export const lectures : Lecture[] = [{
     event: "Conference, Rome, Italy",
     urlToLecture: ""
   },
-   // 2017
+
   {
     id: "52",
     title: "WHAT IS FEAR? AND IS FEAR OF DEATH REALLY A 'FEAR'?",
@@ -376,7 +376,7 @@ export const lectures : Lecture[] = [{
     event: "Awareness of Death and Personal Mortality: Implications for Anthropogeny",
     urlToLecture: ""
   },
-   // 2016
+
   {
     id: "53",
     title: "The struggle with fear - Implications for understanding and the treatment of fear",
@@ -419,7 +419,7 @@ export const lectures : Lecture[] = [{
     event: "Conference (cmbc.emory.edu)",
     urlToLecture: ""
   },
-   // 2015
+
   {
     id: "59",
     title: "Memory, Trauma and Resilience",
@@ -524,6 +524,270 @@ export const lectures : Lecture[] = [{
     date: new Date("2015-05-21"),
     event: "27th APS Annual Convention, New York City",
     urlToLecture: "https://www.psychologicalscience.org/observer/ledoux-recognized-by-aps-for-fear-anxiety-research"
-  }
+  },
+
+
+  {
+    id: "100",
+    title: "The Four Realms of Existence",
+    date: new Date("2025-10-07"),
+    event: "Athena Culture Center, Mailand ti Mendrisio, Switzerland",
+  },
+  {
+    id: "101",
+    title: "The Four Realms of Existence",
+    date: new Date("2025-10-03"),
+    event: "Bergamo Science Festival, Bergamo Italy",
+  },
+  {
+    id: "102",
+    title: "The Four Realms of Existence",
+    date: new Date("2025-09-03"),
+    event: "International Society for Psychoneuroendocrinology, New Orleans, La.",
+  },
+  {
+    id: "103",
+    title: "The Four Realms of Existence",
+    date: new Date("2025-07-13"),
+    event: "Emotional Intelligence Conference, Manchester UK",
+  },
+  {
+    id: "104",
+    title: "The Four Realms of Existence",
+    date: new Date("2025-06-21"),
+    event: "Conference on Embodied Education, University of Cassino and Southern Lazio (Italy)",
+  },
+  {
+    id: "105",
+    title: "The Four Realms of Existence",
+    date: new Date("2025-06-16"),
+    event: "Hamburg Brain School Lecture Series",
+  },
+  {
+    id: "106",
+    title: "The Four Realms of Existence",
+    date: new Date("2025-06-13"),
+    event: "Rewiring Fear & Anxiety World Summit 2025",
+  },
+  {
+    id: "107",
+    title: "Q&A about of my role in Werner Herzog’s Theatre of Thought",
+    date: new Date("2025-06-03"),
+    event: "Callicoon Theater, Callicoon NY",
+  },
+  {
+    id: "108",
+    title: "The Four Realms of Existence",
+    date: new Date("2025-05-08"),
+    event: "Annual Symposium for Leon Levy Scholarships in Neuroscience, New York Academy of Sciences",
+  },
+  {
+    id: "109",
+    title: "The Four Realms of Existence",
+    date: new Date("2025-05-03"),
+    event: "Society for Philosophy and Neuroscience, St. Louis Mo",
+  },
+  {
+    id: "110",
+    title: "The Four Realms of Existence",
+    date: new Date("2025-04-25"),
+    event: "Child Study Center, NYU Langone Medical School",
+  },
+  {
+    id: "111",
+    title: "Music and the Brain Panel Discussion",
+    date: new Date("2025-04-22"),
+    event: "The Helix Center, New York NY",
+  },
+  {
+    id: "112",
+    title: "The Four Realms of Existence",
+    date: new Date("2025-04-04"),
+    event: "Department of Psychology, University of Alabama",
+  },
+  {
+    id: "113",
+    title: "The Four Realms of Existence",
+    date: new Date("2025-03-27"),
+    event: "Seminary Road Event Space, Callicoon NY",
+  },
+  {
+    id: "114",
+    title: "The Four Realms of Existence",
+    date: new Date("2025-03-28"),
+    event: "The Hound Bookstore, Roscoe NY",
+  },
+  {
+    id: "115",
+    title: "The Four Realms of Existence",
+    date: new Date("2025-03-19"),
+    event: "Art and Science Symposium, Montclair State University, Montclair, New Jersey",
+  },
+  {
+    id: "116",
+    title: "Fear Anxiety",
+    date: new Date("2024-10-18"),
+    event: "European Anxiety Association",
+  },
+  {
+    id: "117",
+    title: "Honorary Degree Lecture",
+    date: new Date("2024-10-10"),
+    event: "University Fernando Pessoa, Porto Portugal",
+  },
+  {
+    id: "118",
+    title: "The Four Realms of Existence",
+    date: new Date("2024-06-27"),
+    event: "Brain, Behavior and Emotion Conference, Rio de Janeiro, Brazil",
+  },
+  {
+    id: "119",
+    title: "A New Theory of Being Human (The Four Realms of Existence)",
+    date: new Date("2024-05-21"),
+    event: "Smithsonian Associates, Washington, DC",
+  },
+  {
+    id: "120",
+    title: "The Four Realms of Existence",
+    date: new Date("2024-05-04"),
+    event: "Conference on Defining Brain Function, University of California, Santa Barbara, California",
+  },
+  {
+    id: "121",
+    title: "The Four Realms of Existence",
+    date: new Date("2024-04-23"),
+    event: "Conference on The Amygdala, Stress and PTSD, Uniformed Services University, Bethesda, MD",
+  },
+  {
+    id: "122",
+    title: "The Four Realms of Existence",
+    date: new Date("2024-04-05"),
+    event: "Hunter College Neuroscience, New York, NY",
+  },
+  {
+    id: "123",
+    title: "The Four Realms of Existence",
+    date: new Date("2024-02-02"),
+    event: "Conference on Brain Research and the Future of Teaching, Academy for Neuroscientific Educational Management, Frankfurt, Germany",
+  },
+  {
+    id: "124",
+    title: "The Four Realms of Existence",
+    date: new Date("2024-01-26"),
+    event: "Hungarian Academy of Science, Pecs, Hungary",
+  },
+  {
+    id: "125",
+    title: "The Four Realms of Existence",
+    date: new Date("2023-12-15"),
+    event: "International Philosophy in Biology and Medicine Group, University of Bordeaux, France",
+  },
+  {
+    id: "126",
+    title: "The Four Realms of Existence",
+    date: new Date("2023-11-30"),
+    event: "Rockefeller University, The Price Family Symposium Social on the Social Brain (via Zoom)",
+  },
+  {
+    id: "127",
+    title: "The Four Realms of Existence",
+    date: new Date("2023-10-10"),
+    event: "Workshop, Accademia Nazionale, Mindful Connections, Rome, Italy",
+  },
+  {
+    id: "128",
+    title: "The Four Realms of Existence",
+    date: new Date("2023-09-06"),
+    event: "Louisiana State University Psychiatry Grand Rounds",
+  },
+  {
+    id: "129",
+    title: "The Four Realms of Existence",
+    date: new Date("2023-08-28"),
+    event: "European Brain and Behavior Society, Amsterdam, Netherlands",
+  },
+  {
+    id: "130",
+    title: "The Four Realms of Existence",
+    date: new Date("2023-06-27"),
+    event: "NIH Consciousness Workshop, Bethesda, MD",
+  },
+  {
+    id: "131",
+    title: "The Four Realms of Existence",
+    date: new Date("2023-06-22"),
+    event:
+      "Association for the Scientific Study of Consciousness (ASSC), Presidential Lecture by Joseph LeDoux",
+  },
+  {
+    id: "132",
+    title: "The Four Realms of Existence",
+    date: new Date("2023-05-04"),
+    event: "Chaucer Club, University of Cambridge, Cambridge, UK",
+  },
+  {
+    id: "133",
+    title: "Biology, Psychology, and Life: Connecting the Dots",
+    date: new Date("2023-04-27"),
+    event: "What is Life? series at the Karolinska Institute, Stockholm, Sweden",
+  },
+  {
+    id: "134",
+    title: "The Four Realms of Existence",
+    date: new Date("2023-04-17"),
+    event: "Sainsbury Wellcome Centre, University College, London",
+  },
+  {
+    id: "135",
+    title: "The Four Realms of Existence",
+    date: new Date("2022-10-20"),
+    event: "57th National Congress Psychiatric Association of Turkey, Istanbul, Turkey (via Zoom)",
+  },
+  {
+    id: "136",
+    title: "The Four Realms of Existence",
+    date: new Date("2022-10-05"),
+    event: "Masters of the Mind Lecture Series, Leuven Brain Institute, Leuven, Belgium",
+  },
+  {
+    id: "137",
+    title: "The Four Realms of Existence",
+    date: new Date("2022-09-30"),
+    event:
+      "Conference on Memory, Consciousness and the Emotions: Themes from the Work of Joseph LeDoux, London School of Economics, London, UK",
+  },
+  {
+    id: "138",
+    title: "The Four Realms of Existence",
+    date: new Date("2022-09-16"),
+    event: "Institute of Cognitive Neuroscience, University College, London, UK",
+  },
+  {
+    id: "139",
+    title: "Putting the mental back in mental disorders",
+    date: new Date("2022-09-08"),
+    event: "Swiss Society of Psychiatry and Psychotherapy, Switzerland",
+  },
+  {
+    id: "140",
+    title: "Wakeup Call: Mental States Are a Key Component of Mental Disorders",
+    date: new Date("2022-08-10"),
+    event: "The Inaugural NIH Consciousness Research Interest Group Seminar Series",
+  },
+  {
+    id: "141",
+    title: "From the way we were to the way we are",
+    date: new Date("2022-05-19"),
+    event:
+      "The Braining Club, Systems Neuroscience Through the Lens of Evolutionary Theory Workshop",
+  },
+  {
+    id: "142",
+    title: "As Soon as there is life, there is danger",
+    date: new Date("2022-03-03"),
+    event:
+      "Biopsychology, Institute of Cognitive Neuroscience, Ruhr-University, Bochum, Germany",
+  },
 
 ]

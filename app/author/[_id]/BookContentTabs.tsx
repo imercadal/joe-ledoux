@@ -94,7 +94,10 @@ export default function BookContentTabs({ book }: BookContentTabsProps) {
                 <div className="w-full lg:w-3/5 ml-0 lg:ml-8 mr-2 mt-6 lg:mt-0 px-4 lg:px-0 flex flex-col">
                   <p className="text-lightText">{book.synopsis}</p>
                   <div className="pt-4 flex justify-center">
-                    <BookReviews reviews={book.reviews ?? []} />
+                  <BookReviews 
+                    reviews={book.reviews ?? []} 
+                    onSwitchToReviews={() => setActiveTab("reviews")}
+                  />
                   </div>
                 </div>
               </div>

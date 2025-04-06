@@ -2,7 +2,7 @@ export interface Review {
     content: string;
     author: string;
     date?: Date;
-    reviewUrl: string;
+    reviewUrl?: string;
 }
   
 export interface AdvancedPraise {
