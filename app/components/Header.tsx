@@ -72,16 +72,7 @@ const mainNavItems: NavItem[] = [
         ],
       },
     ],
-  },
-  {
-    label: "media",
-    href: "/media/read",
-    submenu: [
-      { label: "watch", href: "/media/watch" },
-      { label: "listen", href: "/media/listen" },
-      { label: "read", href: "/media/read" },
-    ],
-  },
+  }
 ];
 
 export default function Navbar() {
