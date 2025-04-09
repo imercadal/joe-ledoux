@@ -57,7 +57,7 @@ export default function ImageGrid({images, className = ""}: PhotoGalleryProps){
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [selectedPhoto, images]);
+  }, [selectedPhoto, images, nextImage, prevImage]);
 
     return(
       <div className={`w-full max-w-4xl mx-auto ${className}`}>

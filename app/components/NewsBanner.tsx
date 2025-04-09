@@ -1,7 +1,8 @@
 "use client"
 
-import { XMarkIcon } from "@heroicons/react/20/solid";
 import { useState } from 'react';
+import Link from 'next/link';
+import { XMarkIcon } from "@heroicons/react/20/solid";
 
 export default function NewsBanner() {
   const [isVisible, setIsVisible] = useState(true);
@@ -44,13 +45,13 @@ export default function NewsBanner() {
           <strong className="font-semibold">New book coming soon!</strong>
           <i></i>
         </p>
-        <a
+        <Link
           href="/author/67e455e79d343bd2f8bfe258"
           className="flex-none italic rounded-full bg-accent px-3.5 py-1 text-xs font-semibold text-white shadow-xs hover:bg-subMenu focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900"
         >
           &rarr;
           Starting Over <span aria-hidden="true"></span>
-        </a>
+        </Link>
       </div>
 
       {/* Dismiss Button */}

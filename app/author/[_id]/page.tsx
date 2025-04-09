@@ -1,4 +1,4 @@
-import { Book, Store } from '../book-data';
+import { Book } from '../book-data';
 import BookContentTabs from './BookContentTabs';
 import Link from 'next/link';
 
@@ -27,13 +27,6 @@ params,
             </main>
         );
     }
-  
-    const storeLogos: { [key: string]: string } = {
-        "Amazon": "/910_Amazon.png",
-        "Audible": "/930_Audible.png",
-        "Barnes & Noble": "/940_Barnes.png",
-        "Strand": "/990_Strand.png"
-    };
 
     return(
         <div className='bg-dark'>
