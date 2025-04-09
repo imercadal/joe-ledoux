@@ -6,10 +6,10 @@ const nextConfig: NextConfig = {
     Dangerously allow production builds to successfully complete even if
     your project has type errors.
 
+    eslint: {
+      ignoreDuringBuilds: true,
+    }
     */
-   eslint: {
-     ignoreDuringBuilds: true,
-   }
 };
 
 export default nextConfig;
