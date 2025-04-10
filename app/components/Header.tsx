@@ -61,7 +61,7 @@ const mainNavItems: NavItem[] = [
     submenu: [
       { label: "the amygdaloids", href: "/musician" },
       { label: "albums", href: "/musician#albums" },
-      { label: "shows", href: "/musician#shows" },
+      { label: "gigs", href: "/musician#gigs" },
       { label: "other projects", href: "/musician#otherprojects" },
       {
         label: "media",

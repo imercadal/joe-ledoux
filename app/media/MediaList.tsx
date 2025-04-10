@@ -41,7 +41,7 @@ export default function MediaList({ media }: MediaListProps){
                 ></iframe>
               </div>
             )}
-            <p className="text-xs mb-1">{new Date(mediaItem.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric'})}</p>
+            <p className="text-xs mb-1">{new Date(mediaItem.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric'})}</p>
             <p className='text-sm font-bold'>{mediaItem.mediaCompany}</p>
             <p className='text-sm italic'>{mediaItem.title}</p>
             <p className="text-xs mt-1">{mediaItem.tags.map(tag => tag.toUpperCase()).join('  ᐧ  ')}</p>

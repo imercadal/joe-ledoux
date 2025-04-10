@@ -9,13 +9,12 @@ interface FilterableMediaProps {
   initialMedia: MediaItem[];
 }
 
-const availableTags = ['neuroscience', 'books', 'music']; // Adjust as needed
+const availableTags = ['neuroscience', 'books', 'music'];
 
 export default function FilterableMedia({ initialMedia }: FilterableMediaProps) {
   const searchParams = useSearchParams();
   const initialTag = searchParams.get('tag');
 
-  // Initialize state, using the URL value if available
   const [selectedTags, setSelectedTags] = useState<string[]>(() =>
     initialTag ? [initialTag] : []
   );

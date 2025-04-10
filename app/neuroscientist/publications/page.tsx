@@ -10,7 +10,7 @@ export default async function PublicationsPage(){
         try { 
             response = await fetch(process.env.NEXT_PUBLIC_SITE_URL + '/api/publications');
         } catch (err) {
-            console.log("Network error:", err);
+            console.log("Network error:", err)
             throw new Error("Network error while fetching publications")
         }
     
@@ -23,8 +23,8 @@ export default async function PublicationsPage(){
         try {
             publicationsData = await response.json()
         } catch (err) {
-            console.error("JSON parsing error:", err);
-            throw new Error("Error parsing JSON response from API");
+            console.error("JSON parsing error:", err)
+            throw new Error("Error parsing JSON response from API")
         }
     
         const publications: Publication[] = publicationsData.map((pub: Publication) => ({

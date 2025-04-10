@@ -142,8 +142,8 @@ export default function MusicianPage(){
                 <AlbumList albums={ albums }/>
             </section>
 
-            <section id="shows" className="container px-4 my-4 py-3 md:py-6 mx-auto flex-col justify-center max-w-4xl">
-                <h2 className="text-2xl font-bold mb-4">Shows</h2>
+            <section id="gigs" className="container px-4 my-4 py-3 md:py-6 mx-auto flex-col justify-center max-w-4xl">
+                <h2 className="text-2xl font-bold mb-4">Gigs</h2>
                 <ShowList shows={ shows }/>
             </section>
 
