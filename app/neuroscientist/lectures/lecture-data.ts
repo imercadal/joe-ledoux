@@ -80,7 +80,7 @@ export const lectures : Lecture[] = [{
     id: "11",
     title: "Our Realms of Existence: A Fresh Look at the Science of What and Who We Are",
     date: new Date("2023-06-22"),
-    event: "ASSC26 | NYU",
+    event: "A keynote talk by ASSC President Joseph LeDoux at the 26th meeting of the Association for the Scientific Study of Consciousness, at NYU",
     urlToLecture: ""
   },
   {
@@ -788,6 +788,33 @@ export const lectures : Lecture[] = [{
     date: new Date("2022-03-03"),
     event:
       "Biopsychology, Institute of Cognitive Neuroscience, Ruhr-University, Bochum, Germany",
+  },
+  {
+    id: "143",
+    title: "Stress in the City",
+    date: new Date("2002-01-29"),
+    event: "Rockefeller University",
+  },
+
+  {
+    id: "144",
+    title: "The Self: From Soul to Brain",
+    date: new Date("2002-09-26"),
+    event: "New York Academy of Sciences",
+  },
+
+  {
+    id: "145",
+    title: "The Synaptic Self: How Our Brains Become Who We Are",
+    event: "7th Annual Stony Brook Mind/Brain Lecture. Probing the Mysteries of the Mind",
+    date: new Date("2003-03-31"),
+    urlToLecture: "http://www.theswartzfoundation.org/mind-brain-2003.asp"
+  },
+  {
+    id: "146",
+    title: "Fear: Its Political Uses and Abuses- A social research conference at New School University",
+    event: "New School University",
+    date: new Date("2004-02-06"),
   },
 
 ]
