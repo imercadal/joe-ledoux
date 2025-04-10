@@ -6,12 +6,13 @@ interface TagSidebarProps {
   availableTags: string[];
   selectedTags: string[];
   onToggleTag: (tag: string) => void;
+  filterType: string;
 }
 
-export default function TagSidebar({ availableTags, selectedTags, onToggleTag }: TagSidebarProps) {
+export default function TagSidebar({ availableTags, selectedTags, onToggleTag, filterType }: TagSidebarProps) {
   return (
-    <aside className="w-32 sm:w-36 md:w-44 py-2 md:p-4 border-r border-lightText border-opacity-75">
-      <h2 className="pl-2 text-sm text-lightText font-bold mb-2">Filter by Category</h2>
+    <div>
+      <h2 className="pl-2 text-sm text-lightText font-bold mb-2">Filter by {filterType}</h2>
       <ul>
         {availableTags.map((tag) => (
           <li key={tag}>
@@ -30,6 +31,6 @@ export default function TagSidebar({ availableTags, selectedTags, onToggleTag }:
           </li>
         ))}
       </ul>
-    </aside>
+    </div>
   );
 }
