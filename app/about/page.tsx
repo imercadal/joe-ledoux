@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ArrowLongRightIcon } from "@heroicons/react/16/solid";
 
 export default function AboutPage() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const images = [
     "/105_About_BG_05.webp",
     "/102_About_BG_02.webp",
