@@ -816,5 +816,48 @@ export const lectures : Lecture[] = [{
     event: "New School University",
     date: new Date("2004-02-06"),
   },
+  {
+    id: "147",
+    title: "Joseph LeDoux Ph.D: Danger is Ancient—Fear Is A Recent Invention",
+    event: "92Y / Science Salon",
+    date: new Date("2020-03-11"),
+  },
+  {
+    id: "148",
+    title: "Schooling the Self",
+    event: "Learning and the Brain",
+    date: new Date("2020-01-23"),
+  },
+  {
+    id: "149",
+    title: "EBI 2019 Distinguished Scientist Lecture",
+    event: "UCLA and University of Hong Kong",
+    date: new Date("2019-03-08"),
+  },
+  {
+    id: "150",
+    title: "Author Talk: How we got Conscious Brains",
+    event: "Center for Inquiry NYC",
+    date: new Date("2019-11-20"),
+  },
+  {
+    id: "151",
+    title: "LeDoux: Anxiety and Neuropsychoanalysis",
+    event: "LabLinks: Emotion and the Brain",
+    date: new Date("2016-10-08"),
+  },
+  {
+    id: "152",
+    title: "Conference explores 'Foundations of Emotions in Mind, Brain and Culture'",
+    event: "Emory University",
+    date: new Date("2016-02-09"),
+    urlToLecture: "http://news.emory.edu/stories/2016/02/er_cmbc_conference/campus.html"
+  },
+  {
+    id: "153",
+    title: "2011 Copernicus Lecture: Our emotional brains",
+    event: "Copernicus Center",
+    date: new Date("2011-05-19")
+  },
 
 ]

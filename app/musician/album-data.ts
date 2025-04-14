@@ -9,8 +9,18 @@ export interface Album {
     }[];
 }
 
-export const albums: Album[] = [{
-    id: "5",
+export const albums: Album[] = [
+    {
+    id: "10",
+    title: "A River of Hope and Love",
+    year: 2018,
+    coverUrl: "/416_Cover_River_of_Hope.webp",
+    links: [
+        { platform: "Spotify", url: "https://open.spotify.com/intl-es/album/7Dq0fdCVcNWIGzuFqiUdfF?si=B0J39k20Sx-553x0UH_f_g" },
+        { platform: "YouTube", url: "https://www.youtube.com/channel/UCOIBiy11VwS2vk6r8l9Jfrg/featured" },
+    ],
+    },{
+    id: "11",
     title: "The Flip Side: More songs in our minds",
     year: 2017,
     coverUrl: "/415_Cover_Flip_side.webp",
@@ -20,7 +30,7 @@ export const albums: Album[] = [{
         { platform: "YouTube", url: "https://www.youtube.com/watch?v=jBmIPz20ESc" },
       ],
 }, {
-    id: "4",
+    id: "12",
     title: "Anxious",
     year: 2015,
     coverUrl: "/414_Cover_Anxious.webp",
@@ -30,7 +40,7 @@ export const albums: Album[] = [{
         { platform: "YouTube", url: "https://www.youtube.com/watch?v=62ByT_T-a-g" },
     ],
 },{
-    id: "3",
+    id: "13",
     title: "All in our minds",
     year: 2012,
     coverUrl: "/413_Cover_All_in_our_Minds.webp",
@@ -40,7 +50,7 @@ export const albums: Album[] = [{
         { platform: "YouTube", url: "https://www.youtube.com/watch?v=NrZJJ9EILCo" },
     ],
 },{
-    id: "2",
+    id: "14",
     title: "Theory of my Mind",
     year: 2010,
     coverUrl: "/412_Cover_Theory_of_Mind.webp",
@@ -50,7 +60,7 @@ export const albums: Album[] = [{
         { platform: "YouTube", url: "https://www.youtube.com/watch?v=OfClC_dog2E" },
     ],
 },{
-    id: "1",
+    id: "15",
     title: "Heavy Mental",
     year: 2007,
     coverUrl: "/411_Cover_Heavy_Mental-2.webp",
@@ -59,4 +69,5 @@ export const albums: Album[] = [{
         { platform: "AppleMusic", url: "https://music.apple.com/album/xyz" },
         { platform: "YouTube", url: "https://www.youtube.com/watch?v=npaQXeIeMvo" },
     ],
-},]
+}
+]

@@ -16,7 +16,7 @@ export default function Banner({ imageUrl, title }: BannerProps){
     return(
         <div className="w-full h-40 relative">
             <Image src={imageUrl} alt="Media Banner" fill className="object-cover" />
-            <div className="absolute inset-0 px-6 md:px-12 flex items-center justify-between">
+            <div className="absolute inset-0 px-6 md:px-12 max-w-4xl mx-auto flex items-center justify-between">
                 {/* Previous type */}
                 <Link 
                     href={`/media/${otherTypes[0]}`}
@@ -36,7 +36,7 @@ export default function Banner({ imageUrl, title }: BannerProps){
                         d="M15 19l-7-7 7-7"
                         />
                     </svg>
-                    <h3 className="uppercase pl-0 text-sm text-lightText">{otherTypes[0]}</h3>
+                    <h3 className="uppercase pl-0 text-sm text-lightText shado-2xl">{otherTypes[0]}</h3>
                 </Link>
                 {/* Current Type */}
                 <h3 className="m-0 text-xl text-white tracking-wider">
@@ -47,7 +47,7 @@ export default function Banner({ imageUrl, title }: BannerProps){
                     href={`/media/${otherTypes[1]}`}
                     className="flex items-center text-white hover:opacity-75"
                 >
-                    <h3 className="uppercase text-sm text-lightText">{otherTypes[1]}</h3>
+                    <h3 className="uppercase text-sm text-lightText text-bold shadow-2xl">{otherTypes[1]}</h3>
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         className="h-6 w-6 opacity-75"

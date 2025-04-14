@@ -85,11 +85,11 @@ export default function AboutPage() {
               <p>LinkedIn - @joseph-ledoux</p>
             </a> 
             <a
-              href="https://www.facebook.com/TheAmygdaloids/"
+              href="https://www.facebook.com/joseph.ledoux"
               rel="noopener noreferrer"
               target="_blank"
             >
-              <p>Facebook - @TheAmygdaloids</p>
+              <p>Facebook - @joseph.ledoux</p>
             </a> 
             <p className="flex mt-4 items-center hover:opacity-75">
               <ArrowLongRightIcon className="inline h-5 w-5 text-lightText" />

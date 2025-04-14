@@ -46,19 +46,19 @@ export default function MusicianPage(){
                 <div className='flex-1 bg-green-200'></div>
                 {/* Text block */}
                 <div 
-                    className="lg-gradient relative flex lg:flex-3 xl:flex-1 justify-start items-end lg:ml-96 xl:ml-0 pb-12 lg:pb-2 xl:pb-6 mt-8 md:mt-0 md:pt-10 xl:pt-0 bg-opacity-100 text-lightText"        
+                    className="lg-gradient relative flex lg:flex-2 xl:flex-1 justify-start items-end lg:pl-20 xl:pl-0 lg:ml-96 xl:ml-0 pb-12 lg:pb-2 xl:pb-6 mt-8 md:mt-0 md:pt-10 xl:pt-0 bg-opacity-100 text-lightText"        
                 >
                     <div className='px-6 md:px-20 lg:px-6 lg:pl-36' id="description">
                         <h3 className='text-darker mb-5 font-bold italic'>THE AMYGDALOIDS</h3>
-                        <p className='text-darker leading-6 mb-2'>The Amygdaloids are a New York City band formed in 2006 by scientists Joseph LeDoux and Tyler Volk. They created their own genre, Heavy MeNtal (love songs about mind and brain and mental disorders) and released five albums between 2007 and 2015. The band has played with Rosanne Cash, Lenny Kaye, and other rock stars. LeDoux&apos;s music has become so entwined with his work that he is often asked to bring the band when he lectures in the US and even abroad. LeDoux&apos;s songs have been the basis of a musical called <i>Map of Your Mind</i>, and appear in Werner Herzog&apos;s 2024 documentary, <i>Theatre of Thought</i>. His life, work and music are the subject of a documentary on Amazon called “Neuroscience and Emotions”.</p>
+                        <p className='text-darker text-base/6 mb-2'>The Amygdaloids are a New York City band formed in 2006 by scientists Joseph LeDoux and Tyler Volk. They created their own genre, Heavy MeNtal (love songs about mind and brain and mental disorders) and released five albums between 2007 and 2015. The band has played with Rosanne Cash, Lenny Kaye, and other rock stars. LeDoux&apos;s music has become so entwined with his work that he is often asked to bring the band when he lectures in the US and even abroad. LeDoux&apos;s songs have been the basis of a musical called <i>Map of Your Mind</i>, and appear in Werner Herzog&apos;s 2024 documentary, <i>Theatre of Thought</i>. His life, work and music are the subject of a documentary on Amazon called “Neuroscience and Emotions”.</p>
                         <ArrowLongRightIcon className="inline h-5 w-5 text-accent" />
                         <button
                             onClick={() => setIsModalOpen(true)}
-                            className="text-accent text-xs font-bold inline focus:outline-none"
+                            className="text-accent text-sm font-bold inline focus:outline-none"
                         >
                             Read more about the Amygdaloids&apos; history
                         </button>
-                        <ul className='flex mt-3 md:mt-6 lg:mt-3 xl:mt-6 py-2 gap-4'>
+                        <ul className='flex mt-3 md:mt-6 lg:mt-2 xl:mt-6 py-2 gap-4'>
                             <li>
                                 <a href="https://open.spotify.com/intl-es/artist/22czMwJZGJJ36Cwas7RB3E?si=r4CERr8ORYKS80keAJE4CQ" target="_blank" rel="noopener noreferrer" className="hover:opacity-75">
                                     <Image

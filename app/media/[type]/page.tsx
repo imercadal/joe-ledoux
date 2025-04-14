@@ -4,6 +4,7 @@ import FilterableMedia from '../FilterableMedia';
 import { MediaItem } from '../media-data';
 import Banner from '../../components/Banner';
 import { bannerImages } from '@/config/bannerConfig';
+import ScrollToTopButton from '@/app/components/ScrollToTop';
 
 export default async function MediaPage({ params } : {
   params: Promise<{ type: string }>;
@@ -33,8 +34,10 @@ export default async function MediaPage({ params } : {
       <section className="bg-darkest min-h-[calc(100vh-170px)]">
         <Banner imageUrl={bannerImage} title={type} />
         <FilterableMedia initialMedia={media} />
+        <ScrollToTopButton />
       </section>
     );
+    
   } catch (error) {
     console.log('Error fetching media:', error);
     return (
@@ -48,6 +51,7 @@ export default async function MediaPage({ params } : {
             <p>Back to home</p>
           </Link>
         </div>
+
       </section>
     );
   }
