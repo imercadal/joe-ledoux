@@ -27,9 +27,10 @@ export default function MediaList({ media }: MediaListProps){
               rel='noopener noreferrer'
               className="w-full"
           >
-
-            {mediaItem.embedUrl && (
+            
+            {mediaItem.type === "watch" && (
               <div className="my-4 w-full aspect-video">
+                { mediaItem.embedUrl ? 
                 <iframe
                   width="100%"
                   height="100%"
@@ -39,6 +40,13 @@ export default function MediaList({ media }: MediaListProps){
                   referrerPolicy="strict-origin-when-cross-origin"
                   allowFullScreen
                 ></iframe>
+              :  
+                <img
+                  src="/Watch_Thumb.webp"
+                  alt={mediaItem.title}
+                  className="object-cover w-full h-full"
+                />
+              }
               </div>
             )}
             <p className="text-xs mb-1">{new Date(mediaItem.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric'})}</p>
@@ -51,7 +59,3 @@ export default function MediaList({ media }: MediaListProps){
     </div>
   );
 };
-
-
-
-

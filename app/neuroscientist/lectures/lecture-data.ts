@@ -859,5 +859,28 @@ export const lectures : Lecture[] = [{
     event: "Copernicus Center",
     date: new Date("2011-05-19")
   },
-
+  {
+    id: "154",
+    title: "Sensation and Emotion Conference. Following the conference a music festival featuring science bands and special guest artists will take place.",
+    event: "Park Central Hotel Ballroom",
+    date: new Date("2009-03-02")
+  },
+  {
+    id: "155",
+    title: "Lecture on Fear at Cornelia St Cafe",
+    event: "Cornelia St Cafe",
+    date: new Date("2010-06-06")
+  },
+  {
+    id: "156",
+    title: "The Emotional Brain",
+    event: "Brain Awareness Lecture Series",
+    date: new Date("2010-03-01")
+  },
+  {
+    id: "157",
+    title: "The Emotional Brain – Lecture at NYU Open Center",
+    event: "NYU Open Center",
+    date: new Date("2007-10-02"),
+  },
 ]
