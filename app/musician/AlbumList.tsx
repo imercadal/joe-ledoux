@@ -22,7 +22,7 @@ export default function AlbumList({ albums }: {albums: Album[]}){
                             className="pointer-events-none aspect-10/7 object-cover group-hover:opacity-75 shadow"
                             />
                         </a>
-                        <p className="pointer-events-none mt-2 block truncate text-sm font-medium text-darker">{album.title} {album.year}</p>
+                        <p className="pointer-events-none mt-2 block truncate text-sm font-medium text-darker">{`${album.title} (${album.year})`}</p>
                         <div className="flex gap-4 mt-2">
                         {album.links.map((link) => (
                             <a key={link.platform} href={link.url} target="_blank" rel="noopener noreferrer" className="hover:opacity-75">

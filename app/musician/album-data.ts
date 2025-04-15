@@ -10,8 +10,8 @@ export interface Album {
 }
 
 export const albums: Album[] = [
-    {
-    id: "10",
+{
+    id: "9",
     title: "A River of Hope and Love",
     year: 2018,
     coverUrl: "/416_Cover_River_of_Hope.webp",
@@ -19,8 +19,8 @@ export const albums: Album[] = [
         { platform: "Spotify", url: "https://open.spotify.com/intl-es/album/7Dq0fdCVcNWIGzuFqiUdfF?si=B0J39k20Sx-553x0UH_f_g" },
         { platform: "YouTube", url: "https://www.youtube.com/channel/UCOIBiy11VwS2vk6r8l9Jfrg/featured" },
     ],
-    },{
-    id: "11",
+},{
+    id: "10",
     title: "The Flip Side: More songs in our minds",
     year: 2017,
     coverUrl: "/415_Cover_Flip_side.webp",
@@ -28,6 +28,16 @@ export const albums: Album[] = [
         { platform: "Spotify", url: "https://open.spotify.com/album/xyz" },
         { platform: "AppleMusic", url: "https://music.apple.com/album/xyz" },
         { platform: "YouTube", url: "https://www.youtube.com/watch?v=jBmIPz20ESc" },
+        ],
+}, {
+    id: "11",
+    title: "Things We've Learned (So We Are)",
+    year: 2016,
+    coverUrl: "/417_Cover_Things_Learned.webp",
+    links: [
+        { platform: "Spotify", url: "https://open.spotify.com/intl-es/album/6xGrl1Ef3PNMDF9AjaUmCs?si=WgBG2g3MSK6tghJoy6BGjg" },
+        { platform: "AppleMusic", url: "" },
+        { platform: "YouTube", url: "https://www.youtube.com/watch?v=Tf7BijhqTnQ" },
       ],
 }, {
     id: "12",
