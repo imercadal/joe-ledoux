@@ -17,7 +17,7 @@ export default function MusicianPage(){
         "MusicPhoto_7", "MusicPhoto_8", "MusicPhoto_9", "MusicPhoto_10", "MusicPhoto_11", "MusicPhoto_12", 
         "MusicPhoto_13", "MusicPhoto_14", "MusicPhoto_15", "MusicPhoto_16", "MusicPhoto_17", "MusicPhoto_18", 
         "MusicPhoto_19", "MusicPhoto_20", "MusicPhoto_21", "MusicPhoto_22", "MusicPhoto_23", "MusicPhoto_24", 
-        "MusicPhoto_25", "MusicPhoto_26", "MusicPhoto_27", "MusicPhoto_28", "MusicPhoto_29"
+        "MusicPhoto_25", "MusicPhoto_26", "MusicPhoto_27", "MusicPhoto_28", "MusicPhoto_29", "MusicPhoto_30"
     ];
 
     return(
