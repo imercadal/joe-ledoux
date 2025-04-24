@@ -7,8 +7,8 @@ export default function PostList({ posts }: { posts: Post[]}) {
     const personalBlogPosts = posts.filter((post) => post.mediaCompany === "Personal Blog");
 
     return(
-        <main className='container px-6 mx-auto pb-12 pl-6 sm:pl-0 flex flex-col sm:flex-row gap-8 max-w-4xl items-start justify-center'> 
-            <div className='w-full sm:w-5/12'>
+        <main className='container px-6 mx-auto pb-12 pl-8 lg:pl-0 flex flex-col sm:flex-row gap-4 max-w-3xl items-start justify-center'> 
+            <div className='w-full sm:w-1/2 pl-0 sm:pl-6'>
                 <div className='flex gap-x-4 mb-4 items-center'>    
                     <Image alt="Personal Blog Logo" src='/950_Blogspot.png' className="size-10 rounded-full bg-gray-50" width={10} height={10} />
                     <div>
@@ -32,7 +32,7 @@ export default function PostList({ posts }: { posts: Post[]}) {
                 ))}
             </div>
             
-            <div className='w-full sm:w-7/12 pl-0 sm:pl-6'>
+            <div className='w-full sm:w-1/2'>
                 <div className='mb-10'>
                     <div className='flex gap-x-4 mb-4 items-center'>    
                         <Image alt="New York Times Logo" src='/960_NYTimes.png' className="size-10 rounded-full bg-gray-50" width={10} height={10} />
