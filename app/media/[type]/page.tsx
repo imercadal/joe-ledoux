@@ -11,7 +11,7 @@ export default async function MediaPage({ params } : {
 }) {
   const { type } = await params;
 
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
   const apiUrl = new URL('/api/media', baseUrl);
   apiUrl.searchParams.set('type', type);
 
@@ -46,8 +46,9 @@ export default async function MediaPage({ params } : {
           <h3 className="font-bold uppercase">{type}</h3>
         </div>
         <div className="p-32 min-h-3/4 flex justify-center">
-          <p className="text-dark text-3xl">Failed to load media. Please try again later.</p>
-          <Link href="/">
+          <p className="text-lightText text-3xl">Failed to load media. Please try again later.</p>
+          <br></br>
+          <Link href="/" className='text-white hover:opacity-75'>
             <p>Back to home</p>
           </Link>
         </div>
