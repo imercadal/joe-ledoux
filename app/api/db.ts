@@ -29,8 +29,8 @@ export async function connectToDb() {
   }
 
   cachedClient = client;
-  cachedDb = client.db('joeledoux')
+  cachedDb = client.db('websitedb')
 
-  return { client, db: client.db('joeledoux') }
+  return { client, db: client.db('websitedb') }
 
 }
