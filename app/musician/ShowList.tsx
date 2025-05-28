@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Show } from './show-data';
+import Link from 'next/link';
 import { ArrowLongRightIcon } from "@heroicons/react/16/solid";
 
 export default function ShowList({ shows }: { shows: Show[] }) {
@@ -37,13 +38,12 @@ export default function ShowList({ shows }: { shows: Show[] }) {
       {shows.length > 3 && (
         <div className="mt-4 text-right">
           <ArrowLongRightIcon className="inline h-5 w-5 text-accent" />
-          <button
-            type="button"
-            onClick={() => setShowMore(prev => !prev)}
+          <Link
+            href="/musician/gigs"
             className="text-accent inline font-bold hover:opacity-75"
           >
-            {showMore ? "Show less" : "See more"}
-          </button>
+            "See more"
+          </Link>
         </div>
       )}
     </div>

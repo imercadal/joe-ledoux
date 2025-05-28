@@ -6,10 +6,16 @@ export default function GigsPage() {
   const sortedShows = [...shows].sort((a, b) => b.date.getTime() - a.date.getTime());
 
   return (
-    <div className='max-w-4xl mx-auto py-6'>
+    <div className="bg-lightAccent">
+        <div className="relative h-40 z-10 bg-cover bg-center bg-[url('/220_Neuro_Lectures.webp')] flex items-center justify-center">
+            <h3 className="font-bold">GIGS</h3>
+        </div>
+
+
+    <div className='max-w-4xl mx-auto py-2 text-darkest'>
       <ul role="list" className="grid grid-cols-1 gap-x-4 gap-y-8 sm:gap-x-6 xl:gap-x-8">
         {sortedShows.map((show) => (
-          <li key={show._id} className="sm:flex border p-4 rounded shadow">
+          <li key={show._id} className="sm:flex p-4 rounded shadow-lg">
             <div>
               <p>
                 <strong>
@@ -34,6 +40,7 @@ export default function GigsPage() {
         ))}
       </ul>
       <ScrollToTopButton/>
+    </div>
     </div>
   );
 }
