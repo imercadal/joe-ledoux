@@ -57,7 +57,7 @@ export default function ImageGrid({ images, className = "" }: PhotoGalleryProps)
             return (
               <div
                 key={image.id}
-                className={`relative overflow-hidden rounded-lg cursor-pointer transition-transform hover:scale-[1.02] ${spanClass}`}
+                className={`relative overflow-hidden rounded-lg cursor-pointer transition-transform hover:scale-[1.02]`}
                 onClick={() => setSelectedPhoto(image)}
               >
                 <div className="aspect-[auto] h-full w-full">
