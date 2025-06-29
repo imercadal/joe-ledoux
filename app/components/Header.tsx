@@ -30,7 +30,6 @@ import {
   DisclosureButton,
   DisclosurePanel,
 } from "@headlessui/react";
-import { motion } from 'framer-motion';
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { ArrowLongRightIcon } from "@heroicons/react/16/solid";
@@ -120,17 +119,6 @@ export default function Navbar() {
     });
     setActiveSubmenu(parentNavItem || null);
   }, [pathname]);
-
-  const buttonVariants = {
-    initial: {
-            scale: 1,
-            boxShadow: "none",
-    },
-    hover: {
-            scale: 1.1,
-            boxShadow: "0px 0px 8px rgb(255,255,255)",
-    }
-  }
 
   return (
     <header className="relative bg-white shadow-md z-50">

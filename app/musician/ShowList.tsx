@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { ArrowLongRightIcon } from "@heroicons/react/16/solid";
 
 export default function ShowList({ shows }: { shows: Show[] }) {
-  const [showMore, setShowMore] = useState(false);
+  const [showMore] = useState(false);
 
   const sortedShows = [...shows].sort((a, b) => b.date.getTime() - a.date.getTime());
   const visibleShows = showMore ? sortedShows : sortedShows.slice(0, 3);

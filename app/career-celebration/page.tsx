@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import Image from 'next/image';
-import { Article, articles } from './article-data';
+import { articles } from './article-data';
 
 interface Image {
   id: string;
@@ -114,14 +114,14 @@ export default function RetirementPage() {
         const currentIndex = images.indexOf(selectedPhoto);
         const nextIndex = (currentIndex + 1) % images.length;
         setSelectedPhoto(images[nextIndex]);
-    }, [selectedPhoto, images]);
+    }, [selectedPhoto]);
 
     const prevImage = useCallback(() => {
         if (!selectedPhoto) return;
         const currentIndex = images.indexOf(selectedPhoto);
         const prevIndex = (currentIndex - 1 + images.length) % images.length;
         setSelectedPhoto(images[prevIndex]);
-    }, [selectedPhoto, images]);
+    }, [selectedPhoto]);
 
     useEffect(() => {
         const handleKeyDown = (e: KeyboardEvent) => {
@@ -138,7 +138,7 @@ export default function RetirementPage() {
 
         window.addEventListener('keydown', handleKeyDown);
         return () => window.removeEventListener('keydown', handleKeyDown);
-    }, [selectedPhoto, images, nextImage, prevImage]);
+    }, [selectedPhoto, nextImage, prevImage]);
 
     return(
         <div className="bg-lightAccent">
@@ -241,8 +241,8 @@ export default function RetirementPage() {
                                 allowFullScreen
                                 ></iframe>
                             </div>
-                            <p className='text-sm text-dark font-bold mb-2'>Joseph LeDoux's 50 year scientific Career Celebration</p>
-                            <p className='text-xs text-dark italic mb-2'>Colleagues from near and far gathered at the NYU Clive Davis Institute of Recorded Music in Brooklyn, NY to  celebrate Joseph LeDoux's contributions to understanding emotions and consciousness (see the Program below for the list of speakers).</p>
+                            <p className='text-sm text-dark font-bold mb-2'>Joseph LeDoux&apos;s 50 year scientific Career Celebration</p>
+                            <p className='text-xs text-dark italic mb-2'>Colleagues from near and far gathered at the NYU Clive Davis Institute of Recorded Music in Brooklyn, NY to  celebrate Joseph LeDoux&apos;s contributions to understanding emotions and consciousness (see the Program below for the list of speakers).</p>
                             <p className="text-xs text-dark mt-1">Dec 6th & 7th, 2024  — 7 hrs 5 min</p>
                         </div> 
                         <div className='flex flex-col text-lightText gap-y-2 gap-x-6 lg:gap-x-8 mb-4 items-center'>
@@ -257,7 +257,7 @@ export default function RetirementPage() {
                                 allowFullScreen
                                 ></iframe>
                             </div>
-                            <p className='text-sm text-dark font-bold mb-2'>The Acoustic Amygdaloids wrapped up Day 1 of Joseph LeDoux's career celebration</p>
+                            <p className='text-sm text-dark font-bold mb-2'>The Acoustic Amygdaloids wrapped up Day 1 of Joseph LeDoux&apos;s career celebration</p>
                             <p className='text-xs text-dark italic mb-2'>The Amygdaloids played acoustic versions of their Heavy MenTal songs. Included in the band were Joseph LeDoux, Tyler Volk, Daniela Schiller, Colin Dempsey, David Humphrey, and  Mian Hou. For more about The Amygdaloids see  
                                 <a href='https://www.youtube.com/@theamygdaloids' rel='noopener noreferrer' target='_blank'> @theamygdaloids</a>
                             </p>
@@ -276,9 +276,9 @@ export default function RetirementPage() {
                                     allowFullScreen
                                     ></iframe>
                                 </div>
-                                <p className='text-sm text-dark font-bold mb-2'>Saturday night the Amygdaloids plugged and rocked the Clive Davis 'Garage'</p>
+                                <p className='text-sm text-dark font-bold mb-2'>Saturday night the Amygdaloids plugged and rocked the Clive Davis &apos;Garage&apos;</p>
                                 <p className='text-xs text-dark italic mb-2'>
-                                    The core band included Joe, Colin Dempsey, Amanda Thorpe, Daniela Schiller, Jeff Peretz, Sam Cronin, and on one song, Dennis Tirch. Special guests included, Eric 'Roscoe' Ambel (Joan Jett and the Blackhearts,  Del Lords), Richard Barone (the Bongos, and Lenny Kaye (Patti Smith Group). Rosanne Cash and John Leventhal joined remotely singing and playing solo on Mind Over Matter, a son on which she sang backup vocals for on the Amygdaloids second album.
+                                    The core band included Joe, Colin Dempsey, Amanda Thorpe, Daniela Schiller, Jeff Peretz, Sam Cronin, and on one song, Dennis Tirch. Special guests included, Eric &apos;Roscoe&apos; Ambel (Joan Jett and the Blackhearts,  Del Lords), Richard Barone (the Bongos, and Lenny Kaye (Patti Smith Group). Rosanne Cash and John Leventhal joined remotely singing and playing solo on Mind Over Matter, a son on which she sang backup vocals for on the Amygdaloids second album.
                                 </p>
                                 <p className="text-xs text-dark mt-1">Saturday December 7, 2024 — 58 min</p>
                         </div> 

@@ -72,7 +72,7 @@ export default function NewsBanner() {
           </svg>
           <p className="text-xs text-lightText mr-4">
             <Link href='/career-celebration'>
-              <strong className="font-semibold">Joe's Career Celebration</strong>
+              <strong className="font-semibold">Joe&apos;s Career Celebration</strong>
             </Link>
           </p>
         </>

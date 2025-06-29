@@ -1,5 +1,6 @@
 import React from "react";
 import { MediaItem } from './media-data'; 
+import Image from "next/image";
 
 interface MediaListProps {
     media: MediaItem[];
@@ -41,10 +42,12 @@ export default function MediaList({ media }: MediaListProps){
                   allowFullScreen
                 ></iframe>
               :  
-                <img
+                <Image
                   src="/Watch_Thumb.webp"
                   alt={mediaItem.title}
                   className="object-cover w-full h-full"
+                  width={16}
+                  height={9}
                 />
               }
               </div>
