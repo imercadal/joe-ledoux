@@ -27,7 +27,7 @@ export default function MusicianPage(){
                 className="relative flex flex-col lg:flex-row w-full"
                 style={{ aspectRatio: "1920 / 867" }}
             >
-                {/* md and up devices */}
+                {/* Md and up devices */}
                 <div 
                     className='absolute hidden lg:block inset-0 bg-cover bg-center'
                     style={{ backgroundImage: `url('/410_Music_Amygdaloids.webp')` }}
@@ -44,7 +44,7 @@ export default function MusicianPage(){
                 </div>
                 
                 {/* Spacer block*/}
-                <div className='flex-1 bg-green-200'></div>
+                <div className='flex-1'></div>
                 {/* Text block */}
                 <div 
                     className="lg-gradient relative flex lg:flex-2 xl:flex-1 justify-start items-end lg:pl-20 xl:pl-0 lg:ml-96 xl:ml-0 pb-12 lg:pb-2 xl:pb-6 mt-8 md:mt-0 md:pt-10 xl:pt-0 bg-opacity-100 text-lightText"        
@@ -144,7 +144,8 @@ export default function MusicianPage(){
             </section>
 
             <section id="gigs" className="container px-4 my-4 py-3 md:py-6 mx-auto flex-col justify-center max-w-4xl">
-                <h2 className="text-2xl font-bold mb-4">Gigs</h2>
+                <h2 className="text-2xl font-bold mb-1">Gigs</h2>
+                <p className='text-darker italic mb-3'><b>Note: </b>For this list, ‘Amygdaloids’ means the full band, the acoustic duos Half Full and So We Are, and solo performances by Joe.</p>
                 <ShowList shows={ shows }/>
             </section>
 

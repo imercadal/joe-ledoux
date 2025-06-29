@@ -40,9 +40,9 @@ export default function ShowList({ shows }: { shows: Show[] }) {
           <ArrowLongRightIcon className="inline h-5 w-5 text-accent" />
           <Link
             href="/musician/gigs"
-            className="text-accent inline font-bold hover:opacity-75"
+            className="text-accent ml-1 inline font-bold hover:opacity-75"
           >
-            "See more"
+            See more
           </Link>
         </div>
       )}

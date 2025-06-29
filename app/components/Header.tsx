@@ -1,3 +1,23 @@
+/*
+ADDING SCALE CHANGE ON HOVER AND OTHER ANIMATIONS
+<motion.svg 
+  style={{ opacity: opacity1, y }} 
+  onClick={ openModal }
+  variants={ buttonVariants }
+  initial="initial" 
+  whileHover="hover"
+
+  const buttonVariants = {
+    initial: {
+            scale: 1,
+            boxShadow: "none",
+    },
+    hover: {
+            scale: 1.1,
+            boxShadow: "0px 0px 8px rgb(255,255,255)",
+    }
+};
+*/
 'use client'
 
 import { usePathname } from "next/navigation";
@@ -10,6 +30,7 @@ import {
   DisclosureButton,
   DisclosurePanel,
 } from "@headlessui/react";
+import { motion } from 'framer-motion';
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { ArrowLongRightIcon } from "@heroicons/react/16/solid";
@@ -62,7 +83,7 @@ const mainNavItems: NavItem[] = [
       { label: "the amygdaloids", href: "/musician" },
       { label: "albums", href: "/musician#albums" },
       { label: "gigs", href: "/musician#gigs" },
-      { label: "other projects", href: "/musician#otherprojects" },
+      { label: "gallery", href: "/musician#gallery" },
       {
         label: "media",
         mediamenu: [
@@ -99,6 +120,17 @@ export default function Navbar() {
     });
     setActiveSubmenu(parentNavItem || null);
   }, [pathname]);
+
+  const buttonVariants = {
+    initial: {
+            scale: 1,
+            boxShadow: "none",
+    },
+    hover: {
+            scale: 1.1,
+            boxShadow: "0px 0px 8px rgb(255,255,255)",
+    }
+  }
 
   return (
     <header className="relative bg-white shadow-md z-50">
