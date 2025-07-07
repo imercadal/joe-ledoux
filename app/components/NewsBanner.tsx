@@ -60,7 +60,7 @@ export default function NewsBanner() {
       <div className="flex flex-wrap items-center justify-around gap-y-2">
         <p className="text-xs text-lightText">
           <Link href='/author/67e455e79d343bd2f8bfe258'>
-            <strong className="font-semibold">New book coming soon!</strong>
+            <strong className="font-semibold">Joe's new book is a memoir</strong>
           </Link>
         </p>
         { pathname === '/career-celebration' ?

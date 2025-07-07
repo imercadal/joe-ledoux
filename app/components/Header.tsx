@@ -133,6 +133,7 @@ export default function Navbar() {
         <div className="sm:hidden">
           <button
             type="button"
+            aria-label="Menu"
             onClick={() => setMobileMenuOpen(true)}
             className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-accent"
           >
@@ -224,7 +225,7 @@ export default function Navbar() {
       <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="sm:hidden z-50">
         <DialogPanel className="fixed inset-y-0 right-0 z-10 w-3/4 max-w-lg my-16 bg-white p-6 shadow-lg">
         <div className="flex justify-end">
-          <button onClick={() => setMobileMenuOpen(false)} className="p-2">
+          <button onClick={() => setMobileMenuOpen(false)} className="p-2" aria-label="Close Menu">
             <XMarkIcon className="h-6 w-6 text-accent" />
           </button>
         </div>

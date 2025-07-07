@@ -285,7 +285,7 @@ export default function RetirementPage() {
                     </div>
                 </section>
 
-                {/* Photo Gallery Section */}
+                {/* Photo Gallery */}
                 <section>
                 <div className="flex items-center justify-center gap-2 mb-8">
                     <div className="h-8 w-8 text-green-600" />
