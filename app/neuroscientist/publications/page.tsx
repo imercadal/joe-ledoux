@@ -50,8 +50,6 @@ export default async function PublicationsPage(){
             <div className="relative h-40 z-10 bg-cover bg-center bg-[url('/210_Neuro_Pubs.webp')] flex items-center justify-center">
                 <h3 className="font-bold">PUBLICATIONS</h3>
             </div>
-
-            {/* Navigation for Years */}
             <div className="sticky top-0 py-2 md:py-3 px-4 md:px-0 flex justify-center items-center bg-lightAccent">
                 <ul className="flex flex-wrap gap-x-4 gap-y-2 w-full mx-auto max-w-2xl justify-center text-xs text-accent font-azeret">
                     {years.map((year) => (
@@ -61,8 +59,6 @@ export default async function PublicationsPage(){
                     ))}
                 </ul>
             </div>
-
-            {/* Publication Groups by Year */}
             <div className='p-6 md:px-16 mx-auto max-w-3xl text-lightText'>
                 {years.map((year) => (
                     <div key={year} id={`year-${year}`} className='mb-8'>
