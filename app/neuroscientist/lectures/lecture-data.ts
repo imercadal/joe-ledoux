@@ -1756,7 +1756,7 @@ export const lectures : Lecture[] = [{
   },
   {
     id: "306",
-    title: '1997 FC Donders Lecture: "Emotion, Memory, and the Brain"',
+    title: 'FC Donders Lecture: "Emotion, Memory, and the Brain"',
     event: "Nijmegen, The Netherlands",
     date: new Date("1997-12-10"),
   },
@@ -1766,5 +1766,759 @@ export const lectures : Lecture[] = [{
     event: "New York, New York",
     date: new Date("1997-12-11"),
   },
-  
+  {
+    id: "310",
+    title: '1st Annual Goldsmith Lecture: The Emotional Brain',
+    event: "Institute of Cognitive Neuroscience. Dept of Pharmacology, Oxford, UK",
+    date: new Date("1998-02-08")
+  },
+  {
+    id: "311",
+    title: 'Nobel Minisymposium on "The Neural Mechanisms of Fear"',
+    event: "Karolinska Institute, Stockholm, Sweden",
+    date: new Date("1998-02-12")
+  },
+  {
+    id: "312",
+    title: "LTP and Fear Conditioning in the Amygdala",
+    event: "Keystone Symp on Mol & Cell Bio: The Hippo: Toward a Mol Understanding of Cognition. Salt Lake City, Utah",
+    date: new Date("1998-03-07")
+  },
+  {
+    id: "314",
+    title: "Lecture",
+    event: "Queens, NY",
+    date: new Date("1998-03-22")
+  },
+  {
+    id: "315",
+    title: 'Brain Neurocircuitry of Anxiety and Fear: Implications for Clinical Research and Practice',
+    event: "ADAA Sci. Sat. Mting. Washington, DC",
+    date: new Date("1998-03-25")
+  },
+  {
+    id: "316",
+    title: "Workshop on Neurobiology of Depressive Illness: Synaptic Plasticity Underlying Emotional Memory",
+    event: "Rockefeller Univ., New York, NY",
+    date: new Date("1998-03-27")
+  },
+  {
+    id: "317",
+    title: "NJ Writing Project in Texas",
+    event: "Houston, Texas",
+    date: new Date("1998-03-28")
+  },
+  {
+    id: "318",
+    title: "1998 Charles Fisher Memorial Lecture at the NY Psychoanalytic Society",
+    event: "New York, NY",
+    date: new Date("1998-05-12")
+  },
+  {
+    id: "319",
+    title: 'The Future of the Study of Emotion',
+    event: "NIMH, Discovering our Selves: The Science of Emotion. Bethesda, MD",
+    date: new Date("1998-05-05")
+  },
+  {
+    id: "320",
+    title: 'American Psychiatric Association: Frontier of Science Lecture',
+    event: "Toronto, Canada",
+    date: new Date("1998-06-02")
+  },
+  {
+    id: "321",
+    title: "Vatican Conference: Mind, Brain Problem",
+    event: "Krakow, Poland",
+    date: new Date("1998-06-21")
+  },
+  {
+    id: "322",
+    title: "James S McDonnell Foundation Meeting",
+    event: "Lake Tahoe, California",
+    date: new Date("1998-07-12")
+  },
+  {
+    id: "323",
+    title: 'Invited Speaker Lecture "Amygdala and Stress"',
+    event: "WHO Meeting on Stress and Adaptation. Montreal, Canada",
+    date: new Date("1998-09-21")
+  },
+  {
+    id: "324",
+    title: "NIDA: Cellular & Molecular Basis of Emotional Memory: Implication for Addiction",
+    event: "Bethesda, MD",
+    date: new Date("1998-09-23")
+  },
+  {
+    id: "325",
+    title: 'Emotion, Qualia, & Consciousness: "The Neuroscience of Fear: Perspectives from Animal Research"',
+    event: "Ischia, Italy",
+    date: new Date("1998-10-19")
+  },
+  {
+    id: "326",
+    title: 'Emotion, Memory & the Brain',
+    event: "78th Annual Meeting NY Academy of Medicine. Mt Sinai Medical Center, New York, NY",
+    date: new Date("1998-12-04")
+  },
+  {
+    id: "327",
+    title: "Lecture",
+    event: "Ponce, Puerto Rico",
+    date: new Date("1998-12-05")
+  },
+  {
+    id: "328",
+    title: "Biology of Emotions Lecture",
+    event: "Beth Israel Medical Center, New York, NY",
+    date: new Date("1998-12-23")
+  },
+  {
+    id: "329",
+    title: "Baton Rouge",
+    event: "Baton Rouge, Louisiana",
+    date: new Date("1999-01-11")
+  },
+  {
+    id: "330",
+    title: "Neuroscience Seminar Series",
+    event: "UCLA, Los Angeles, California",
+    date: new Date("1999-01-25")
+  },
+  {
+    id: "331",
+    title: "Butler Hospital CME: Understanding the Emotional Brain: Implications for Treatment and Research",
+    event: "Providence, Rhode Island",
+    date: new Date("1999-02-02")
+  },
+  {
+    id: "332",
+    title: 'INS Conference: Special Topic – "Emotion, Memory and the Brain"',
+    event: "Boston, MA",
+    date: new Date("1999-02-10")
+  },
+  {
+    id: "333",
+    title: 'CME: "1999 Review of Basic & Clinical Neurosciences" – Limbic System lecture',
+    event: "Columbia University",
+    date: new Date("1999-02-20")
+  },
+  {
+    id: "334",
+    title: "WI Alliance for Arts Education – Summit 13",
+    event: "University of Wisconsin, Madison, WI",
+    date: new Date("1999-02-24")
+  },
+  {
+    id: "335",
+    title: "1st Conference on Brain & Communication: Conscious and Unconscious Processing",
+    event: "Georgetown University, Washington, DC",
+    date: new Date("1999-04-08")
+  },
+  {
+    id: "336",
+    title: 'Symposium "Limbic Structures and Functions" (needs confirmation)',
+    event: "Magdeburg, Germany",
+    date: new Date("1999-04-22")
+  },
+  {
+    id: "337",
+    title: "CSH Meeting",
+    event: "Cold Spring Harbor, Long Island, NY",
+    date: new Date("1999-04-28")
+  },
+  {
+    id: "338",
+    title: "American Psychiatric Association: The Neuroscience of Severe Mental Disorders Symposium",
+    event: "Washington, DC",
+    date: new Date("1999-05-15")
+  },
+  {
+    id: "339",
+    title: 'How can Technology Emulate Biological Intelligence?',
+    event: "3rd Int. Conference on Cognitive & Neural Systems: How does the Brain Control Behavior? Boston University, Boston, MA",
+    date: new Date("1999-05-26")
+  },
+  {
+    id: "341",
+    title: "North American Society of Teachers of the Alexander Technique",
+    event: "Amherst College, Western Massachusetts",
+    date: new Date("1999-06-23")
+  },
+  {
+    id: "342",
+    title: 'Neuron Circuits Conference: "Fear Learning: from Systems to Synapses"',
+    event: "Monte Verita, Ascona, Switzerland",
+    date: new Date("1999-09-26")
+  },
+  {
+    id: "343",
+    title: 'La Caixa Foundation: Emotion & Knowledge: The Evolution of the Nervous System & Intelligence',
+    event: "The Science Museum, Barcelona, Spain",
+    date: new Date("1999-10-01")
+},
+{
+    id: "344",
+    title: 'Naturing Nature: Plasticity in Emotional Networks"',
+    event: "Foundation Ipsen, Jean-Louis Signoret Prize. Paris, France",
+    date: new Date("1999-11-12")
+},
+{
+    id: "345",
+    title: 'Lecture',
+    event: "Puerto Rico",
+    date: new Date("1999-12-05")
+},
+{
+    id: "346",
+    title: 'Conference at Princeton University',
+    event: "Princeton, NJ",
+    date: new Date("1999-12-15")
+},
+{
+    id: "347",
+    title: 'Neurobiology Seminar',
+    event: "Caltech, Pasadena, California",
+    date: new Date("2000-01-11")
+},
+  {
+    id: "348",
+    title: "Rose M. Litman Lecture 'Emotional Synapses'",
+    event: "Univ of CO, Boulder, CO",
+    date: new Date("2000-02-03")
+  },
+  {
+    id: "349",
+    title: "Emotion, Memory and the Brain",
+    event: "NYU/Child Study Center Grand Rounds Lecture Series. New York, New York",
+    date: new Date("2000-02-11")
+  },
+  {
+    id: "350",
+    title: "Emotions and the Brain",
+    event: "AAAs Meeting. Washington, DC",
+    date: new Date("2000-02-17")
+  },
+  {
+    id: "351",
+    title: "Emotional Synapses",
+    event: "NS Seminar Series, Univ. of Maryland, Baltimore, MD",
+    date: new Date("2000-03-08")
+  },
+  {
+    id: "352",
+    title: "NY Academy of Sciences Psychology Section Lecture",
+    event: "New York, New York",
+    date: new Date("2000-04-17")
+  },
+  { 
+    id: "353", 
+    title: "UCSF Grand Rounds Presentation", 
+    event: "San Francisco, CA", 
+    date: new Date("2000-04-25") 
+  },
+  { 
+    id: "354", 
+    title: "New Research: Emotional Synapses", 
+    event: "Learning and the Brain Conference, Boston, MA", 
+    date: new Date("2000-04-30") 
+  },
+  { 
+    id: "355", 
+    title: "The Role of Neural Plasticity in Chemical Intolerance", 
+    event: "New York Academy of Sciences Conference, Rockefeller University, New York, NY", 
+    date: new Date("2000-06-16") 
+  },
+  { 
+    id: "356", 
+    title: "Personality and the Brain: Closing the GAP", 
+    event: "Learning Sciences and Brain Research: Potential Implications for Education Policies and Practices. OECD, CERI & Sackler Institute. New York, NY", 
+    date: new Date("2000-06-16") 
+  },
+  { 
+    id: "357", 
+    title: "Conference on Man and Mind", 
+    event: "Stockholm, Sweden", 
+    date: new Date("2000-09-24") 
+  },
+  { 
+    id: "358", 
+    title: "VolkswagenStiftung", 
+    event: "Bremen, Germany", 
+    date: new Date("2001-09-28") 
+  },
+  { 
+    id: "359", 
+    title: "Psychiatry Grand Rounds Talk: Emotion, Memory and the Brain", 
+    event: "Westchester Medical Center, Valhalla, NY", 
+    date: new Date("2000-10-10") },
+  { 
+    id: "360", 
+    title: "Emotions:Deconstruction how they happen and why they impact work effectiveness", 
+    event: "Emotional Intelligence Conference: Effective Leadership, High-Performing Organizations, Better Business Results. Chicago, IL", 
+    date: new Date("2000-10-11") },
+  { 
+    id: "361", 
+    title: "Kuopio Neuroscience Lecture Series", 
+    event: "University of Kuopio, Kuopio, Finland", 
+    date: new Date("2000-10-15") },
+  { 
+    id: "362", 
+    title: "30th Annual SFN Meeting", 
+    event: "New Orleans, LA", 
+    date: new Date("2000-11-04") },
+  { 
+    id: "363", 
+    title: "Distinguished Speaker Series Lectures", 
+    event: "Psychology Department, Cornell University, Ithaca, NY", 
+    date: new Date("2000-11-16") },
+  { 
+    id: "364", 
+    title: "ACNP Annual Meeting: Fear and Anxiety: Linking the Neurobiology with the Psychopathology", 
+    event: "San Juan, Puerto Rico", 
+    date: new Date("2000-12-10") },
+  { 
+    id: "365", 
+    title: "VA Medical Center / University of Pennsylvania Continuing Medical Education", 
+    event: "Philadelphia, PA", 
+    date: new Date("2001-01-10") },
+  { 
+    id: "366", 
+    title: "Neuropsychology Colloquium Series", 
+    event: "Queens College, Queens, NY", 
+    date: new Date("2001-02-21") },
+  { 
+    id: "367", 
+    title: "Flynn Lecture in Psychiatry", 
+    event: "Yale University, New Haven, CT", 
+    date: new Date("2001-03-01") },
+  { 
+    id: "368", 
+    title: "DeLange Conference on the Neurobiology of Perception and Communications: From Synapse to Society", 
+    event: "Rice University, Houston, TX", 
+    date: new Date("2001-03-04") },
+  { 
+    id: "369", 
+    title: "2nd Kuopio Alzheimer Symposium", 
+    event: "University of Kuopio, Kuopio, Finland", 
+    date: new Date("2001-03-13") },
+  { 
+    id: "370", 
+    title: "Learning and Memory", 
+    event: "Cold Spring Harbor, Long Island", 
+    date: new Date("2001-04-25") },
+  { 
+    id: "371", 
+    title: "Learning and the Brain Conference: New Research: Emotional Synapses", 
+    event: "Washington, DC", 
+    date: new Date("2001-05-02") },
+  { 
+    id: "372", 
+    title: "SFB 2nd Symposium on Limbic Structures and Functions", 
+    event: "Magdeburg, Germany", 
+    date: new Date("2001-05-17") },
+  { 
+    id: "373", 
+    title: "30th Annual SFN Meeting: Symposium on Consolidation and Reconsolidation of Memory", 
+    event: "San Diego, CA", 
+    date: new Date("2001-11-10") },
+  { 
+    id: "374", 
+    title: "Neurological Basis for Justice Roundtable Workshop", 
+    event: "Gruter Institute for Law and Behavioral Research Roundtable Workshop. Portola Valley, CA", 
+    date: new Date("2001-11-16") },
+  { 
+    id: "375", 
+    title: "The Adult Brain: Synaptic Self", 
+    event: "Dana/Smithsonian Lecture Series: The Secret Life of the Brain. Washington, DC", 
+    date: new Date("2001-11-20") },
+  { 
+    id: "376", 
+    title: "Integrative Approaches to Analyzing Cognitivie Functions", 
+    event: "1st Symposium of VolkswagenStiftung: Dynamics and Adaptivity of Neuronal Systems. Bremen, The Netherlands", 
+    date: new Date("2001-09-28") },
+  { 
+    id: "377", 
+    title: "Pavlovian Meeting", 
+    event: "New Brunswick, NJ", 
+    date: new Date("2001-10-11") },
+  { 
+    id: "378", 
+    title: "What is it to be Human? What science can and cannot tell us about human nature", 
+    event: "Institute of Ideas. New York, NY", 
+    date: new Date("2001-10-26") },
+  { 
+    id: "379", 
+    title: "The Biology of Fear: From Basic to Clinical Science", 
+    event: "American College of Psychiatrists, CME Plenary. Kohala Coast, Hawaii", 
+    date: new Date("2002-02-27") },
+  { 
+    id: "380", 
+    title: "Neural Control of Behavior", 
+    event: "UCLA, Los Angeles, CA", 
+    date: new Date("2002-03-14") },
+  { 
+    id: "381", 
+    title: "Emotional Memory:The Integration of Modern Psychoanalysis & Contempory Neuroscience", 
+    event: "PCNJ Caspersen School: Enlisting Emotional Memory to Create the Self. Drew University, Madison, NJ", 
+    date: new Date("2002-04-06") },
+  { 
+    id: "382", 
+    title: "Panel Trauma, Dissociation, & Conflict: The Space where Neuroscience, Cognitive Science and Psychoanalysis Overlap", 
+    event: "Division 39 Conf 22nd Annual Meeting of the APA 'Evolving Domains: Psychoanalysis in Dialogue with Science, Culture & Technology'. New York, NY", 
+    date: new Date("2002-04-12") },
+  { 
+    id: "383", 
+    title: "Southwestern Psychological Association: Distinguished Scientist Lecturer", 
+    event: "Corpus Christi, TX", 
+    date: new Date("2002-04-18") },
+  { 
+    id: "384", 
+    title: "Brookdale University Hospital and Medical Center Grand Rounds: The Emotional Brain", 
+    event: "Brooklyn, NY", 
+    date: new Date("2002-05-07") },
+  { 
+    id: "385", 
+    title: "Northwestern University", 
+    event: "Evanston, IL", 
+    date: new Date("2002-05-16") },
+  { 
+    id: "386", 
+    title: "Conference Pathos, Passion, Feelings-Emotions in the Arts, and talk: Passions of the Soul: how the Brain Makes the Selfon Emotions in the Arts: Passions of the Soul", 
+    event: "Frankfurt Opera House, Frankfurt, Germany", 
+    date: new Date("2002-05-30") },
+  { 
+    id: "387", 
+    title: "CINP Congress: Collegium Internationale Neuro-Psychopharmacologicum", 
+    event: "Montreal, Canada", 
+    date: new Date("2002-06-23") },
+  { 
+    id: "388", 
+    title: "110th APA Annual Convention: Synaptic Self", 
+    event: "Chicago, IL", 
+    date: new Date("2002-08-23") },
+  { 
+    id: "389", 
+    title: "Seminar at University of Rochester, Department of Neurobiology and Anatomy", 
+    event: "Rochester, NY", 
+    date: new Date("2002-09-12") },
+  { 
+    id: "390", 
+    title: "Herbert Spencer Lecture Series: How Our Brains Learn to Be Who We Are", 
+    event: "University of Oxford, Oxford, UK", 
+    date: new Date("2002-10-23") },
+  {
+    id: "391", 
+    title: "32nd SFN Meeting", 
+    event: "Orlando, FL", 
+    date: new Date("2002-11-02") },
+  { 
+    id: "392", 
+    title: "ITSS", 
+    event: "Baltimore, MD", 
+    date: new Date("2002-11-08") },
+  { 
+    id: "393", 
+    title: "Stanford Seminar", 
+    event: "Stanford, CA", 
+    date: new Date("2002-11-21") 
+  },
+{
+    id: "400",
+    title: "Fear, Stress and the Brain",
+    event: "Psychological Trauma: Maturation Processes & Therapeutic Interventions. Boston, Mass",
+    date: new Date("2003-05-29")
+  },
+  {
+    id: "401",
+    title: "Anxiety Disorder Assoc. of Amer.: Novel Approaches to Refractory Anxiety Disorderer",
+    event: "Washington, DC",
+    date: new Date("2003-06-16")
+  },
+  {
+    id: "402",
+    title: "Neuronal Circuits",
+    event: "Ascona, Italy",
+    date: new Date("2003-09-28")
+  },
+  {
+    id: "403",
+    title: "Gallup University",
+    event: "Omaha, Nebraska",
+    date: new Date("2003-10-07")
+  },
+  {
+    id: "404",
+    title: "McGovern Sympos. Inst: \"Mechanisms Underlying Perception, Action and Mind: talkl \"Emotional Synapses and their Memories\"",
+    event: "Cambridge, Mass",
+    date: new Date("2003-10-20")
+  },
+  {
+    id: "405",
+    title: "Bauer Foundation Colloqium Series",
+    event: "Brandeis Univ., Waltham, Mass",
+    date: new Date("2003-12-01")
+  },
+  {
+    id: "406",
+    title: "SFN",
+    event: "New Orleans, Louisiana",
+    date: new Date("2003-11-06")
+  },
+  {
+    id: "407",
+    title: "42nd ACNP Annual Meeting Panel: \"How the Prefrontal Cortex Modulates Subcortical Circuitry in Fear and Anxiety Disorders\"",
+    event: "San Juan, Puerto Rico",
+    date: new Date("2003-12-07")
+  },
+  {
+    id: "408",
+    title: "Grand Rounds @ Payne Whitney Clinic/Cornell Med College",
+    event: "New York, New York",
+    date: new Date("2003-01-14")
+  },
+  {
+    id: "409",
+    title: "HHMI-Janelia Farm Workshop Perception & Behavior",
+    event: "Chevy Chase, Maryland",
+    date: new Date("2004-01-20")
+  },
+  {
+    id: "410",
+    title: "Fear: Its Political Uses and Abuses. Session: Fear & How it Works: Science and Social Science",
+    event: "New York, New York",
+    date: new Date("2004-02-05")
+  },
+  {
+    id: "411",
+    title: "Talk at Ann Arbor, Univ of MI",
+    event: "Ann Arbor, Michigan",
+    date: new Date("2004-02-10")
+  },
+  {
+    id: "412",
+    title: "Grass Lecture, Emory U",
+    event: "Atlanta, Georgia",
+    date: new Date("2004-03-16")
+  },
+  {
+    id: "413",
+    title: "Talk: Emotion, Memory and the Brain",
+    event: "10th Annual WI Sympos. On Emotion: Emotion Regulation: Neurobiological Substrates of Normal and Abnormal Processes. Madison, Wisconsin",
+    date: new Date("2004-04-22")
+  },
+  {
+    id: "414",
+    title: "Soc Biol Psych 59th Ann: Neuroplasticity: Pres. Lecture: From Soul to Synapses",
+    event: "New York, New York",
+    date: new Date("2004-04-29")
+  },
+  {
+    id: "415",
+    title: "APA Meeting",
+    event: "New York, New York",
+    date: new Date("2004-05-01")
+  },
+  {
+    id: "416",
+    title: "Wallenberg Symposium: speaking in \"Affective control of sensory information\"",
+    event: "Helsinki,  Finland",
+    date: new Date("2004-05-27")
+  },
+  {
+    id: "417",
+    title: "15th Annual Albert Barrett Neuroscience Lecture",
+    event: "Univer. of MI, Ann Arbor, MI",
+    date: new Date("2004-06-08")
+  },
+  {
+    id: "418",
+    title: "Marymount University",
+    event: "Arlington, VA",
+    date: new Date("2004-06-22")
+  },
+  {
+    id: "419",
+    title: "Magda Arnold Symposium",
+    event: "New York, New York",
+    date: new Date("2004-07-07")
+  },
+  {
+    id: "420",
+    title: "CSHL Axon Guidance & Neural Plasticity",
+    event: "Cold Spring Harbor, Long Island",
+    date: new Date("2004-09-18")
+  },
+  {
+    id: "421",
+    title: "4th Picower-Riken Neurosci Sympos \"New Frontiers in Brain Science: From Molecules to Mind\" Session: Addiction and Memory",
+    event: "MIT, Cambridge, MA",
+    date: new Date("2004-09-22")
+  },
+  {
+    id: "422",
+    title: "34th Annual SFN Meeting",
+    event: "San Diego, CA",
+    date: new Date("2004-10-23")
+  },
+  {
+    id: "423",
+    title: "Extinction Conference",
+    event: "Ponce, Puerto Rico",
+    date: new Date("2005-02-02")
+  },
+  {
+    id: "424",
+    title: "Columbia/Simons Foundation Autism Regency Hotel",
+    event: "New York, New York",
+    date: new Date("2005-02-25")
+  },
+  {
+    id: "425",
+    title: "Penn State Lecture",
+    event: "Penn State, PA",
+    date: new Date("2005-02-28")
+  },
+  {
+    id: "426",
+    title: "Consciousness: How does the brain create mind. Lecture: The Emotional Brain",
+    event: "NIH, Bethesda, MD",
+    date: new Date("2005-03-22")
+  },
+  {
+    id: "427",
+    title: "Consciousnes",
+    event: "Oxford, UK",
+    date: new Date("2005-05-01")
+  },
+  {
+    id: "428",
+    title: "\"The Neuroscience of Emotion\"",
+    event: "Korolinska Institute, Stockholm, Sweden",
+    date: new Date("2005-06-09")
+  },
+  {
+    id: "429",
+    title: "Dept of Psychiatry Mt Sinai: From Memory to Meta-Memory",
+    event: "New York, New York",
+    date: new Date("2005-09-15")
+  },
+  {
+    id: "430",
+    title: "SFN Meeting",
+    event: "Washington, DC",
+    date: new Date("2005-11-12")
+  },
+  {
+    id: "431",
+    title: "Columbia Conference on Art and the New Biology of Mind",
+    event: "New York, New York",
+    date: new Date("2006-03-24")
+  },
+  {
+    id: "432",
+    title: "Foundation Fyssen",
+    event: "Paris, France",
+    date: new Date("2006-03-31")
+  },
+  {
+    id: "433",
+    title: "Chichele Lecture Consciousness Symposium",
+    event: "All Souls College, Oxford, UK?",
+    date: new Date("2006-05-19")
+  },
+  {
+    id: "434",
+    title: "APA 2006 Convention",
+    event: "New Orleans, Louisiana",
+    date: new Date("2006-08-10")
+  },
+  {
+    id: "436",
+    title: "16th Neuropharmacology: LTP-40 Unforgettable Years",
+    event: "Atlanta, GA",
+    date: new Date("2006-10-11")
+  },
+  {
+    id: "437",
+    title: "SFN",
+    event: "Atlanta, GA",
+    date: new Date("2006-10-14")
+  },
+  {
+    id: "438",
+    title: "ISTSS 22nd Annual Meeting",
+    event: "Hollywood, CA",
+    date: new Date("2006-11-05")
+  },
+  {
+    id: "439",
+    title: "Global Creative Leadership Summit",
+    event: "New York, New York",
+    date: new Date("2006-11-13")
+  },
+  {
+    id: "440",
+    title: "NYS Psychiatric Inst./Columbia U Dept of Psychiatry Grand Rounds",
+    event: "New York, New York",
+    date: new Date("2006-11-17")
+  },
+  {
+    id: "441",
+    title: "Faculty & Staff Devel. Ctr @ NYU Coll. Of Dent. NYU Dental Liberal Arts @ Lunch: Neural Basis of Emotions",
+    event: "New York, New York",
+    date: new Date("2007-01-24")
+  },
+  {
+    id: "442",
+    title: "NIH Neuroscience Series Sem.: \"How does it feel? Closing the Gap Between Unconscious and Conscious Emotion",
+    event: "Bethesda, MD",
+    date: new Date("2007-02-04")
+  },
+  {
+    id: "443",
+    title: "\"How does it feel? Closing the Gap between the Unconscious and Conscious Emotion\" Lecture",
+    event: "London, UK",
+    date: new Date("2007-02-19")
+  },
+  {
+    id: "444",
+    title: "2007 Psychopharmacology Program: Clinical Dialogue: Update on Psychopharmacology",
+    event: "New York, New York",
+    date: new Date("2007-03-02")
+  },
+  {
+    id: "445",
+    title: "Tinnitus Research Consortium",
+    event: "Chicago, Illinois",
+    date: new Date("2007-04-22")
+  },
+  {
+    id: "446",
+    title: "The Neuroscience of Fear @Dept of Neurobiology",
+    event: "Boston, MA",
+    date: new Date("2007-05-02")
+  },
+
+  {
+    id: "448",
+    title: "Global Leadership Summit/UN Fund for Internationasl Partnerships: Featured speaker",
+    event: "NYC",
+    date: new Date("2007-09-17")
+  },
+  {
+    id: "449",
+    title: "Society for Risk Analysis",
+    event: "San Antonio, Texas",
+    date: new Date("2007-12-09")
+  },
+  {
+    id: "450",
+    title: "Inter. Sympos. On Learning, Memory, & Cognitive Function: Mechisms, Pathology. &Therapeutics",
+    event: "Valencia, Spain",
+    date: new Date("2008-02-10")
+  }
+
+
 ]
