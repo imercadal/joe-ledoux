@@ -67,6 +67,7 @@ export default function AboutPage() {
             </p>
             <a
               href="mailto:ledoux@cns.nyu.edu"
+              rel="noopener noreferrer"
             >
               <p>Email - ledoux@cns.nyu.edu</p>
             </a>
