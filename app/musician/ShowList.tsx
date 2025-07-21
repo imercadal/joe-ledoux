@@ -36,13 +36,13 @@ export default function ShowList({ shows }: { shows: Show[] }) {
         ))}
       </ul>
       {shows.length > 3 && (
-        <div className="mt-4 text-right">
+        <div className="mt-4 text-left">
           <ArrowLongRightIcon className="inline h-5 w-5 text-accent" />
           <Link
             href="/musician/gigs"
             className="text-accent ml-1 inline font-bold hover:opacity-75"
           >
-            See more
+            See all gigs
           </Link>
         </div>
       )}
