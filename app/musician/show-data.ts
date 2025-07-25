@@ -3,7 +3,7 @@ export interface Show {
     title?: string;
     band?: string;
     date: Date;
-    venue: string;
+    venue?: string;
     address?: string;
     notes?: string;
     photoUrl?: string;
@@ -22,7 +22,6 @@ export const shows: Show[] = [
     _id: 2,
     title: "Philoctetes Center for Imagination and Creativity",
     date: new Date("2006-12-16"),
-    venue: "Philoctetes Center",
     address: "NYC"
   },
   {    
@@ -32,16 +31,10 @@ export const shows: Show[] = [
     venue: "Cornelia Street Cafe",
     address: "NYC"
   },
-  {
-    _id: 4,
-    title: "Cornelia Street Cafe",
-    date: new Date("2007-03-19"),
-    venue: "Cornelia Street Cafe",
-    address: "NYC"
-  },
+
   {
         _id: 5,
-    title: "Madison Square Garden, NYU Graduation",
+    title: "NYU Graduation",
     date: new Date("2007-05-08"),
     venue: "Madison Square Garden",
     address: "NYC"
@@ -57,28 +50,24 @@ export const shows: Show[] = [
         _id: 7,
     title: "John F. Kennedy Center, Millennium Stage",
     date: new Date("2008-01-03"),
-    venue: "John F. Kennedy Center",
     address: "Washington, DC"
   },
   {
-        _id: 8,
+    _id: 8,
     title: "Exit Art, Common Senses",
     date: new Date("2008-02-29"),
-    venue: "Exit Art",
     address: "NYC"
   },
   {
         _id: 9,
     title: "Arlene’s Grocery",
     date: new Date("2008-03-11"),
-    venue: "Arlene’s Grocery",
     address: "NYC"
   },
   {
         _id: 10,
     title: "92d Street Y",
     date: new Date("2008-04-03"),
-    venue: "92d Street Y",
     address: "NYC"
   },
   {
@@ -90,7 +79,7 @@ export const shows: Show[] = [
   },
   {
         _id: 12,
-    title: "Off the Grid, Earth Day Festival",
+    title: "Earth Day Festival",
     date: new Date("2008-04-19"),
     venue: "Off the Grid",
     address: "NYC"
@@ -106,27 +95,23 @@ export const shows: Show[] = [
         _id: 14,
     title: "Lakeside Lounge",
     date: new Date("2009-06-02"),
-    venue: "Lakeside Lounge",
     address: "NYC"
   },
   {
         _id: 15,
     title: "Kenny’s Castaways",
     date: new Date("2009-09-24"),
-    venue: "Kenny’s Castaways",
     address: "NYC"
   },
   {    _id: 16,
     title: "Mind Science Foundation",
     date: new Date("2009-12-08"),
-    venue: "Mind Science Foundation",
     address: "San Antonio, TX"
   },
   {
         _id: 17,
     title: "The Rubin Museum of Tibetan Art",
     date: new Date("2010-04-19"),
-    venue: "Rubin Museum of Tibetan Art",
     address: "NYC",
     notes: "with LeNYC"
   },
@@ -160,7 +145,6 @@ export const shows: Show[] = [
         _id: 22,
     title: "Newmark Theatre",
     date: new Date("2010-08-29"),
-    venue: "Newmark Theatre",
     address: "Portland, OR"
   },
   {
@@ -175,7 +159,6 @@ export const shows: Show[] = [
     title: "Banjo Jims",
     band: "Amygdaloids",
     date: new Date("2011-05-13"),
-    venue: "Banjo Jims",
     address: "NYC"
   },
   {
@@ -183,7 +166,6 @@ export const shows: Show[] = [
     title: "World Science Fair",
     band: "Amygdaloids",
     date: new Date("2011-06-03"),
-    venue: "World Science Fair",
     address: "NYC"
   },
   {
@@ -191,7 +173,6 @@ export const shows: Show[] = [
     title: "Coco 66",
     band: "Amygdaloids",
     date: new Date("2011-06-26"),
-    venue: "Coco 66",
     address: "NYC"
   },
   {
@@ -199,7 +180,6 @@ export const shows: Show[] = [
     title: "Goggies Lounge",
     band: "Amygdaloids",
     date: new Date("2011-08-12"),
-    venue: "Goggies Lounge",
     address: "NYC"
   },
   {
@@ -207,7 +187,6 @@ export const shows: Show[] = [
     title: "The Living Room",
     band: "Amygdaloids",
     date: new Date("2011-08-16"),
-    venue: "The Living Room",
     address: "NYC"
   },
   {
@@ -222,7 +201,7 @@ export const shows: Show[] = [
   // 2012 Shows
   {
     _id: 36,
-    title: "CD release for All in Our Minds at Bowery Electric",
+    title: 'CD release for "All in Our Minds" at Bowery Electric',
     band: "Amygdaloids",
     date: new Date("2012-01-26"),
     venue: "Bowery Electric",
@@ -233,12 +212,11 @@ export const shows: Show[] = [
     title: "Bar East",
     band: "Amygdaloids",
     date: new Date("2012-03-29"),
-    venue: "Bar East",
     address: "NYC"
   },
   {
     _id: 38,
-    title: "I am Science the Bell House",
+    title: "I Am Science",
     band: "Amygdaloids",
     date: new Date("2012-04-03"),
     venue: "The Bell House",
@@ -258,7 +236,6 @@ export const shows: Show[] = [
     title: "New York Academy of Sciences",
     band: "Amygdaloids",
     date: new Date("2012-03-27"),
-    venue: "New York Academy of Sciences",
     address: "NYC"
   },
   {
@@ -358,8 +335,7 @@ export const shows: Show[] = [
     band: "Joe and Colin",
     date: new Date("2013-12-13"),
     venue: "Black Box Theatre, NYU Tisch School",
-    address: "NYC",
-    notes: "Joe and Colin"
+    address: "NYC"
   },
   {
     _id: 58,
@@ -367,19 +343,16 @@ export const shows: Show[] = [
     band: "Joe and Colin",
     date: new Date("2013-12-18"),
     venue: "Cantina Royale",
-    address: "NYC",
-    notes: "Joe and Colin"
+    address: "NYC"
   },
 
   // 2014 Shows
   {
     _id: 59,
     title: "Cameo Galler",
-    band: "Joe and Amanda",
+    band: "Joe, Daniela, Tyler, and Amanda",
     date: new Date("2014-02-23"),
-    venue: "Cameo Galler",
-    address: "NYC",
-    notes: "Joe, Daniela, Tyler, and Amanda"
+    address: "NYC"
   },
   {
     _id: 60,

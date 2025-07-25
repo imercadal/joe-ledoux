@@ -21,10 +21,10 @@ export default function ShowList({ shows }: { shows: Show[] }) {
                   }).replace(' ', '').toLowerCase()}
                 </strong>
               </p>
-              <p className='text-xs mb-2'>{show.band}</p>
+              <p className='text-dark text-xs mb-2'>{show.band}</p>
               <h4 className="text-lg font-bold">{show.title}</h4>
-              <h2 className='mb-2'>{show.venue}</h2>
-              {show.address && <p className="text-dark text-xs">{show.address}</p>}
+              <h2 className='inline mb-2'>{show.venue}</h2>
+              {show.address && <p className="mt-1 text-dark text-xs">{show.address}</p>}
               {show.notes && <p className="text-dark text-xs mt-1">{show.notes}</p>}
             </div>
           </li>
