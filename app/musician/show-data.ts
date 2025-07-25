@@ -284,22 +284,20 @@ export const shows: Show[] = [
     title: "The American Association for the Advancement of Science meeting",
     band: "Joe with Stuart Chatwood",
     date: new Date("2013-02-18"),
-    venue: "Vancouver, CA",
-    address: ""
+    venue: "Vancouver, CA"
   },
   {
     _id: 52,
     title: "Second Annual Heavy Mental Variety Show",
-    band: "Joe and Amanda",
+    band: "Joe, Daniela, Tyler, and Amanda",
     date: new Date("2013-05-18"),
     venue: "New York Psychoanalytic Institute",
     address: "New York",
-    notes: "Joe, Daniela, Tyler, and Amanda"
   },
   {
     _id: 53,
     title: "Sidewalk Café",
-    band: "Joe and Amanda",
+    band: "Amygdaloids",
     date: new Date("2013-03-09"),
     venue: "Sidewalk Café",
     address: "NYC"
@@ -307,11 +305,9 @@ export const shows: Show[] = [
   {
     _id: 54,
     title: "Make Music New York",
-    band: "Joe and Amanda",
+    band: "Joe, Amanda, and Serena Jost",
     date: new Date("2013-06-21"),
-    venue: "Make Music New York",
-    address: "NYC",
-    notes: "Joe, Amanda, and Serena Jost"
+    address: "NYC"
   },
   {
     _id: 55,
@@ -331,10 +327,10 @@ export const shows: Show[] = [
   },
   {
     _id: 57,
-    title: "Black Box Theatre, NYU Tisch School",
+    title: "Black Box Theatre",
     band: "Joe and Colin",
     date: new Date("2013-12-13"),
-    venue: "Black Box Theatre, NYU Tisch School",
+    venue: "NYU Tisch School",
     address: "NYC"
   },
   {
@@ -342,7 +338,6 @@ export const shows: Show[] = [
     title: "Cantina Royale",
     band: "Joe and Colin",
     date: new Date("2013-12-18"),
-    venue: "Cantina Royale",
     address: "NYC"
   },
 
@@ -357,18 +352,16 @@ export const shows: Show[] = [
   {
     _id: 60,
     title: "Palis des congress de Montreal",
-    band: "Joe and Colin",
+    band: "Joe, Daniela, Tyler, and Colin",
     date: new Date("2014-04-06"),
     venue: "Palis des congress de Montreal",
     address: "Montreal, Canada",
-    notes: "Joe, Daniela, Tyler, and Colin"
   },
   {
     _id: 61,
     title: "Bowery Electric",
-    band: "Joe and Colin",
+    band: "Amygdaloids",
     date: new Date("2014-03-13"),
-    venue: "Bowery Electric",
     address: "NYC"
   },
   {
@@ -376,18 +369,12 @@ export const shows: Show[] = [
     title: "North Branch Inn",
     band: "Joe and Colin",
     date: new Date("2014-08-09"),
-    venue: "North Branch Inn",
-    address: "North Branch, NY",
-    notes: "Joe and Colin"
   },
   {
     _id: 63,
-    title: "German Psych Association Meeting",
+    title: "German Psychology Association Meeting",
     band: "Joe with German scientists",
     date: new Date("2014-09-22"),
-    venue: "German Psych Association Meeting",
-    address: "",
-    notes: "with the German Amygdaloids"
   },
   {
     _id: 64,
@@ -411,7 +398,6 @@ export const shows: Show[] = [
     title: "Blue Moon Saloon",
     band: "Joe and Colin",
     date: new Date("2014-10-25"),
-    venue: "Blue Moon Saloon",
     address: "Lafayette, LA"
   },
   {
@@ -419,76 +405,62 @@ export const shows: Show[] = [
     title: "Live on KRVS (NPR)",
     band: "Joe and Colin",
     date: new Date("2014-10-25"),
-    venue: "KRVS (NPR)",
     address: "Lafayette, LA"
   },
   {
     _id: 68,
-    title: "NYU Global Center",
+    title: "NYU Global Center, with Rosanne Cash",
     band: "Joe and Colin",
     date: new Date("2014-11-18"),
-    venue: "NYU Global Center",
-    address: "NYC",
-    notes: "with Rosanne Cash"
+    address: "NYC"
   },
   {
     _id: 69,
     title: "HiFi Bar",
-    band: "Joe and Colin",
+    band: "Amygdaloids",
     date: new Date("2015-01-11"),
-    venue: "HiFi Bar",
     address: "NYC"
   },
   {
     _id: 70,
     title: "Sidewalk Cafe",
-    band: "Joe and Colin",
+    band: "Joe, Daniela, Tyler, and Colin",
     date: new Date("2015-01-15"),
-    venue: "Sidewalk Cafe",
     address: "NYC",
-    notes: "Joe, Daniela, Tyler, and Colin"
   },
   {
     _id: 71,
     title: "Bowery Electric",
-    band: "Joe and Colin",
+    band: "Joe, Daniela, Tyler, and Colin",
     date: new Date("2015-03-13"),
-    venue: "Bowery Electric",
     address: "NYC",
-    notes: "Joe, Daniela, Tyler, and Colin"
   },
   {
     _id: 72,
     title: "DROM",
-    band: "Joe and Colin",
+    band: "Joe, Daniela, Tyler, and Colin",
     date: new Date("2015-03-22"),
-    venue: "DROM",
     address: "NYC",
-    notes: "Joe, Daniela, Tyler, and Colin"
   },
   {
     _id: 73,
     title: "Private Event at Will Cotton Studio",
     band: "Joe and Colin",
     date: new Date("2015-05-07"),
-    venue: "Will Cotton Studio",
-    address: "NYC",
-    notes: "Joe and Colin"
+    address: "NYC"
   },
   {
     _id: 74,
     title: "Sidewalk Cafe",
-    band: "Joe and Colin",
+    band: "Amygdaloids",
     date: new Date("2015-05-10"),
-    venue: "Sidewalk Cafe",
     address: "NYC"
   },
   {
     _id: 75,
     title: "Cornelia Street Café",
-    band: "Joe and Colin",
+    band: "Amygdaloids",
     date: new Date("2015-06-22"),
-    venue: "Cornelia Street Café",
     address: "NYC"
   },
   {
@@ -496,7 +468,6 @@ export const shows: Show[] = [
     title: "Rock Valley Schoolhouse",
     band: "Joe and Colin",
     date: new Date("2015-06-28"),
-    venue: "Rock Valley Schoolhouse",
     address: "Long Eddy, NY"
   },
   {
@@ -504,7 +475,6 @@ export const shows: Show[] = [
     title: "INNERSLEEVES RECORDS",
     band: "Joe and Colin",
     date: new Date("2015-07-09"),
-    venue: "INNERSLEEVES RECORDS",
     address: "Amagansett, NY"
   },
   {
@@ -512,7 +482,6 @@ export const shows: Show[] = [
     title: "Music and Cognition Conference",
     band: "Joe and Colin",
     date: new Date("2015-07-29"),
-    venue: "Music and Cognition Conference",
     address: "Nashville, TN"
   },
   {
@@ -520,7 +489,6 @@ export const shows: Show[] = [
     title: "Vanderbilt University, Blair Theater",
     band: "Joe and Colin",
     date: new Date("2015-08-01"),
-    venue: "Vanderbilt University, Blair Theater",
     address: "Nashville, TN"
   },
   {
@@ -528,7 +496,6 @@ export const shows: Show[] = [
     title: "The Basement",
     band: "Joe and Colin",
     date: new Date("2015-08-02"),
-    venue: "The Basement",
     address: "Nashville, TN"
   },
   {
@@ -536,7 +503,6 @@ export const shows: Show[] = [
     title: "HiFi Bar",
     band: "Joe and Colin",
     date: new Date("2015-10-21"),
-    venue: "HiFi Bar",
     address: "NYC"
   },
   {
@@ -544,57 +510,49 @@ export const shows: Show[] = [
     title: "Private Event",
     band: "Joe and Colin",
     date: new Date("2015-11-20"),
-    venue: "Private Event",
     address: "NYC"
   },
-    // 2016 Shows
+  // 2016 Shows
   {
     _id: 90,
     title: "Sidewalk Café",
-    band: "Joe and Colin",
+    band: "Amygdaloids",
     date: new Date("2016-01-11"),
-    venue: "Sidewalk Café",
     address: "NYC"
   },
   {
     _id: 91,
     title: "Kimmel Center, NYU",
-    band: "Joe and Colin",
+    band: "Amygdaloids",
     date: new Date("2016-03-18"),
-    venue: "Kimmel Center, NYU",
     address: "NYC"
   },
   {
     _id: 92,
     title: "DROM",
-    band: "Joe and Colin",
+    band: "Joe, Daniela, Tyler, and Colin",
     date: new Date("2016-04-03"),
-    venue: "DROM",
     address: "NYC",
-    notes: "Joe, Daniela, Tyler, and Colin"
   },
   {
     _id: 93,
     title: "Rock Valley Schoolhouse",
     band: "Joe and Colin",
     date: new Date("2016-08-07"),
-    venue: "Rock Valley Schoolhouse",
     address: "Long Eddy, NY"
   },
   {
     _id: 94,
     title: "Kimmel Center, NYU",
-    band: "Joe and Colin",
+    band: "Amygdaloids",
     date: new Date("2016-09-22"),
-    venue: "Kimmel Center, NYU",
     address: "NYC"
   },
   {
     _id: 95,
     title: "Sidewalk Cafe",
-    band: "Joe and Colin",
+    band: "Amygdaloids",
     date: new Date("2016-10-25"),
-    venue: "Sidewalk Cafe",
     address: "NYC"
   },
   {
@@ -602,7 +560,6 @@ export const shows: Show[] = [
     title: "HiFi Bar",
     band: "Joe and Colin",
     date: new Date("2016-11-21"),
-    venue: "HiFi Bar",
     address: "NYC"
   },
 
@@ -612,41 +569,34 @@ export const shows: Show[] = [
     title: "The Burren",
     band: "Joe and Colin",
     date: new Date("2017-01-10"),
-    venue: "The Burren",
     address: "Somerville, MA"
   },
   {
     _id: 98,
     title: "Sidewalk Café",
-    band: "Joe and Colin",
+    band: "Joe, Colin, Daniela, Tyler",
     date: new Date("2017-01-31"),
-    venue: "Sidewalk Café",
     address: "NYC",
-    notes: "Joe, Colin, Daniela, Tyler"
   },
   {
     _id: 99,
     title: "The Blue Room",
     band: "Joe and Colin",
     date: new Date("2017-03-08"),
-    venue: "The Blue Room",
     address: "Sarah Lawrence College, Bronxville, NY",
-    notes: "Joe and Colin"
   },
   {
     _id: 100,
     title: "Rock Valley Schoolhouse",
     band: "Joe and Colin",
     date: new Date("2017-07-30"),
-    venue: "Rock Valley Schoolhouse",
     address: "Long Eddy, NY"
   },
   {
     _id: 101,
     title: "Sidewalk Café",
-    band: "Joe and Colin",
+    band: "Amygdaloids",
     date: new Date("2017-10-19"),
-    venue: "Sidewalk Café",
     address: "NYC"
   },
   {
@@ -654,7 +604,6 @@ export const shows: Show[] = [
     title: "Upsala",
     band: "Joe and Colin",
     date: new Date("2017-11-02"),
-    venue: "Upsala",
     address: "Sweden"
   },
   {
@@ -662,7 +611,6 @@ export const shows: Show[] = [
     title: "Stavanger",
     band: "Joe and Colin",
     date: new Date("2017-11-07"),
-    venue: "Stavanger",
     address: "Norway"
   },
 
@@ -672,7 +620,6 @@ export const shows: Show[] = [
     title: "Alphabet Beer Company",
     band: "Joe and Colin",
     date: new Date("2018-01-07"),
-    venue: "Alphabet Beer Company",
     address: "NYC"
   },
   {
@@ -680,7 +627,6 @@ export const shows: Show[] = [
     title: "CUNY Graduate Center",
     band: "Joe",
     date: new Date("2018-03-02"),
-    venue: "CUNY Graduate Center",
     address: "NYC"
   },
   {
@@ -688,24 +634,19 @@ export const shows: Show[] = [
     title: "Rome, Italy",
     band: "Joe and Colin",
     date: new Date("2018-03-08"),
-    venue: "Rome, Italy",
-    address: ""
   },
   {
     _id: 107,
     title: "Spectrum",
-    band: "Joe and Colin",
+    band: "Joe, Colin, Daniela, Tyler",
     date: new Date("2018-05-10"),
-    venue: "Spectrum",
     address: "NYC",
-    notes: "Joe, Colin, Daniela, Tyler"
   },
   {
     _id: 108,
     title: "The Smithsonian, S. Dillon Ripley Center",
     band: "Joe and Colin",
     date: new Date("2018-05-23"),
-    venue: "The Smithsonian, S. Dillon Ripley Center",
     address: "Washington DC"
   },
   {
@@ -713,15 +654,12 @@ export const shows: Show[] = [
     title: "Mexico City",
     band: "Joe and Colin",
     date: new Date("2018-05-31"),
-    venue: "Mexico City",
-    address: "Mexico"
   },
   {
     _id: 110,
     title: "Rock Valley Schoolhouse",
-    band: "Joe and Colin",
+    band: "Amygdaloids",
     date: new Date("2018-08-26"),
-    venue: "Rock Valley Schoolhouse",
     address: "Long Eddy, NY"
   },
   {
@@ -729,24 +667,20 @@ export const shows: Show[] = [
     title: "House Concert",
     band: "Joe and Colin",
     date: new Date("2018-10-27"),
-    venue: "House Concert",
     address: "Nashville, TN"
   },
   {
     _id: 112,
     title: "Sidewalk Café",
-    band: "Joe and Colin",
+    band: "Joe, Colin, Daniela, Tyler",
     date: new Date("2018-11-18"),
-    venue: "Sidewalk Café",
     address: "NYC",
-    notes: "Joe, Colin, Daniela, Tyler"
   },
   {
     _id: 113,
     title: "Sidewalk Café",
     band: "Joe and Colin",
     date: new Date("2018-12-07"),
-    venue: "Sidewalk Café",
     address: "NYC"
   },
 
@@ -754,18 +688,15 @@ export const shows: Show[] = [
   {
     _id: 114,
     title: "Academia Delle Scienze and XO Café",
-    band: "Joe and Colin",
+    band: "Joe, Daniela, and Colin",
     date: new Date("2019-04-14"),
-    venue: "Academia Delle Scienze and XO Café",
     address: "Turin, Italy",
-    notes: "Joe, Daniela, and Colin"
   },
   {
     _id: 115,
     title: "National Sawdust",
     band: "Colin, Corneius Dufalo, Ittai Shipira",
     date: new Date("2019-05-24"),
-    venue: "National Sawdust",
     address: "NYC"
   },
   {
@@ -773,26 +704,23 @@ export const shows: Show[] = [
     title: "Rock Valley School House",
     band: "Joe and Colin",
     date: new Date("2019-09-01"),
-    venue: "Rock Valley School House",
     address: "Long Eddy, NY"
   },
   {
     _id: 117,
     title: "Niagara Bar",
-    band: "Joe and Colin",
+    band: "Joe, Tyler, Daniela, and Colin",
     date: new Date("2019-12-10"),
-    venue: "Niagara Bar",
     address: "NYC",
-    notes: "Joe, Tyler, Daniela, and Colin"
   },
 
-  // 2020 and 2021 (Pandemic Pause)
+
+  // 2022 Shows
   {
     _id: 118,
     title: "Rock Valley School House",
     band: "Joe and Colin",
     date: new Date("2022-07-03"),
-    venue: "Rock Valley School House",
     address: "Long Eddy, NY"
   },
 
@@ -802,7 +730,6 @@ export const shows: Show[] = [
     title: "The Marsh Theater",
     band: "Joe and Colin",
     date: new Date("2023-01-14"),
-    venue: "The Marsh Theater",
     address: "San Francisco, CA"
   },
   {
@@ -810,7 +737,6 @@ export const shows: Show[] = [
     title: "Pub",
     band: "Joe and Amanda",
     date: new Date("2023-04-15"),
-    venue: "Pub",
     address: "London, UK"
   },
   {
@@ -818,7 +744,6 @@ export const shows: Show[] = [
     title: "Karolinska Institute",
     band: "Joe and Colin",
     date: new Date("2023-04-24"),
-    venue: "Karolinska Institute",
     address: "Stockholm, Sweden"
   },
   {
@@ -826,24 +751,21 @@ export const shows: Show[] = [
     title: "Candyland Art Space",
     band: "Joe and Colin",
     date: new Date("2023-04-24"),
-    venue: "Candyland Art Space",
     address: "Stockholm, Sweden"
   },
   {
     _id: 123,
     title: "Association for the Scientific Study of Consciousness",
-    band: "Joe and Colin",
+    band: "Joe, Colin, David Humphrey, Heather Fergusen, and Richard Barone",
     date: new Date("2023-06-23"),
     venue: "Kimmel C Center, NYU",
     address: "NYC",
-    notes: "with David Humphrey, Heather Fergusen, and Richard Barone"
   },
   {
     _id: 124,
     title: "Rockwood Music Hall",
     band: "Joe and Colin",
     date: new Date("2023-06-25"),
-    venue: "Rockwood Music Hall",
     address: "NYC"
   },
   {
@@ -851,7 +773,6 @@ export const shows: Show[] = [
     title: "Smithsonian",
     band: "Joe and Colin",
     date: new Date("2023-07-23"),
-    venue: "Smithsonian",
     address: "Washington, DC"
   },
   {
@@ -859,7 +780,6 @@ export const shows: Show[] = [
     title: "Time and Space Gallery",
     band: "Joe and Colin",
     date: new Date("2023-08-05"),
-    venue: "Time and Space Gallery",
     address: "Hudson, NY"
   },
   {
@@ -867,7 +787,6 @@ export const shows: Show[] = [
     title: "Hurleyville Performing Arts Center",
     band: "Joe and Colin",
     date: new Date("2023-08-11"),
-    venue: "Hurleyville Performing Arts Center",
     address: "Hurleyville, NY"
   },
   {
@@ -875,7 +794,6 @@ export const shows: Show[] = [
     title: "Basilica Hudson",
     band: "Joe and Colin",
     date: new Date("2023-07-09"),
-    venue: "Basilica Hudson",
     address: "Hudson, NY"
   },
   {
@@ -883,17 +801,14 @@ export const shows: Show[] = [
     title: "Right Proper Brewing Company",
     band: "Joe and Colin",
     date: new Date("2023-11-12"),
-    venue: "Right Proper Brewing Company",
     address: "Washington, DC"
   },
   {
     _id: 130,
     title: "LeDoux Lab Closing Party",
-    band: "Joe and Colin",
+    band: "Joe, Tyler, Daniela, Colin",
     date: new Date("2023-11-17"),
-    venue: "LeDoux Lab Closing Party",
     address: "NYU, NYC",
-    notes: "Joe, Tyler, Daniela, Colin"
   },
 
   // 2024 Shows
@@ -902,7 +817,6 @@ export const shows: Show[] = [
     title: "House Concert",
     band: "Joe and Colin",
     date: new Date("2024-06-13"),
-    venue: "House Concert",
     address: "NYC"
   },
   {
@@ -910,7 +824,6 @@ export const shows: Show[] = [
     title: "Rio De Janeiro",
     band: "Joe and Colin",
     date: new Date("2024-06-23"),
-    venue: "Rio De Janeiro",
     address: "Brazil"
   },
   {
@@ -918,7 +831,6 @@ export const shows: Show[] = [
     title: "Rock Valley School House",
     band: "Joe and Colin",
     date: new Date("2024-09-01"),
-    venue: "Rock Valley School House",
     address: "Long Eddy, NY"
   },
   {
@@ -926,38 +838,32 @@ export const shows: Show[] = [
     title: "University Fernando Pessoa",
     band: "Joe and Amanda",
     date: new Date("2024-10-10"),
-    venue: "University Fernando Pessoa",
     address: "Porto, Portugal"
   },
   {
     _id: 135,
     title: "Mount Sinai Student Retreat",
-    band: "Joe and Colin",
+    band: "Joe, Daniela, Colin",
     date: new Date("2024-11-08"),
-    venue: "Mount Sinai Student Retreat",
     address: "NYC"
   },
   {
     _id: 136,
     title: "Clive Davis Institute of Recorded Music",
-    band: "Joe and Colin",
+    band: "Joe, Daniela, Tyler, Colin, David Humphrey",
     date: new Date("2024-12-06"),
-    venue: "Clive Davis Institute of Recorded Music",
     address: "NYC",
-    notes: "Joe, Daniela, Tyler, Colin, David Humphrey"
   },
   {
     _id: 137,
     title: "The Garage, Clive Davis Institute of Recorded Music",
-    band: "Joe and Colin",
+    band: "Joe, Daniela, Colin, Jeff Perez, Sam, Lenny Kaye, Eric Ambel, Richard Barone",
     date: new Date("2024-12-07"),
-    venue: "The Garage",
     address: "NYC",
-    notes: "Joe, Daniela, Colin, Jeff Perez, Sam, Lenny Kaye, Eric Ambel, Richard Barone"
   },
   {
     _id: 138,
-    title: "NYC release of Verner Herzog’s Theatre of Thought",
+    title: 'NYC release of Werner Herzog’s "Theatre of Thought"',
     band: "Joe and Tyler",
     date: new Date("2024-12-12"),
     venue: "Film Forum",
@@ -970,7 +876,6 @@ export const shows: Show[] = [
     title: "Seminary Hill",
     band: "Joe and Colin",
     date: new Date("2025-03-27"),
-    venue: "Seminary Hill",
     address: "Callicoon, NY"
   },
   {
@@ -978,7 +883,6 @@ export const shows: Show[] = [
     title: "The Hound Bookstore",
     band: "Joe and Colin",
     date: new Date("2025-03-28"),
-    venue: "The Hound Bookstore",
     address: "Roscoe, NY"
   },
   {
@@ -986,12 +890,11 @@ export const shows: Show[] = [
     title: "Ritz Carlton",
     band: "Joe and Colin",
     date: new Date("2025-09-03"),
-    venue: "Ritz Carlton",
     address: "New Orleans, LA"
   },
   {
     _id: 142,
-    title: "Verner Herzog’s Theatre of Thought release",
+    title: 'Werner Herzog’s "Theatre of Thought" release',
     band: "Joe and Colin",
     date: new Date("2025-09-04"),
     venue: "Broad Theatre",
