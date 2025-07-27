@@ -337,9 +337,18 @@ export default function RetirementPage() {
                                     Colleagues, students, and friends have shared their heartfelt messages and memories in a special digital
                                     thankbox created to honor this remarkable career.
                                 </p>
-                                <button className="bg-accent hover:opacity-75 rounded-md shadow-lg mx-auto">
-                                    <a href="https://www.thankbox.com/app/thankbox/HJNGhcoD" rel="noopener noreferrer" className="text-lightText text-sm font-bold inline-flex items-center gap-2">
-                                    View Thankbox Messages
+                                <button
+                                    onClick={() => setIsOpen(true)}
+                                    className="bg-accent hover:opacity-75 rounded-md shadow-lg mx-auto text-lightText text-sm font-bold inline-flex items-center gap-2 px-4 py-2"
+                                >
+                                    <a
+                                        href="/603_Thankbox_full.pdf"
+                                        download="Joes_Thankbox.pdf"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline"
+                                    >
+                                    Download Thankbox Messages
                                     </a>
                                 </button>
                             </div>
@@ -525,3 +534,13 @@ export default function RetirementPage() {
         </div>
     )
 } 
+
+
+/*
+                        
+<button className="bg-accent hover:opacity-75 rounded-md shadow-lg mx-auto">
+    <a href="https://www.thankbox.com/app/thankbox/HJNGhcoD" rel="noopener noreferrer" className="text-lightText text-sm font-bold inline-flex items-center gap-2">
+    View Thankbox Messages
+    </a>
+</button>
+ */
