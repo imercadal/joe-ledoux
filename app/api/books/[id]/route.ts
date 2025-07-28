@@ -4,10 +4,10 @@ import { ObjectId } from 'mongodb';
 
 export async function GET(
   _request: NextRequest,
-  { params }: { params: Promise<{ id: string }> }
+  { params }: { params: { id: string } }
 ) {
-  // Await and destructure the params
-  const { id } = await params;
+
+  const { id } = params;
 
   const { db } = await connectToDb();
   let book;

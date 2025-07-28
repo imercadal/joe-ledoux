@@ -144,17 +144,26 @@ export default function BookContentTabs({ book }: BookContentTabsProps) {
             <section className="w-full py-8">
               <div className="mx-auto w-full sm:px-8 lg:px-16 flex flex-col gap-4 justify-start min-h-64 after:content-[''] after:block after:min-w-[24rem]">
                 <h4>Resources available for download:</h4>
-                {book.documents?.map((d, index) => (
+                {book.documents?.map((d, index) => 
+                d.file ? (
                   <a
-                  key={index}
-                  href={d.file || "#"}
-                  target="_blank"
+                  key={d.file || index}
+                  href={d.file}
+                  download={d.document}
                   rel="noopener noreferrer"
                   className="text-lightAccent text-md hover:underline underline-offset-8"
                   >
                     <ArrowLongRightIcon className="inline text-lightAccent h-5 w-6 mr-2" />
                     <span>{d.document}</span>
                   </a>
+                ) : (
+                  <span
+                    key={`unavailable-${index}`}
+                    className="text-dark text-sm flex items-center"
+                  >
+                    <ArrowLongRightIcon className="inline text-lightAccent h-5 w-6 mr-2" />
+                    <span>{d.document} (Unavailable)</span>
+                  </span>
                 ))}
               </div>
             </section>
