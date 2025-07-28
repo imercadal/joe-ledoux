@@ -148,7 +148,7 @@ export default function BookContentTabs({ book }: BookContentTabsProps) {
                 d.file ? (
                   <a
                   key={d.file || index}
-                  href={d.file}
+                  href={`/documents/${d.file}`}
                   download={d.document}
                   rel="noopener noreferrer"
                   className="text-lightAccent text-md hover:underline underline-offset-8"
