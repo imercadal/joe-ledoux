@@ -5,13 +5,9 @@ import { ArrowLongRightIcon } from "@heroicons/react/16/solid";
 
 export const dynamic = 'force-dynamic';
 
-interface BookDetailsPageProps {
-  params: { _id: string };
-}
+export default async function BookDetails({ params }: { params: Promise<{ _id: string }> }) {
+    const { _id } = await params;
 
-export default async function BookDetails({ params }: BookDetailsPageProps) {
-
-    const { _id } = params;
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
     const apiUrl = new URL(`/api/books/${_id}`, baseUrl).toString();
 
