@@ -3,11 +3,12 @@ import { MediaItem } from './media-data';
 import Image from "next/image";
 
 interface MediaListProps {
-    media: MediaItem[];
+    media?: MediaItem[];
 }
 
 export default function MediaList({ media }: MediaListProps){
-  if (media.length === 0) {
+    const list = Array.isArray(media) ? media : [];
+  if (list.length === 0) {
     return (
       <p className="text-lightText text-center">
         No media items found for this tag.
@@ -17,7 +18,7 @@ export default function MediaList({ media }: MediaListProps){
 
   return (
     <div className="container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mx-auto"> 
-      {media.map(mediaItem => (
+      {list.map(mediaItem => (
         <div 
         key={mediaItem._id ? mediaItem._id.toString() : `${mediaItem.type}-${mediaItem.title}-${new Date(mediaItem.date).getTime()}`}
         className='flex flex-col text-lightText gap-y-2 gap-x-6 lg:gap-x-8 mb-4 items-center'
@@ -55,7 +56,7 @@ export default function MediaList({ media }: MediaListProps){
             <p className="text-xs mb-1">{new Date(mediaItem.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric'})}</p>
             <p className='text-sm font-bold'>{mediaItem.mediaCompany}</p>
             <p className='text-sm italic'>{mediaItem.title}</p>
-            <p className="text-xs mt-1">{mediaItem.tags.map(tag => tag.toUpperCase()).join('  ᐧ  ')}</p>
+            <p className="text-xs mt-1">{(mediaItem.tags ?? []).map(tag => tag.toUpperCase()).join('  ᐧ  ')}</p>
           </a>
         </div> 
       ))}
