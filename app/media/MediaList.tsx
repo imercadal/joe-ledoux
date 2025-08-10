@@ -19,7 +19,7 @@ export default function MediaList({ media }: MediaListProps){
     <div className="container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mx-auto"> 
       {media.map(mediaItem => (
         <div 
-        key={mediaItem._id} 
+        key={mediaItem._id ? mediaItem._id.toString() : `${mediaItem.type}-${mediaItem.title}-${new Date(mediaItem.date).getTime()}`}
         className='flex flex-col text-lightText gap-y-2 gap-x-6 lg:gap-x-8 mb-4 items-center'
         >
           <a 
