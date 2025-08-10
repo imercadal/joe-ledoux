@@ -1,5 +1,7 @@
+import type { ObjectId } from 'mongodb';
+
 export interface MediaItem {
-    _id?: string;
+    _id?: ObjectId;
     title: string;
     mediaCompany: string;
     date: Date;

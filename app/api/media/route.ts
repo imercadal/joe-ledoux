@@ -1,5 +1,7 @@
 import { NextResponse, NextRequest } from 'next/server';
 import { connectToDb } from '../db';
+import type { Db, Filter, WithId } from 'mongodb';
+import { MediaItem } from '@/app/media/media-data';
 
 const TAGS = ['neuroscience', 'books', 'music'] as const;
 const TYPES = ['watch', 'listen', 'read'] as const;
@@ -55,16 +57,16 @@ export async function GET(request: NextRequest) {
     }
 
     const { db } = await connectToDb();
+    const collection = db.collection<MediaItem>('media');
 
-    const query: Record<string, any> = {
+    const query: Filter<MediaItem> = {
       type: { $in: types },
     };
     if (tags?.length) {
       query.tags = { $in: tags };
     }
 
-    const media = await db
-      .collection('media')
+    const media: WithId<MediaItem>[] = await collection
       .find(query)
       .sort({ date: -1 })
       .toArray();

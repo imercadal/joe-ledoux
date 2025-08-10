@@ -19,7 +19,7 @@ export default async function ReadMediaPage() {
     }
 
     const media: MediaItem[] = await response.json();
-    media.sort((a: any, b: any) => new Date(b.date).getTime() - new Date(a.date).getTime());
+    media.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
     
     const bannerImage = bannerImages['read'];
     
