@@ -1,6 +1,6 @@
 import { NextResponse, NextRequest } from 'next/server';
 import { connectToDb } from '../db';
-import type { Db, Filter, WithId } from 'mongodb';
+import type { Filter, WithId } from 'mongodb';
 import { MediaItem } from '@/app/media/media-data';
 
 const TAGS = ['neuroscience', 'books', 'music'] as const;
