@@ -6,7 +6,14 @@ export default function LectureList({ lectures }: { lectures: Lecture[]}) {
         <main className='max-w-4xl'> 
             {lectures.map(lecture => (
                 <div key={lecture.id} className='mb-8'>
-                        <p>{lecture.date.toLocaleDateString('en-US', { month: 'long', day: 'numeric' })}</p>
+                        <p>
+                        {lecture.date.toLocaleDateString('en-US', {
+                            month: 'long',
+                            day: 'numeric',
+                            year: 'numeric',
+                            timeZone: 'UTC',
+                        })}
+                        </p>
                         {lecture.urlToLecture ? (
                             <Link
                             href={lecture.urlToLecture}

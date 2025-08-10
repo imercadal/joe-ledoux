@@ -13,6 +13,10 @@ export default function LecturesPage(){
         return acc;
       }, {} as Record<number, Lecture[]>);
 
+    Object.values(lecturesByYear).forEach(list =>
+        list.sort((a, b) => b.date.getTime() - a.date.getTime())
+    );
+
     const years = Object.keys(lecturesByYear)
         .map(Number)
         .sort((a, b) => b - a);

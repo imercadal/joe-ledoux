@@ -49,14 +49,8 @@ const mainNavItems: NavItem[] = [
       { label: "home", href: "/neuroscientist" },
       { label: "publications", href: "/neuroscientist/publications" },
       { label: "lectures", href: "/neuroscientist/lectures" },
-      {
-        label: "media",
-        mediamenu: [
-          { label: "watch", href: "/media/watch?tag=neuroscience" },
-          { label: "listen", href: "/media/listen?tag=neuroscience" },
-          { label: "read", href: "/media/read?tag=neuroscience" },
-        ],
-      },
+      { label: "interviews", href: "/media/interviews"},
+      { label: "writeups", href: "/media/read"}
     ],
   },
   {
@@ -65,14 +59,8 @@ const mainNavItems: NavItem[] = [
     submenu: [
       { label: "books", href: "/author" },
       { label: "columns & blog", href: "/author/columns" },
-      {
-        label: "media",
-        mediamenu: [
-          { label: "watch", href: "/media/watch?tag=books" },
-          { label: "listen", href: "/media/listen?tag=books" },
-          { label: "read", href: "/media/read?tag=boks" },
-        ],
-      },
+      { label: "interviews", href: "/media/interviews"},
+      { label: "writeups", href: "/media/read" },
     ],
   },
   {
@@ -83,14 +71,8 @@ const mainNavItems: NavItem[] = [
       { label: "albums", href: "/musician#albums" },
       { label: "gigs", href: "/musician#gigs" },
       { label: "gallery", href: "/musician#gallery" },
-      {
-        label: "media",
-        mediamenu: [
-          { label: "watch", href: "/media/watch?tag=music" },
-          { label: "listen", href: "/media/listen?tag=music" },
-          { label: "read", href: "/media/read?tag=music" },
-        ],
-      },
+      { label: "performances", href: "/media/performances"},
+      { label: "writeups", href: "/media/read" },
     ],
   }
 ];
@@ -148,10 +130,11 @@ export default function Navbar() {
                 href={item.href ?? "#"} 
                 className={`
                   font-medium text-accent underline-offset-8 flex items-center hover:opacity-75 
+                  hover:scale-105 transition-transform duration-200
                   hover:relative hover:before:content-[''] hover:before:absolute hover:before:bottom-[-4px] hover:before:left-[25%] hover:before:w-[50%] hover:before:h-px hover:before:border-b hover:before:border-accent
                   ${ item.href && 
                     (pathname === item.href || pathname.startsWith(item.href + "/"))
-                    ? "relative before:content-[''] before:absolute before:bottom-[-4px] before:left-[25%] before:w-[50%] before:h-[2px] before:border-b before:border-accent"
+                    ? "relative opacity-75 before:content-[''] before:absolute before:bottom-[-4px] before:left-[25%] before:w-[50%] before:border-b-[2px] before:border-accent [text-shadow:0_0_8px_rgba(0,200,255,0.6)]"
                     : ""
                   }
                 `}

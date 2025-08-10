@@ -4,6 +4,7 @@ export interface MediaItem {
     mediaCompany: string;
     date: Date;
     type: string;
+    category?: string;
     tags: string[];
     urlToItem?: string;
     embedUrl?: string;

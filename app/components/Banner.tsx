@@ -1,4 +1,34 @@
 import Image from 'next/image';
+
+interface BannerProps {
+  imageUrl: string;
+  title: string;
+}
+
+export default function Banner({ imageUrl, title }: BannerProps) {
+  return (
+    <div className="w-full h-40 relative">
+      <Image
+        src={imageUrl}
+        alt={`${title} banner`}
+        fill
+        className="object-cover"
+        sizes="100vw"
+        priority
+      />
+      <div className="absolute inset-0 px-6 md:px-12 max-w-4xl mx-auto flex items-center justify-center">
+        <h3 className="m-0 text-xl text-white tracking-wider">
+          <strong>{String(title).toUpperCase()}</strong>
+        </h3>
+      </div>
+    </div>
+  );
+}
+
+
+
+/*
+import Image from 'next/image';
 import React from 'react';
 import Link from 'next/link';
 
@@ -7,7 +37,7 @@ interface BannerProps {
     title: string;
 }
 
-const availableTypes = ['watch', 'listen', 'read'];
+const availableTypes = ['watch', 'listen', 'read', 'interviews', 'performances'];
 
 export default function Banner({ imageUrl, title }: BannerProps){
     const mayus = title.toUpperCase()
@@ -17,7 +47,7 @@ export default function Banner({ imageUrl, title }: BannerProps){
         <div className="w-full h-40 relative">
             <Image src={imageUrl} alt="Media Banner" fill className="object-cover" />
             <div className="absolute inset-0 px-6 md:px-12 max-w-4xl mx-auto flex items-center justify-between">
-                {/* Previous type */}
+                {/* Previous type *
                 <Link 
                     href={`/media/${otherTypes[0]}`}
                     className="flex items-center text-white hover:opacity-75"
@@ -38,11 +68,11 @@ export default function Banner({ imageUrl, title }: BannerProps){
                     </svg>
                     <h3 className="uppercase pl-0 text-sm text-lightText shado-2xl">{otherTypes[0]}</h3>
                 </Link>
-                {/* Current Type */}
+                {/* Current Type *
                 <h3 className="m-0 text-xl text-white tracking-wider">
                     <strong>{mayus}</strong>
                 </h3>
-                {/* Next type */}
+                {/* Next type *
                 <Link 
                     href={`/media/${otherTypes[1]}`}
                     className="flex items-center text-white hover:opacity-75"
@@ -68,3 +98,5 @@ export default function Banner({ imageUrl, title }: BannerProps){
     )
 
 }
+
+*/
