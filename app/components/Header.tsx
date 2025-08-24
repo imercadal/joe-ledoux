@@ -59,6 +59,7 @@ const mainNavItems: NavItem[] = [
     submenu: [
       { label: "books", href: "/author" },
       { label: "columns & blog", href: "/author/columns" },
+      { label: "lectures", href: "/author/lectures" },
       { label: "interviews", href: "/media/interviews"},
       { label: "writeups", href: "/media/read" },
     ],
