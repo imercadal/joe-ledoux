@@ -885,19 +885,18 @@ export const shows: Show[] = [
     date: new Date("2025-03-28"),
     address: "Roscoe, NY"
   },
-  {
+    {
     _id: 141,
-    title: "Ritz Carlton",
+    title: 'Screening of Werner Herzog’s "Theatre of Thought". Joe does a talkback, Colin joins to play a few song',
     band: "Joe and Colin",
-    date: new Date("2025-09-03"),
-    address: "New Orleans, LA"
+    date: new Date("2025-09-04"),
+    venue: "Broad Theatre New Orleans"
   },
   {
     _id: 142,
-    title: 'Werner Herzog’s "Theatre of Thought" release',
+    title: "Neuropsychoendocrinology Conference Reception. Joe and Colin do a Heavy Mental Set",
     band: "Joe and Colin",
-    date: new Date("2025-09-04"),
-    venue: "Broad Theatre",
-    address: "New Orleans"
+    date: new Date("2025-09-05"),
+    venue: "Ritz Carlton, New Orleans"
   }
 ]
