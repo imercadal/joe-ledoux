@@ -15,9 +15,10 @@ export const lectures : Lecture[] = [
   },
   {
     id: "101",
-    title: "The Four Realms of Existence",
+    title: "The Four Realms of Existence. On the neuroscience front, the festival will feature: Joseph LeDoux, one of the world's leading scholars of the neurobiology of emotions and longtime director of the Center for the Neuroscience of Fear and Anxiety in New York, who will discuss a new theory of the self and consciousness, capable of opening up unprecedented perspectives on what it means to be human.",
     date: new Date("2025-10-03"),
-    event: "Bergamo Science Festival, Bergamo Italy",
+    event: "Bergamo Science Festival 2025, Bergamo, Italy",
+    urlToLecture: "https://www.bergamoscienza.it/it/festival-corrente/xxiii-edizione-bergamoscienza-2025"
   },
   {
     id: "102",
@@ -1973,5 +1974,12 @@ export const lectures : Lecture[] = [
     title: "Inter. Sympos. On Learning, Memory, & Cognitive Function: Mechisms, Pathology. &Therapeutics",
     event: "Valencia, Spain",
     date: new Date("2008-02-10")
+  },
+    {
+    id: "451",
+    title: "Lectio Magistralis Joseph LeDoux The Four Realms of the Self",
+    event: "San Raffaele University, Milan, Italy",
+    date: new Date("2025-10-03"),
+    urlToLecture: "https://info.unisr.it/en/lectio-magistralis-ledoux"
   }
 ]

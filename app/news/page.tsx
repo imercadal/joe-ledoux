@@ -6,42 +6,14 @@ export default function NewsPage(){
     return(
       <main className="p-4 bg-lightText min-h-screen">
         <h1 className="max-w-4xl mx-auto mt-4 sm:mt-12 text-3xl font-bold text-dark">Forthcoming</h1>
-        <NewsCard
-          href="/neuroscientist/lectures"
-          title='Keynote Lecture, Emotional Intelligence conference, Manchester, UK'
-          tag="Lectures"
-          date={new Date('2025-07-14')}
-        />
-        <NewsCard
-          href="https://www.ispne.net/2025-annual-meeting"
-          title="Keynote Lecture at the International Society for Psychoneuroendocrinology, New Orleans"
-          tag="Lectures"
-          date={new Date('2025-09-03')}
+        <NewsCard 
+          href="https://mailchi.mp/bbrfoundation/2025-symposium-goldman-rakic-prize-4241159?e=08baf21cb2"
+          imgSrc="/news/2025-10_Goldman-Rakic-Prize.png"
+          title="Joe Wins the 2025 Goldman-Rakic Prize for Outstanding Achievements in Cognitive Science."
+          tag="Awards"
+          date={new Date('2025-10-24')}
           external
         />
-
-        <NewsCard
-          href="/musician/gigs"
-          title="So We Are performance after Herzog’s *Theatre of Thought* screening, Broad Theatre, New Orleans"
-          tag="Performance"
-          date={new Date('2025-09-04')}
-        />
-
-        <NewsCard
-          href="https://www.bergamoscienza.it/en/festival-corrente/23rd-edition-bergamoscienza-2025"
-          title="Lecture at BergamoScienza Science Festival, Bergamo, Italy"
-          tag="Lectures"
-          date={new Date('2025-09-04')}
-          external
-        />
-
-        <NewsCard
-          href="/neuroscientist/lectures"
-          title="Lecture to Athena Cultura, Mendrisio, Switzerland"
-          tag="Lectures"
-          date={new Date('2025-10-07')}
-        />
-
         <NewsCard
           href="https://neuroscience.uct.ac.za/events/society-neuroscience-sfn-meeting-2025"
           title="History of Neuroscience Lecture, Society for Neuroscience, San Diego, CA"
@@ -49,6 +21,7 @@ export default function NewsPage(){
           date={new Date('2025-11-18')}
           external
         />
+
         <h1 className="max-w-4xl mx-auto my-4 sm:mt-12 text-3xl font-bold text-dark">Past events</h1>
         <NewsCard
           href="/author/67e455e79d343bd2f8bfe258"
