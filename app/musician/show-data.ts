@@ -898,5 +898,12 @@ export const shows: Show[] = [
     band: "Joe and Colin",
     date: new Date("2025-09-05"),
     venue: "Ritz Carlton, New Orleans"
+  },
+    {
+    _id: 143,
+    title: "WWOZ New Orleans",
+    band: "Amygdaloids",
+    date: new Date("2025-09-03"),
+    venue: " New Orleans"
   }
 ]
