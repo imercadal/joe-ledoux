@@ -1975,11 +1975,18 @@ export const lectures : Lecture[] = [
     event: "Valencia, Spain",
     date: new Date("2008-02-10")
   },
-    {
+  {
     id: "451",
     title: "Lectio Magistralis Joseph LeDoux The Four Realms of the Self",
     event: "San Raffaele University, Milan, Italy",
     date: new Date("2025-10-03"),
     urlToLecture: "https://info.unisr.it/en/lectio-magistralis-ledoux"
-  }
+  },
+  {
+    id: "452",
+    title: "History of Neuroscience: The Troubled History of the Emotional Brain",
+    event: "How I see it through the lens of my fifty-one-years in neuroscience",
+    date: new Date("2025-11-19"),
+    urlToLecture: ""
+  },
 ]

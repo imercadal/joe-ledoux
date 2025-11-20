@@ -6,6 +6,21 @@ export default function NewsPage(){
     return(
       <main className="p-4 bg-lightText min-h-screen">
         <h1 className="max-w-4xl mx-auto mt-4 sm:mt-12 text-3xl font-bold text-dark">Forthcoming</h1>
+        <NewsCard
+          href="https://www.cogneurosociety.org/george-a-miller-award/"
+          title="Joe is awarded the 32nd Annual George A. Miller Prize in Cognitive Neuroscience (GAM)"
+          tag="Awards"
+          date={new Date('2026-03-08')}
+          external
+        />
+
+        <h1 className="max-w-4xl mx-auto my-4 sm:mt-12 text-3xl font-bold text-dark">Past events</h1>
+        <NewsCard
+          href="/news/history-of-neuroscience"
+          title="History of Neuroscience Lecture, Society for Neuroscience, San Diego, CA"
+          tag="Lectures"
+          date={new Date('2025-11-18')}
+        />
         <NewsCard 
           href="https://mailchi.mp/bbrfoundation/2025-symposium-goldman-rakic-prize-4241159?e=08baf21cb2"
           imgSrc="/news/2025-10_Goldman-Rakic-Prize.png"
@@ -14,15 +29,6 @@ export default function NewsPage(){
           date={new Date('2025-10-24')}
           external
         />
-        <NewsCard
-          href="https://neuroscience.uct.ac.za/events/society-neuroscience-sfn-meeting-2025"
-          title="History of Neuroscience Lecture, Society for Neuroscience, San Diego, CA"
-          tag="Lectures"
-          date={new Date('2025-11-18')}
-          external
-        />
-
-        <h1 className="max-w-4xl mx-auto my-4 sm:mt-12 text-3xl font-bold text-dark">Past events</h1>
         <NewsCard
           href="/author/67e455e79d343bd2f8bfe258"
           imgSrc="/319_Starting_Over_Cover.webp"
