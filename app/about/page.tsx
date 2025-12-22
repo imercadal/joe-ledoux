@@ -1,8 +1,110 @@
+import { ArrowLongRightIcon } from "@heroicons/react/16/solid";
+import AboutBackgroundSlideshow from "./AboutBackgroundSlideshow";
+import BioModal from './BioModal';
+
+export default function AboutPage() {
+  const images = [
+    "/105_About_BG_05.webp",
+    "/102_About_BG_02.webp",
+    "/103_About_BG_03.webp",
+    "/104_About_BG_04.webp"
+  ];
+
+  return (
+    <section className="bg-darker relative min-h-screen">
+      <AboutBackgroundSlideshow images={images} fadeDuration={2} intervalMs={5000} />
+      <div className="relative z-10">
+        <div className="relative max-w-xl xl:max-w-3xl 2xl:max-w-4xl sm:w-1/2 sm:w-3/5 py-10 md:py-16 lg:py-24 flex justify-start text-lightText">
+          <div className="px-8 sm:pl-16 md:pl-24 xl:pl-56 2xl:pl-80 flex flex-col justify-start">
+            <div className="text-sm">
+            Joseph LeDoux is neuroscientist at New York University and an elected member of the National Academy of Sciences and the American Academy of Arts and Sciences. He has received numerous awards for his work and has written a number of well-received books. His work and writings have focused on the topics of emotion, memory, and consciousness, and their interaction in the brain. He is also the lead singer and songwriter in the rock band, the Amygdaloids. His music has been the subject of a play, <i>Map of Your Mind</i>, and was featured in Werner Herzog’s 2024 film, <i>Theatre of Thought</i>. A documentary on Amazon, <i>Neuroscience and Emotions</i>, explores his Life, work and music.
+
+              <BioModal buttonLabel="(Read Full Bio)">
+                  <p>Joseph LeDoux is Professor Emeritus at New York University, 
+                where he was a University Professor, Henry and Lucy Moses Professor, 
+                Professor of Neural Science and Psychology, and Professor of Psychiatry 
+                and Child and Adolescent Psychiatry at NYU Langone Medical School. 
+                He is an elected member of the National Academy of Sciences and the 
+                American Academy of Arts and Sciences.          
+                </p>
+                  <p className="mt-4">His work has focused on the 
+                topics of emotion, memory, and consciousness and their interaction 
+                in the brain. He has published 244 peer reviewed publications, which 
+                have been cited 182,153 times, resulting in an h-index of 177, making 
+                him amongst the most highly cited neuroscientists. He has received 
+                numerous scientific awards, most recently the 2025 Brain & Behavior 
+                Research Foundation Goldman Rakic Award and the 2026 Cognitive 
+                Neuroscience George A. Miller Award, both for outstanding 
+                contributions in Cognitive Neuroscience.</p>
+                <p className="mt-4">                He the author of 
+                several highly acclaimed books, including The Emotional Brain, 
+                Synaptic Self, Anxious (winner of the APA William James Book Award), 
+                The Deep History of Ourselves (long list for the Pen America EO Wilson 
+                Literary Science Writing Award), and The Four Realms of 
+                Existence(finalist for the Royal Institute of Philosophy Nayef Al-Rodhan 
+                International Book Prize in Transdisciplinary Philosophy). Forthcoming 
+                is his memoir, Starting Over, Tales from an Accidental Neuroscientist. 
+                </p>
+                <p className="mt-4">
+                  Additionally, LeDoux is the lead singer and songwriter in the rock band, 
+                the Amygdaloids. His music has been the subject of a play, Map of Your 
+                Mind, and was featured in Werner Herzog’s 2024 film, Theatre of Thought. 
+                A documentary on Amazon, Neuroscience and Emotions explores his Life, work 
+                and music.
+                </p>
+              </BioModal>
+
+            </div>
+            <p className="mt-6 mb-1">
+              <strong>Contact:</strong>
+            </p>
+            <a
+              href="mailto:ledoux@cns.nyu.edu"
+              rel="noopener noreferrer"
+            >
+              <p>Email - ledoux@cns.nyu.edu</p>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/joseph-ledoux/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <p>LinkedIn - @joseph-ledoux</p>
+            </a> 
+            <a
+              href="https://www.facebook.com/joseph.ledoux"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <p>Facebook - @joseph.ledoux</p>
+            </a> 
+            <p className="flex mt-4 items-center hover:opacity-75">
+              <ArrowLongRightIcon className="inline h-5 w-5 text-lightText" />
+              <a
+                href="CV/LeDoux_CV_Dec3-2025.pdf"
+                download="Joe_LeDoux_CV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline"
+              >
+                <strong>Download Curriculum Vitae</strong>
+              </a>
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+};
+
+/*
 "use client";
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowLongRightIcon } from "@heroicons/react/16/solid";
+import Link from 'next/link';
 
 export default function AboutPage() {
   const images = [
@@ -24,7 +126,7 @@ export default function AboutPage() {
 
   return (
     <section className="bg-darker relative min-h-screen">
-      {/* Background for devices sm and up */}
+      {/* Background for devices sm and up *
       <div className="hidden sm:block absolute inset-0">
         <AnimatePresence mode="wait">
           <motion.div
@@ -39,7 +141,7 @@ export default function AboutPage() {
         </AnimatePresence>
       </div>
 
-      {/* Block image for small devices */}
+      {/* Block image for small devices *
       <div className="sm:hidden relative h-64 overflow-hidden">
         <AnimatePresence mode="wait">
           <motion.img
@@ -55,7 +157,7 @@ export default function AboutPage() {
         </AnimatePresence>
       </div>
 
-      {/* Content */}
+      {/* Content *
       <div className="relative z-10">
         <div className="relative max-w-xl xl:max-w-3xl 2xl:max-w-4xl sm:w-1/2 sm:w-3/5 py-10 md:py-16 lg:py-24 flex justify-start text-lightText">
           <div className="px-8 sm:pl-16 md:pl-24 xl:pl-56 2xl:pl-80 flex flex-col justify-start">
@@ -70,13 +172,6 @@ export default function AboutPage() {
               rel="noopener noreferrer"
             >
               <p>Email - ledoux@cns.nyu.edu</p>
-            </a>
-            <a
-              href="https://bsky.app/profile/theamygdaloid.bsky.social"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              <p>Bluesky - @theamygdaloid.bsky.social</p>
             </a>
             <a
               href="https://www.linkedin.com/in/joseph-ledoux/"
@@ -95,7 +190,7 @@ export default function AboutPage() {
             <p className="flex mt-4 items-center hover:opacity-75">
               <ArrowLongRightIcon className="inline h-5 w-5 text-lightText" />
               <a
-                href="LeDoux_CV.pdf"
+                href="CV/LeDoux_CV_Dec3-2025.pdf"
                 download="Joe_LeDoux_CV.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -104,9 +199,20 @@ export default function AboutPage() {
                 <strong>Download Curriculum Vitae</strong>
               </a>
             </p>
+            <p className="flex mt-4 items-center hover:opacity-75">
+              <ArrowLongRightIcon className="inline h-5 w-5 text-lightText" />
+              <Link
+                href="/about/bio"
+                className="inline"
+              >
+                <strong>See Full Bio</strong>
+              </Link>
+            </p>
           </div>
         </div>
       </div>
     </section>
   )
 };
+
+*/
