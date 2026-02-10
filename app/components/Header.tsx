@@ -41,7 +41,7 @@ interface NavItem {
 }
 
 const mainNavItems: NavItem[] = [
-  { label: "bio | cv | contact", href: "/about" },
+  { label: "bio, cv, contact", href: "/about" },
   {
     label: "neuroscientist",
     href: "/neuroscientist",

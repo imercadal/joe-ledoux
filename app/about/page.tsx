@@ -52,6 +52,7 @@ export default function AboutPage() {
                 A documentary on Amazon, Neuroscience and Emotions explores his Life, work 
                 and music.
                 </p>
+                <br/>
               </BioModal>
 
             </div>
