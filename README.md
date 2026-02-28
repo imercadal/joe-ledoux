@@ -1,5 +1,8 @@
 This is a personal webpage for Neuroscientist, Author and Musician Joseph E. LeDoux.
 
+# Note to self re: /media/_[type]/page.tsx
+This was the original dynamic route for the media section, where all media types (interviews, performances, read) lived under a single, dynamic, [type] route. Later, the client requested separate pages instead, which is why `/media/interviews`, `/media/performances`, and `/media/read` each have their own `page.tsx`. In case we are requested to change it back to how it was in the original proposal, taking out the guion bajo will make the page active, and the individual pages for each media type can be deleted.
+
 ## FrontEnd
 /neuroscientist
     /publications

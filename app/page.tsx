@@ -16,16 +16,17 @@ export default function Home() {
     return () => mediaQuery.removeEventListener("change", handler);
   }, []);
 
+  useEffect(() => {
+    if (window.imageMapResize) {
+      window.imageMapResize('map');
+    }
+  }, [isDesktop]);
+
   return (
     <>
       <Script
         src="/imageMapResizer.min.js"
         strategy="afterInteractive"
-        onLoad={() => {
-          if (window.imageMapResize) {
-            window.imageMapResize('map');
-          }
-        }}
       />
 
       {/* Container that wraps the image and any overlay elements */}
@@ -36,11 +37,16 @@ export default function Home() {
             <source media="(min-width: 1024px)" srcSet="000_Doors_Background.webp" />
             {/* For smaller screens */}
             <source media="(max-width: 1023px)" srcSet="000_Doors_Background_small.webp" />
-            <img 
-              src="000_Doors_Background.webp" 
+            <img
+              src="000_Doors_Background.webp"
               useMap="#image-map"
               className="w-full h-auto lg:object-cover"
               alt="Doors Background"
+              onLoad={() => {
+                if (window.imageMapResize) {
+                  window.imageMapResize('map');
+                }
+              }}
             />
           </picture>
 
