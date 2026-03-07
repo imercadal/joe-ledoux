@@ -1,50 +1,52 @@
-This is a personal webpage for Neuroscientist, Author and Musician Joseph E. LeDoux.
+# Digital Archive Website for renowned Neuroscientist, Author and Musician Joseph E. LeDoux.
+Next.js 15 · React 19 · TypeScript · Tailwind CSS · MongoDB Atlas · Vercel
 
-# Note to self re: /media/_[type]/page.tsx
-This was the original dynamic route for the media section, where all media types (interviews, performances, read) lived under a single, dynamic, [type] route. Later, the client requested separate pages instead, which is why `/media/interviews`, `/media/performances`, and `/media/read` each have their own `page.tsx`. In case we are requested to change it back to how it was in the original proposal, taking out the guion bajo will make the page active, and the individual pages for each media type can be deleted.
+# OVERVIEW
+A full-stack personal website for Joseph E. LeDoux, NYU neuroscientist, author, and musician. The site consolidates his three distinct bodies of work (research, books, and music), into a single cohesive platform, designed to be navigable by audiences ranging from academic researchers to casual readers.
 
-## FrontEnd
-/neuroscientist
-    /publications
-    /lectures
+# FEATURES:
+- Multi-persona navigation (Neuroscientist / Author / Musician) via responsive image map
+- Dynamic publications & books from MongoDB Atlas with ISR
+- Page-level SEO: metadata templates, Open Graph, Twitter cards, JSON-LD structured data
+- Framer Motion animations on interactive hotspots
+- Filterable media library with server-side API routes
 
-/author
-    /books
-    /blogs (and columns)
+# ARCHITECTURE
+The original, client-approved design unified all media in one page, which could be filtered by field (neuroscience, books, music), media type (written, audio and video), and year. This is why a `/media/_[type]` dynamic route exists in the codebase (the underscore prefix disables it in next.js routing). The client later requested dedicated pages for each media type, so `/media/interviews`, `/media/performances` and `/media/read` each have their own page.
 
-/musician
-    /amygdaloids
-        /albums
-    /soloprojects
+  ## Data sources
 
-/media
-    /watch
-    /listen
-    /read
+  Two patterns coexist depending on how frequently content changes:
+  - **MongoDB Atlas** — Publications, books, and media items are stored in a
+    `websitedb` database and fetched server-side via internal API routes
+    (`/api/publications`, `/api/books`, `/api/media`). Media pages use ISR with
+    a 5-minute revalidation window.
+  - **Static TypeScript data files** — Albums, shows, lectures, columns, and
+    articles are hardcoded in `*-data.ts` files co-located with their routes.
+    These change infrequently enough that a redeploy is acceptable.
 
-## Backend
+  ## Server and client components
 
+  Next.js metadata exports require server components, but several pages need
+  client-side interactivity (modals, image galleries, responsive state). These
+  are split into a thin server wrapper that exports `metadata` and a
+  `*Client.tsx` component that holds the `"use client"` logic — for example,
+  `app/musician/page.tsx` → `app/musician/MusicianClient.tsx`.
 
+  ## Development process
+  Requirements evolved during development, which made the development intertwined with the design process. Navigational structure and dedicated section landing pages were added iteratively based on client feedback.
 
-spotify
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/57L6C0WjJO4mBkYABP5SIb?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+# LOCAL SETUP
+                                                                                                                     
+1. Clone the repository and install dependencies:                                                                                      
+  npm install
 
-<iframe title="Libsyn Player" style="border: none" src="//html5-player.libsyn.com/embed/episode/id/15879461/height/90/theme/custom/thumbnail/yes/direction/backward/render-playlist/no/custom-color/000000/" height="90" width="100%" scrolling="no"  allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+2. Start the development server:
+  npm run dev
 
+  Open http://localhost:3000 in your browser.
 
-For NewsBanner:
-If we want to dismiss the banner and that to persist across pages, use localStorage.
-
-  useEffect(() => {
-    const storedDismiss = localStorage.getItem("newsBannerDismissed");
-    if (storedDismiss === "true") {
-      setIsVisible(false);
-    }
-  }, []);
-
-    const handleDismiss = () => {
-    setIsVisible(false);
-    localStorage.setItem("newsBannerDismissed", "true"); // Save to storage
-  };
-
-  then, change onClick={ handleDismiss }
+Note: Some content (albums, shows, lectures and columns) is hardcoded
+in static data files and will load without any configuration. Pages that
+fetch from the database — publications, books, and media — require MongoDB
+Atlas credentials in a .env.local file and are not publicly accessible.
