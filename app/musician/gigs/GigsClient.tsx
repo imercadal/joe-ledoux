@@ -24,7 +24,7 @@ export default function GigsClient() {
     <div className="bg-lightAccent">
         <div className="relative h-40 z-10 bg-cover bg-center bg-[url('/220_Neuro_Lectures.webp')] flex flex-col items-center justify-center">
             <h3 className="font-bold">GIGS</h3>
-            <h3 className="block italic  m-0 mt-2 px-16 md:px-0 text-sm text-center"><b>Note: </b>For this list, 'Amygdaloids' means the full band, the acoustic duos Half Full and So We Are, and solo performances by Joe.</h3>
+            <h3 className="block italic  m-0 mt-2 px-16 md:px-0 text-sm text-center"><b>Note: </b>For this list, &apos;Amygdaloids&apos; means the full band, the acoustic duos Half Full and So We Are, and solo performances by Joe.</h3>
         </div>
         {/* Navigation for Years */}
         <div className="sticky top-0 py-2 md:py-3 px-4 md:px-0 flex justify-center items-center bg-lightAccent">

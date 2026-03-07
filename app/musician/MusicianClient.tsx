@@ -51,7 +51,7 @@ export default function MusicianClient(){
                 >
                     <div className='px-6 md:px-20 lg:px-6 lg:pl-36' id="description">
                         <h3 className='text-darker mb-5 font-bold italic'>THE AMYGDALOIDS</h3>
-                        <p className='text-darker text-base/6 mb-2'>The Amygdaloids are a New York City band formed in 2006 by scientists Joseph LeDoux and Tyler Volk. They created their own genre, Heavy MeNtal (love songs about mind and brain and mental disorders) and released five albums between 2007 and 2015. The band has played with Rosanne Cash, Lenny Kaye, and other rock stars. LeDoux&apos;s music has become so entwined with his work that he is often asked to bring the band when he lectures in the US and even abroad. LeDoux&apos;s songs have been the basis of a musical called <i>Map of Your Mind</i>, and appear in Werner Herzog&apos;s 2024 documentary, <i>Theatre of Thought</i>. His life, work and music are the subject of a documentary on Amazon called "Neuroscience and Emotions".</p>
+                        <p className='text-darker text-base/6 mb-2'>The Amygdaloids are a New York City band formed in 2006 by scientists Joseph LeDoux and Tyler Volk. They created their own genre, Heavy MeNtal (love songs about mind and brain and mental disorders) and released five albums between 2007 and 2015. The band has played with Rosanne Cash, Lenny Kaye, and other rock stars. LeDoux&apos;s music has become so entwined with his work that he is often asked to bring the band when he lectures in the US and even abroad. LeDoux&apos;s songs have been the basis of a musical called <i>Map of Your Mind</i>, and appear in Werner Herzog&apos;s 2024 documentary, <i>Theatre of Thought</i>. His life, work and music are the subject of a documentary on Amazon called &quot;Neuroscience and Emotions&quot;.</p>
                         <ArrowLongRightIcon className="inline h-5 w-5 text-accent" />
                         <button
                             onClick={() => setIsModalOpen(true)}
@@ -145,7 +145,7 @@ export default function MusicianClient(){
 
             <section id="gigs" className="container px-4 my-4 py-3 md:py-6 mx-auto flex-col justify-center max-w-4xl">
                 <h2 className="text-2xl font-bold mb-1">Gigs</h2>
-                <p className='text-darker italic mb-3'><b>Note: </b>For this list, 'Amygdaloids' means the full band, the acoustic duos Half Full and So We Are, and solo performances by Joe.</p>
+                <p className='text-darker italic mb-3'><b>Note: </b>For this list, &apos;Amygdaloids&apos; means the full band, the acoustic duos Half Full and So We Are, and solo performances by Joe.</p>
                 <ShowList shows={ shows }/>
             </section>
 
