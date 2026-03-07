@@ -1,8 +1,15 @@
+import type { Metadata } from 'next';
 import FilterableMedia from '../FilterableMedia';
 import Banner from '@/app/components/Banner';
 import { bannerImages } from '@/config/bannerConfig';
 
 export const revalidate = 300;
+
+export const metadata: Metadata = {
+  title: 'Performances',
+  description: 'Live musical performances by Joseph LeDoux and The Amygdaloids.',
+  openGraph: { url: 'https://www.joseph-ledoux.com/media/performances' },
+};
 
 export default async function PerformancesPage() {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';

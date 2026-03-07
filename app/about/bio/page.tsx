@@ -1,3 +1,11 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Biography — Joseph LeDoux',
+  description: 'Full biography of Joseph LeDoux: career at NYU, scientific awards, acclaimed books, and music with The Amygdaloids.',
+  openGraph: { url: 'https://www.joseph-ledoux.com/about/bio' },
+};
+
 export default function FullBioPage(){
     return(
         <div className="bg-darker relative min-h-screen">

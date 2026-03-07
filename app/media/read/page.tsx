@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import FilterableMedia from '../FilterableMedia';
 import { MediaItem } from '../media-data';
@@ -6,6 +7,12 @@ import { bannerImages } from '@/config/bannerConfig';
 import ScrollToTopButton from '@/app/components/ScrollToTop';
 
 export const revalidate = 300;
+
+export const metadata: Metadata = {
+  title: 'Articles & Written Media',
+  description: 'Articles and written media featuring or by Joseph LeDoux.',
+  openGraph: { url: 'https://www.joseph-ledoux.com/media/read' },
+};
 
 export default async function ReadMediaPage() {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';

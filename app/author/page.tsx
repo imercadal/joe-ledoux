@@ -1,6 +1,13 @@
+import type { Metadata } from 'next';
 import BookList from "./BookList";
 
 export const dynamic = 'force-dynamic';
+
+export const metadata: Metadata = {
+  title: 'Books by Joseph LeDoux',
+  description: 'Books by Joseph LeDoux: The Emotional Brain, Synaptic Self, Anxious, The Deep History of Ourselves, and more.',
+  openGraph: { url: 'https://www.joseph-ledoux.com/author' },
+};
 
 export default async function AuthorPage() {
 

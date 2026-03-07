@@ -1,4 +1,11 @@
+import type { Metadata } from 'next';
 import PdfIframe from "@/app/components/PdfIframe";
+
+export const metadata: Metadata = {
+  title: 'History of Neuroscience Lecture',
+  description: 'Joseph LeDoux\'s History of Neuroscience lecture at the Society for Neuroscience, 2025.',
+  openGraph: { url: 'https://www.joseph-ledoux.com/news/history-of-neuroscience' },
+};
 
 export default function HistoryPage() {
     return (

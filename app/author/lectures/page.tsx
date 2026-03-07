@@ -1,6 +1,13 @@
+import type { Metadata } from 'next';
 import LectureList from '../../neuroscientist/lectures/LectureList';
 import { lectures, Lecture } from '../../neuroscientist/lectures/lecture-data';
 import ScrollToTopButton from '@/app/components/ScrollToTop';
+
+export const metadata: Metadata = {
+  title: 'Author Lectures',
+  description: 'Lectures by Joseph LeDoux discussing his books on neuroscience and the mind.',
+  openGraph: { url: 'https://www.joseph-ledoux.com/author/lectures' },
+};
 
 export default function AuthorLecturesPage(){
 

@@ -1,9 +1,28 @@
+import type { Metadata } from 'next';
 import { Book } from '../book-data';
 import BookContentTabs from './BookContentTabs';
 import Link from 'next/link';
 import { ArrowLongRightIcon } from "@heroicons/react/16/solid";
 
 export const dynamic = 'force-dynamic';
+
+export async function generateMetadata({ params }: { params: Promise<{ _id: string }> }): Promise<Metadata> {
+  const { _id } = await params;
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
+  const res = await fetch(new URL(`/api/books/${_id}`, baseUrl).toString());
+  if (!res.ok) return { title: 'Book' };
+  const book: Book = await res.json();
+  return {
+    title: book.title,
+    description: book.synopsis?.slice(0, 160) ?? `${book.title} by Joseph LeDoux`,
+    openGraph: {
+      title: `${book.title} | Joseph LeDoux`,
+      description: book.synopsis?.slice(0, 160),
+      images: book.imageUrl ? [{ url: `/${book.imageUrl}` }] : undefined,
+      url: `https://www.joseph-ledoux.com/author/${_id}`,
+    },
+  };
+}
 
 export default async function BookDetails({ params }: { params: Promise<{ _id: string }> }) {
     const { _id } = await params;

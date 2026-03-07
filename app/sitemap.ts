@@ -26,13 +26,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE_URL}/news/history-of-neuroscience`,           lastModified: new Date(), changeFrequency: 'yearly',  priority: 0.7 },
   ]
 
-  const mediaTypeRoutes: MetadataRoute.Sitemap = ['watch', 'listen', 'read'].map((type) => ({
-    url: `${BASE_URL}/media/_${type}`,
-    lastModified: new Date(),
-    changeFrequency: 'yearly' as const,
-    priority: 0.6,
-  }))
-
   let bookRoutes: MetadataRoute.Sitemap = []
   try {
     const { db } = await connectToDb()
@@ -47,5 +40,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     console.error('Failed to fetch books for sitemap:', error)
   }
 
-  return [...staticRoutes, ...mediaTypeRoutes, ...bookRoutes]
+  return [...staticRoutes, ...bookRoutes]
 }

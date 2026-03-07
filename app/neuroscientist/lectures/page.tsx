@@ -1,6 +1,13 @@
+import type { Metadata } from 'next';
 import LectureList from './LectureList';
 import { lectures, Lecture } from './lecture-data';
 import ScrollToTopButton from '@/app/components/ScrollToTop';
+
+export const metadata: Metadata = {
+  title: 'Lectures',
+  description: 'Neuroscience lectures and talks by Joseph LeDoux on fear, memory, and the brain.',
+  openGraph: { url: 'https://www.joseph-ledoux.com/neuroscientist/lectures' },
+};
 
 export default function LecturesPage(){
 

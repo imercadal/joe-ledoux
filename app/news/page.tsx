@@ -1,5 +1,12 @@
+import type { Metadata } from 'next';
 import NewsCard from "../components/NewsCard";
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: 'News',
+  description: 'Latest news, awards, and events for Joseph LeDoux — neuroscientist, author, and musician.',
+  openGraph: { url: 'https://www.joseph-ledoux.com/news' },
+};
 
 export default function NewsPage(){
 

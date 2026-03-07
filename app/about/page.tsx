@@ -1,5 +1,12 @@
+import type { Metadata } from 'next';
 import { ArrowLongRightIcon } from "@heroicons/react/16/solid";
 import AboutBackgroundSlideshow from "./AboutBackgroundSlideshow";
+
+export const metadata: Metadata = {
+  title: 'About Joseph LeDoux',
+  description: 'NYU Professor Emeritus, elected National Academy of Sciences. Researches emotion, memory, and consciousness. Author and musician.',
+  openGraph: { url: 'https://www.joseph-ledoux.com/about' },
+};
 import BioModal from './BioModal';
 
 export default function AboutPage() {

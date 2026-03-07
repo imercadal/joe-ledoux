@@ -1,8 +1,15 @@
+import type { Metadata } from 'next';
 import PublicationList from "./PublicationsList";
 import { Publication } from './publication-data';
 import ScrollToTopButton from "@/app/components/ScrollToTop";
 
 export const dynamic = 'force-dynamic';
+
+export const metadata: Metadata = {
+  title: 'Publications',
+  description: 'Complete list of peer-reviewed publications by Joseph LeDoux — 244 papers on emotion, memory, and consciousness.',
+  openGraph: { url: 'https://www.joseph-ledoux.com/neuroscientist/publications' },
+};
 
 export default async function PublicationsPage(){
 
@@ -61,7 +68,7 @@ export default async function PublicationsPage(){
             </div>
             <div className='p-6 md:px-16 mx-auto max-w-3xl text-lightText'>
                 {years.map((year) => (
-                    <div key={year} id={`year-${year}`} className='mb-8'>
+                    <div key={year} id={`year-${year}`} className='mb-8 scroll-mt-10 md:scroll-mt-12'>
                         <p className="mb-4 px-1 inline-block text-sm font-azeret font-bold bg-accent text-lightText">{year}</p>
                         <PublicationList publications={ publicationsByYear[year] }/>
                     </div>

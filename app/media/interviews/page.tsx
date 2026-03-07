@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import FilterableMedia from '../FilterableMedia';
 import { MediaItem } from '../media-data';
@@ -6,6 +7,12 @@ import { bannerImages } from '@/config/bannerConfig';
 import ScrollToTopButton from '@/app/components/ScrollToTop';
 
 export const revalidate = 300;
+
+export const metadata: Metadata = {
+  title: 'Interviews',
+  description: 'Video and audio interviews with Joseph LeDoux on neuroscience, his books, and music.',
+  openGraph: { url: 'https://www.joseph-ledoux.com/media/interviews' },
+};
 
 export default async function InterviewsPage() {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
