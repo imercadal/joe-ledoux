@@ -1,12 +1,12 @@
 import type { Metadata } from 'next';
-import HomeClient from './HomeClient';
+import MusicianPage from './musician/page';
 
 export const metadata: Metadata = {
-  title: 'Joseph LeDoux — Neuroscientist, Author & Musician',
-  description: 'Official site of Joseph LeDoux — NYU neuroscientist researching fear, memory, and consciousness; author of The Emotional Brain; lead singer of The Amygdaloids.',
-  openGraph: { url: 'https://www.joseph-ledoux.com' },
+  title: 'Joseph LeDoux — Musician',
+  description: 'Joseph LeDoux, lead singer of The Amygdaloids.',
+  openGraph: { url: 'https://www.joseph-ledoux.com/musician' },
 };
 
 export default function Home() {
-  return <HomeClient />;
+  return <MusicianPage />;
 }
