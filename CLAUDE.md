@@ -40,9 +40,9 @@ The site is organized around three personas:
 
 Two patterns coexist:
 
-1. **MongoDB (dynamic)** — Publications and books are stored in MongoDB Atlas (`websitedb` database, `publications` and `books` collections). Server components fetch from internal API routes (`/api/publications`, `/api/books`, `/api/books/[id]`, `/api/media`). All dynamic pages use `export const dynamic = 'force-dynamic'`. The DB connection is cached in module scope (`app/api/db.ts`).
+1. **MongoDB (dynamic)** — Publications and books are stored in MongoDB Atlas (`websitedb` database, `publications`, `media` and `books` collections). Server components fetch from internal API routes (`/api/publications`, `/api/books`, `/api/books/[id]`, `/api/media`). All dynamic pages use `export const dynamic = 'force-dynamic'`. The DB connection is cached in module scope (`app/api/db.ts`).
 
-2. **Static TypeScript data files** — Albums, shows, media items, lectures, columns, and articles are hardcoded in `*-data.ts` files co-located with their feature routes.
+2. **Static TypeScript data files** — Albums, shows, lectures, columns, and articles are hardcoded in `*-data.ts` files co-located with their feature routes.
 
 ### Styling
 
