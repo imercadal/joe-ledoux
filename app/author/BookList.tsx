@@ -13,12 +13,11 @@ export default function BookList({ books }: { books: Book[]}) {
                 <div key={book._id} className='flex'>
                     <Link href={`/author/${book._id}`} className='flex'>
                     <div className='w-2/5'>
-                        <Image 
-                            className='shadow-2xl' 
-                            src={`/${book.imageUrl}`} 
-                            alt="Book Cover" 
-                            layout="responsive"
-                            width={150} 
+                        <Image
+                            className='shadow-2xl w-full h-auto'
+                            src={`/${book.imageUrl}`}
+                            alt="Book Cover"
+                            width={150}
                             height={300}
                         />
                     </div>

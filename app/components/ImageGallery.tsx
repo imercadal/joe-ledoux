@@ -11,19 +11,44 @@ interface ImageGalleryProps {
 export default function ImageGallery({ images, folder }: ImageGalleryProps) {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
+  const currentIndex = selectedImage ? images.indexOf(selectedImage) : -1;
+
+  const goTo = (index: number) => {
+    const next = (index + images.length) % images.length;
+    setSelectedImage(images[next]);
+  };
+
   return (
     <div className="w-full">
       {selectedImage && (
-      <div className="w-full flex justify-center">
-        <Image
-          src={`/${folder}/${selectedImage}.jpg`}
-          alt={selectedImage}
-          width={300}
-          height={300}
-          style={{ height: "30em", width: "auto" }}
-
-          className="shadow-xl"
-        />
+      <div className="w-full flex items-center gap-2">
+        <button
+          onClick={() => goTo(currentIndex - 1)}
+          className="flex-shrink-0 p-2 text-dark hover:text-accent transition-colors"
+          aria-label="Previous image"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-8 h-8">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+          </svg>
+        </button>
+        <div className="relative flex-1" style={{ height: "30em" }}>
+          <Image
+            src={`/${folder}/${selectedImage}.webp`}
+            alt={selectedImage}
+            fill
+            className="object-contain shadow-xl"
+            sizes="100vw"
+          />
+        </div>
+        <button
+          onClick={() => goTo(currentIndex + 1)}
+          className="flex-shrink-0 p-2 text-dark hover:text-accent transition-colors"
+          aria-label="Next image"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-8 h-8">
+            <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+          </svg>
+        </button>
       </div>
       )}
       {/* Horizontal carousel */}
@@ -36,11 +61,10 @@ export default function ImageGallery({ images, folder }: ImageGalleryProps) {
             onClick={() => setSelectedImage(img)}
           >
             <Image
-              src={`/${folder}/${img}.jpg`}
+              src={`/${folder}/${img}.webp`}
               alt={img}
               fill
-              objectFit="cover"
-              className={`hover:opacity-75 ${
+              className={`object-cover hover:opacity-75 ${
                 selectedImage === img ? "border-accent" : "border-transparent"
               }`}
             />
