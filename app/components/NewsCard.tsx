@@ -1,5 +1,3 @@
-'use client';
-
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -30,6 +28,7 @@ export default function NewsCard({ href, imgSrc, title, tag, date, external = fa
               alt={title}
               width={800}
               height={500}
+              sizes="(max-width: 640px) 100vw, 320px"
               className="w-full max-h-64 sm:w-80 h-auto object-contain rounded-md"
             />
           </div>

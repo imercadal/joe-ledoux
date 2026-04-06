@@ -1,8 +1,6 @@
 import type { Metadata } from 'next';
 import ImageGrid from '../components/ImageGrid';
 
-export const dynamic = 'force-dynamic';
-
 export const metadata: Metadata = {
   title: 'Neuroscientist',
   description: 'Joseph LeDoux\'s neuroscience research at NYU on fear conditioning, the amygdala, emotion, and consciousness.',

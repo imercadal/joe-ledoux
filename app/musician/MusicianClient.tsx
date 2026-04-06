@@ -6,8 +6,7 @@ import { albums } from './album-data';
 import ShowList from './ShowList';
 import { shows } from './show-data';
 import ImageGallery from '../components/ImageGallery';
-import { ArrowLongRightIcon } from "@heroicons/react/16/solid";
-import Link from 'next/link';
+import { ArrowLongRightIcon, ArrowLongUpIcon } from "@heroicons/react/16/solid";
 import Image from 'next/image';
 
 export default function MusicianClient(){
@@ -17,8 +16,8 @@ export default function MusicianClient(){
         "MusicPhoto_7", "MusicPhoto_8", "MusicPhoto_9", "MusicPhoto_10", "MusicPhoto_11", "MusicPhoto_12",
         "MusicPhoto_14", "MusicPhoto_15", "MusicPhoto_16", "MusicPhoto_17", "MusicPhoto_18",
         "MusicPhoto_19", "MusicPhoto_20", "MusicPhoto_21", "MusicPhoto_23", "MusicPhoto_24",
-        "MusicPhoto_25", "MusicPhoto_26", "MusicPhoto_27", "MusicPhoto_28", "MusicPhoto_29", "MusicPhoto_30",
-        "MusicPhoto_51", "MusicPhoto_52", "MusicPhoto_53", "MusicPhoto_54"
+        "MusicPhoto_26", "MusicPhoto_27", "MusicPhoto_28", "MusicPhoto_29", "MusicPhoto_30",
+        "MusicPhoto_51", "MusicPhoto_52", "MusicPhoto_53"
     ];
 
     return(
@@ -156,10 +155,10 @@ export default function MusicianClient(){
                 </div>
             </section>
             <section className="container px-4 mx-auto max-w-4xl">
-                <Link href="#description" className='text-accent font-bold hover:opacity-75'>
-                    <ArrowLongRightIcon className='inline h-4 w-5'/>
+                <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className='text-accent font-bold hover:opacity-75'>
                     <i>Go to top </i>
-                </Link>
+                    <ArrowLongUpIcon className='inline h-4 w-5'/>
+                </button>
             </section>
 
         </main>
