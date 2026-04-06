@@ -11,7 +11,7 @@ export default async function NeuroscientistPage(){
     const images = [
         {
             id: "1",
-            src: "/scientistPictures/SciencePhoto_4.png",
+            src: "/scientistPictures/SciencePhoto_4.webp",
             alt: "Picture of Molecules",
             width: 1120, 
             height: 537,
@@ -32,7 +32,7 @@ export default async function NeuroscientistPage(){
         },
         {
             id: "4",
-            src: "/scientistPictures/SciencePhoto_1.png",
+            src: "/scientistPictures/SciencePhoto_1.webp",
             alt: "Microscope",
             width: 1234,
             height: 986,
@@ -53,7 +53,7 @@ export default async function NeuroscientistPage(){
         },
         {
             id: "7",
-            src: "/scientistPictures/SciencePhoto_7.png",
+            src: "/scientistPictures/SciencePhoto_7.webp",
             alt: "Microscope",
             width: 1006,
             height: 754,
