@@ -910,7 +910,7 @@ export const shows: Show[] = [
     _id: 144,
     title: "Joe talked about is work, and he and Colin played, for school friends and other local folks at Gabrielle's party space in his hometown, Eunice, Louisiana",
     band: "Joe and Colin",
-    date: new Date("2025-09-07"),
+    date: new Date("2025-09-08"),
     venue: "(see the Eunice News article about the event in Writeups)"
   }
 ]
