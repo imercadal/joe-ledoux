@@ -50,7 +50,7 @@ export default function MusicianClient(){
                 >
                     <div className='px-6 md:px-20 lg:px-6 lg:pl-36' id="description">
                         <h3 className='text-darker mb-5 font-bold italic'>THE AMYGDALOIDS</h3>
-                        <p className='text-darker text-base/6 mb-2'>The Amygdaloids are a New York City band formed in 2006 by scientists Joseph LeDoux and Tyler Volk. They created their own genre, Heavy MeNtal (love songs about mind and brain and mental disorders) and released five albums between 2007 and 2015. The band has played with Rosanne Cash, Lenny Kaye, and other rock stars. LeDoux&apos;s music has become so entwined with his work that he is often asked to bring the band when he lectures in the US and even abroad. LeDoux&apos;s songs have been the basis of a musical called <i>Map of Your Mind</i>, and appear in Werner Herzog&apos;s 2024 documentary, <i>Theatre of Thought</i>. His life, work and music are the subject of a documentary on Amazon called &quot;Neuroscience and Emotions&quot;.</p>
+                        <p className='text-darker text-base/6 mb-2'>The Amygdaloids are a New York City band formed in 2006 by scientists Joseph LeDoux, Tyler Volk and Daniella Schiller. They created their own genre, Heavy MeNtal (love songs about mind and brain and mental disorders) and released five albums between 2007 and 2015. The band has played with Rosanne Cash, Lenny Kaye, and other rock stars. LeDoux&apos;s music has become so entwined with his work that he is often asked to bring the band when he lectures in the US and even abroad. LeDoux&apos;s songs have been the basis of a musical called <i>Map of Your Mind</i>, and appear in Werner Herzog&apos;s 2024 documentary, <i>Theatre of Thought</i>. His life, work and music are the subject of a documentary on Amazon called &quot;Neuroscience and Emotions&quot;.</p>
                         <ArrowLongRightIcon className="inline h-5 w-5 text-accent" />
                         <button
                             onClick={() => setIsModalOpen(true)}
@@ -117,9 +117,9 @@ export default function MusicianClient(){
                             <h3 className="text-2xl mb-4">THE AMYGDALOIDS</h3>
                             <p className="leading-relaxed text-lightText">
                                 The Amygdaloids are a New York City band formed in 2006, and made up of
-                                scientists at New York University: Jospeh LeDoux (guitar, singer, song writer);
-                                Tyler Volk (led guitar); Daniela Schiller (drums), and Nina Curly (bass). They
-                                created their own genera, <i>Heavy MeNtal</i>, love songs about mind and brain and
+                                scientists at New York University: Joseph LeDoux (guitar, singer, song writer);
+                                Tyler Volk (lead guitar); Daniella Schiller (drums), and Nina Curly (bass). They
+                                created their own genre, <i>Heavy MeNtal</i>, love songs about mind and brain and
                                 mental disorders, and released five albums of such songs between 2007 and
                                 2015. The bass position has changed over the years in the hands of Gerald
                                 McCollum, Amanda Thorpe, and Colin Dempsey. The band has played with

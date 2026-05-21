@@ -887,7 +887,7 @@ export const shows: Show[] = [
   },
     {
     _id: 141,
-    title: 'Screening of Werner Herzog’s "Theatre of Thought". Joe does a talkback, Colin joins to play a few song',
+    title: 'Screening of Werner Herzog\'s "Theatre of Thought". Joe does a talkback, Colin joins to play a few song',
     band: "Joe and Colin",
     date: new Date("2025-09-04"),
     venue: "Broad Theatre New Orleans"
@@ -899,11 +899,18 @@ export const shows: Show[] = [
     date: new Date("2025-09-05"),
     venue: "Ritz Carlton, New Orleans"
   },
-    {
+  {
     _id: 143,
     title: "WWOZ New Orleans",
     band: "Amygdaloids",
     date: new Date("2025-09-03"),
     venue: " New Orleans"
+  },
+  {
+    _id: 144,
+    title: "Joe talked about is work, and he and Colin played, for school friends and other local folks at Gabrielle's party space in his hometown, Eunice, Louisiana",
+    band: "Joe and Colin",
+    date: new Date("2025-09-07"),
+    venue: "(see the Eunice News article about the event in Writeups)"
   }
 ]
