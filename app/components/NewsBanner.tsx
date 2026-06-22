@@ -26,7 +26,7 @@ export default function NewsBanner() {
           animate={{ y: 0, opacity: 1}}
           exit={{ y: -100, opacity: 0}}
           transition={{duration: 0.4}}
-          className='relative z-40 isolate flex items-center gap-x-6 overflow-hidden bg-darker px-6 py-2.5 sm:px-3.5 sm:before:flex-1'
+          className='relative z-40 isolate flex items-center md:gap-x-6 overflow-hidden bg-darker px-6 py-2.5 sm:px-3.5 sm:before:flex-1'
         >
       {/* Background Gradient 1 */}
       <div
@@ -57,29 +57,31 @@ export default function NewsBanner() {
       </div>
 
       {/* News Text */}
-      <div className="flex flex-wrap items-center justify-around gap-y-2">
-        <p className="text-xs text-lightText">
-          <Link href='/author/67e455e79d343bd2f8bfe258'>
-            <strong className="font-semibold">Joe&apos;s new book is a memoir</strong>
-          </Link>
-        </p>
-        { pathname === '/career-celebration' ?
-        <></>
-        : 
-        <>
-          <svg viewBox="0 0 2 2" aria-hidden="true" className="mx-1 sm:mx-2 inline size-0.5 fill-current text-white">
-            <circle r={1} cx={1} cy={1} />
-          </svg>
-          <p className="text-xs text-lightText mr-4">
-            <Link href='/career-celebration'>
-              <strong className="font-semibold">Joe&apos;s Career Celebration</strong>
+      <div className="flex flex-col gap-y-1 md:flex-row md:items-center md:gap-x-1 md:gap-y-0">
+        <div className="flex items-center gap-x-1">
+          <p className="text-xs text-lightText whitespace-nowrap">
+            <Link href='/author/67e455e79d343bd2f8bfe258'>
+              <strong className="font-semibold">Joe&apos;s new book is a memoir</strong>
             </Link>
           </p>
-        </>
-        }
+          { pathname === '/career-celebration' ?
+          <></>
+          :
+          <>
+            <svg viewBox="0 0 2 2" aria-hidden="true" className="mx-1 sm:mx-2 inline size-0.5 fill-current text-white">
+              <circle r={1} cx={1} cy={1} />
+            </svg>
+            <p className="text-xs text-lightText whitespace-nowrap">
+              <Link href='/career-celebration'>
+                <strong className="font-semibold">Joe&apos;s Career Celebration</strong>
+              </Link>
+            </p>
+          </>
+          }
+        </div>
         <Link
           href="/news"
-          className="ml-1 sm:ml-4 flex-none italic rounded-full bg-accent px-3 py-1 text-xs font-semibold text-white shadow-xs hover:bg-subMenu focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900"
+          className="self-center md:self-auto md:ml-4 flex-none whitespace-nowrap italic rounded-full bg-accent px-3 py-1 text-xs font-semibold text-white shadow-xs hover:bg-subMenu focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900"
           onClick={() => setIsVisible(false)}
         >
           &rarr;
