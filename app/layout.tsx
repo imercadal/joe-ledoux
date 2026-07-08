@@ -58,9 +58,9 @@ export default function RootLayout({
         <NewsBanner />
         <Header />
         <ClientCopyHandler />
-        <main className="flex-grow">
-          {children}
-        </main>
+          <main className="flex-grow flex flex-col">
+            {children}
+          </main>
         <Footer />
         <Analytics />
         <SpeedInsights />

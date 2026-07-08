@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import HomeClient from './HomeClient';
+import HomeDoors from './HomeDoors';
 
 export const metadata: Metadata = {
   title: 'Joseph LeDoux — Neuroscientist, Author & Musician',
@@ -8,5 +8,5 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  return <HomeClient />;
+  return <HomeDoors />;
 }
