@@ -68,7 +68,7 @@ const mainNavItems: NavItem[] = [
     label: "musician",
     href: "/musician",
     submenu: [
-      { label: "the amygdaloids", href: "/musician" },
+      { label: "about", href: "/musician" },
       { label: "albums", href: "/musician#albums" },
       { label: "gigs", href: "/musician#gigs" },
       { label: "gallery", href: "/musician#gallery" },
@@ -149,7 +149,7 @@ export default function Navbar() {
 
 {/* Horizontal Submenu Bar */}
 {activeSubmenu?.submenu && (
-  <div className="hidden sm:flex sticky h-8 top-0 bg-accent py-1 flex tracking-wide justify-center items-center shadow-lg z-40">
+  <div className="flex sm:flex sticky h-8 top-0 bg-accent py-1 tracking-wide justify-center items-center shadow-lg z-40">
     {activeSubmenu.submenu.map((sub) => (
       <div key={sub.label} className="relative z-40">
         {sub.mediamenu ? (
@@ -160,7 +160,7 @@ export default function Navbar() {
                 prev === sub.label ? null : sub.label
               )
             }
-            className={`px-2 sm:px-4 py-2 text-white text-xs sm:text-sm ${
+            className={`px-2 sm:px-4 py-2 text-white text-xs sm:text-sm text-center ${
               openMediaMenu === sub.label
                 ? "font-bold text-dark opacity-100"
                 : "opacity-75 hover:text-dark"
@@ -172,7 +172,7 @@ export default function Navbar() {
         ) : (
           <Link
             href={sub.href ?? "#"}
-            className={`px-2 sm:px-4 py-2 text-white text-xs sm:text-sm hover:text-dark ${
+            className={`px-1 sm:px-4 text-white text-xs sm:text-sm text-center hover:text-dark ${
               sub.href &&
               (pathname === sub.href)
                 ? "font-bold opacity-100"
@@ -215,7 +215,12 @@ export default function Navbar() {
         </div>
         <nav className="mt-6">
             {mainNavItems.map((item) => (
-              <Disclosure as="div" key={item.label} className="border-b border-gray-200 py-2">
+              <Disclosure
+                as="div"
+                key={item.label}
+                defaultOpen={activeSubmenu?.label === item.label}
+                className="border-b border-gray-200 py-2"
+              >
                 <DisclosureButton className="flex w-full items-center justify-start text-base font-semibold text-accent hover:opacity-75">
                   {item.href && !item.submenu ? (
                     <Link href={item.href} onClick={() => setMobileMenuOpen(false)}>

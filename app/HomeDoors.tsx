@@ -40,7 +40,7 @@ export default function HomeDoors() {
         </picture>
 
         <div className="absolute left-1/2 top-8 -translate-x-1/2">
-          <span className="font-cardo text-white tracking-wide text-sm md:text-md lg:text-lg">
+          <span className="font-cardo text-white tracking-wide text-sm md:text-md lg:text-lg whitespace-nowrap">
             <i>· Click on a door and explore ·</i>
           </span>
         </div>

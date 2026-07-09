@@ -53,6 +53,7 @@ Two patterns coexist:
 
 ### Key Shared Components
 
+- `app/components/Header.tsx` — Nav bar with active-section tracking (`activeSubmenu`, synced to `pathname`). On mobile, the hamburger menu's `Disclosure` for the current section renders pre-expanded via `defaultOpen`; this only re-evaluates because the `Dialog` unmounts its children on close, forcing a remount each time the menu opens — don't switch the `Dialog` to stay mounted (e.g. a `static` Transition) without replacing `defaultOpen` with controlled `open` state
 - `app/components/Banner.tsx` — Full-width hero banner with image and title
 - `app/components/NewsBanner.tsx` — Dismissable top announcement bar (client component, hides on `/news`)
 - `app/components/ImageGrid.tsx` / `ImageGallery.tsx` — Image display layouts
