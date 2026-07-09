@@ -204,6 +204,17 @@ export default function Navbar() {
   </div>
 )}
 
+{/* Mobile-Only Home Submenu */}
+{pathname === "/" && (
+  <div className="flex sm:hidden sticky h-8 top-0 bg-accent py-1 tracking-wide justify-center items-center shadow-lg z-40">
+    <Link
+      href={mainNavItems[0].href ?? "#"}
+      className="px-1 sm:px-4 text-white text-xs sm:text-sm text-center opacity-75 hover:text-dark"
+    >
+      {mainNavItems[0].label}
+    </Link>
+  </div>
+)}
 
       {/* Mobile Navigation */}
       <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="sm:hidden z-50">
