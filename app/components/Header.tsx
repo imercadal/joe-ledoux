@@ -106,7 +106,7 @@ export default function Navbar() {
   return (
     <header className="relative bg-white shadow-md z-50">
       {/* Desktop Navigation */}
-      <nav className="mx-auto max-w-4xl flex sm:flex-col items-center justify-between pt-4 pb-1 px-4 lg:px-8">
+      <nav className="mx-auto max-w-5xl flex sm:flex-col items-center justify-between pt-4 pb-1 px-4 lg:px-8">
         <div className="pt-3 pb-3 sm:pb-0">
           <Link href="/" className="font-extrabold text-dark">
             <h1 className="text-3xl">Joseph LeDoux</h1>
