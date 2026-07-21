@@ -42,7 +42,7 @@ Two patterns coexist:
 
 1. **MongoDB (dynamic)** — Publications and books are stored in MongoDB Atlas (`websitedb` database, `publications` and `books` collections). Server components fetch from internal API routes (`/api/publications`, `/api/books`, `/api/books/[id]`, `/api/media`). All dynamic pages use `export const dynamic = 'force-dynamic'`. The DB connection is cached in module scope (`app/api/db.ts`).
 
-2. **Static TypeScript data files** — Albums, shows, media items, lectures, columns, and articles are hardcoded in `*-data.ts` files co-located with their feature routes.
+2. **Static TypeScript data files** — Albums, shows, media items, lectures, columns, articles, and nav structure (`app/components/header-data.ts`) are hardcoded in `*-data.ts` files co-located with their feature routes/components.
 
 ### Styling
 
@@ -53,7 +53,7 @@ Two patterns coexist:
 
 ### Key Shared Components
 
-- `app/components/Header.tsx` — Nav bar with active-section tracking (`activeSubmenu`, synced to `pathname`). On mobile, the hamburger menu's `Disclosure` for the current section renders pre-expanded via `defaultOpen`; this only re-evaluates because the `Dialog` unmounts its children on close, forcing a remount each time the menu opens — don't switch the `Dialog` to stay mounted (e.g. a `static` Transition) without replacing `defaultOpen` with controlled `open` state
+- `app/components/Header.tsx` — Nav bar with active-section tracking (`activeSubmenu`, synced to `pathname`). Composed from local subcomponents (`DesktopNavLink`, `SubmenuBar`, `MobileNavPanel`); nav data/types and the `isActivePath` helper live in the co-located `app/components/header-data.ts`. On mobile, the hamburger menu's `Disclosure` for the current section renders pre-expanded via `defaultOpen`; this only re-evaluates because the `Dialog` unmounts its children on close, forcing a remount each time the menu opens — don't switch the `Dialog` to stay mounted (e.g. a `static` Transition) without replacing `defaultOpen` with controlled `open` state
 - `app/components/Banner.tsx` — Full-width hero banner with image and title
 - `app/components/NewsBanner.tsx` — Dismissable top announcement bar (client component, hides on `/news`)
 - `app/components/ImageGrid.tsx` / `ImageGallery.tsx` — Image display layouts

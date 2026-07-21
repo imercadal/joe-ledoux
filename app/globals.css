@@ -5,6 +5,7 @@
 :root {
   --font-azeret-mono: "Azeret Mono", monospace;
   --font-inter: "Inter", sans-serif;
+  --year-anchor-offset: 4rem;
 }
 
 body {
