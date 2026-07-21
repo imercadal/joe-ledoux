@@ -46,7 +46,7 @@ const mainNavItems: NavItem[] = [
     label: "neuroscientist",
     href: "/neuroscientist",
     submenu: [
-      { label: "home", href: "/neuroscientist" },
+      { label: "neuroscientist", href: "/neuroscientist" },
       { label: "publications", href: "/neuroscientist/publications" },
       { label: "lectures", href: "/neuroscientist/lectures" },
       { label: "interviews", href: "/media/interviews"},
