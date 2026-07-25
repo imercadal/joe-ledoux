@@ -5,8 +5,9 @@ export default function PublicationList({ publications }: { publications: Public
         <main className='max-w-4xl'> 
             {publications.map(publication => (
                 <div key={publication.id} className='mb-8'>
-                    <a 
+                    <a
                         href={publication.link}
+                        download={publication.link.startsWith('/documents/')}
                         target='_blank'
                         rel='noopener noreferrer'
                     >
