@@ -7,7 +7,7 @@ export default function PublicationList({ publications }: { publications: Public
                 <div key={publication.id} className='mb-8'>
                     <a
                         href={publication.link}
-                        download={publication.link.startsWith('/documents/')}
+                        download={publication.link?.startsWith('/documents/')}
                         target='_blank'
                         rel='noopener noreferrer'
                     >
