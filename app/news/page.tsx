@@ -44,7 +44,7 @@ export default function NewsPage(){
           date={new Date('2025-04-30')}
         />
         <NewsCard
-          href="/retirement"
+          href="/career-celebration"
           imgSrc="/retirementPictures/RetirementParty_1_short.webp"
           title="Joe's Career Celebration at the Clive Davis Institute, Brooklyn"
           tag="News"
