@@ -2,14 +2,15 @@ import type { Metadata } from 'next';
 import { Book } from '../book-data';
 import BookContentTabs from './BookContentTabs';
 import Link from 'next/link';
+import { permanentRedirect } from 'next/navigation';
 import { ArrowLongRightIcon } from "@heroicons/react/16/solid";
 
 export const dynamic = 'force-dynamic';
 
-export async function generateMetadata({ params }: { params: Promise<{ _id: string }> }): Promise<Metadata> {
-  const { _id } = await params;
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
-  const res = await fetch(new URL(`/api/books/${_id}`, baseUrl).toString());
+  const res = await fetch(new URL(`/api/books/${slug}`, baseUrl).toString());
   if (!res.ok) return { title: 'Book' };
   const book: Book = await res.json();
   return {
@@ -19,16 +20,16 @@ export async function generateMetadata({ params }: { params: Promise<{ _id: stri
       title: `${book.title} | Joseph LeDoux`,
       description: book.synopsis?.slice(0, 160),
       images: book.imageUrl ? [{ url: `/${book.imageUrl}` }] : undefined,
-      url: `https://www.joseph-ledoux.com/author/${_id}`,
+      url: `https://www.joseph-ledoux.com/author/${book.slug}`,
     },
   };
 }
 
-export default async function BookDetails({ params }: { params: Promise<{ _id: string }> }) {
-    const { _id } = await params;
+export default async function BookDetails({ params }: { params: Promise<{ slug: string }> }) {
+    const { slug } = await params;
 
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
-    const apiUrl = new URL(`/api/books/${_id}`, baseUrl).toString();
+    const apiUrl = new URL(`/api/books/${slug}`, baseUrl).toString();
 
     const response = await fetch(apiUrl);
 
@@ -55,6 +56,11 @@ export default async function BookDetails({ params }: { params: Promise<{ _id: s
     }
 
     const book: Book = await response.json();
+
+    // Old ObjectId links resolve via the API fallback; send them to the canonical slug URL
+    if (book?.slug && slug !== book.slug) {
+        permanentRedirect(`/author/${book.slug}`);
+    }
     
     if (!book) {
         return (

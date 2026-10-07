@@ -23,6 +23,7 @@ export interface Document {
 
 export interface Book {
     _id?: number;
+    slug: string;
     title: string;
     subhead: string;
     year: number;

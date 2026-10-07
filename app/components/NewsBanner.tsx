@@ -60,7 +60,7 @@ export default function NewsBanner() {
       <div className="flex flex-col gap-y-1 md:flex-row md:items-center md:gap-x-1 md:gap-y-0">
         <div className="flex items-center gap-x-1">
           <p className="text-xs text-lightText whitespace-nowrap">
-            <Link href='/author/67e455e79d343bd2f8bfe258'>
+            <Link href='/author/starting-over'>
               <strong className="font-semibold">Joe&apos;s new book is a memoir</strong>
             </Link>
           </p>

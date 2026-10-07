@@ -37,7 +37,7 @@ export default function NewsPage(){
           external
         />
         <NewsCard
-          href="/author/67e455e79d343bd2f8bfe258"
+          href="/author/starting-over"
           imgSrc="/319_Starting_Over_Cover.webp"
           title="Joe signs with MIT Press to publish his memoir *(Just Like) Starting Over*"
           tag="Books"

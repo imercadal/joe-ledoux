@@ -11,7 +11,7 @@ export default function BookList({ books }: { books: Book[]}) {
             .sort((a, b) => b.year - a.year)
             .map((book) => (
                 <div key={book._id} className='flex'>
-                    <Link href={`/author/${book._id}`} className='flex'>
+                    <Link href={`/author/${book.slug}`} className='flex'>
                     <div className='w-2/5'>
                         <Image
                             className='shadow-2xl w-full h-auto'

@@ -36,6 +36,39 @@ The original, client-approved design unified all media in one page, which could 
   ## Development process
   Requirements evolved during development, which made the development intertwined with the design process. Navigational structure and dedicated section landing pages were added iteratively based on client feedback.
 
+# ROADMAP: Starting Over companion page
+Appendix C of Joe's memoir *Starting Over* (MIT Press) sends readers to the website ("open the Author door to explore Starting Over"). The client asked for a Starting Over page with tabs for pre-publication endorsements, post-publication praise & reviews, dates and locations of readings, lectures and related musical performances, additional personal photos, and merch. Book pages used to live at `/author/<MongoDB ObjectId>`, so the first stage gives every book a human-readable slug; the companion page then lives at `/author/starting-over`.
+
+  ## Stage 1 — Book slugs and slug-based routes
+  - [x] Add `slug` to the `Book` type (`app/author/book-data.ts`)
+  - [x] Add a unique `slug` to every document in `websitedb.books` and a unique index on it (done manually in the MongoDB Playground)
+  - [x] `/api/books/[id]` looks up by `slug`, falling back to `_id` for legacy links
+  - [x] Rename `app/author/[_id]` → `app/author/[slug]`; legacy ObjectId URLs permanently redirect to the slug URL
+  - [x] Book links use slugs: `BookList.tsx`, `sitemap.ts`, `NewsBanner.tsx`, `news/page.tsx`
+
+  ## Stage 2 — Starting Over page shell
+  - [ ] `app/author/starting-over/starting-over-data.ts` — static data for endorsements, reviews, events, photos and merch (reuses `AdvancedPraise` / `Review` from `book-data.ts`)
+  - [ ] `app/author/starting-over/page.tsx` — server component with metadata and banner; core book info (cover, synopsis, stores) still comes from MongoDB by slug. The static segment takes precedence over `[slug]`
+  - [ ] `StartingOverTabs.tsx` — client tabs styled like `BookContentTabs.tsx`: The Book / Endorsements / Praise & Reviews / Readings & Events / Photos / Merch. Empty tabs are hidden; the active tab is synced to `?tab=` so tabs can be linked directly; nav wraps on mobile
+
+  ## Stage 3 — Tab content
+  - [ ] Endorsements and Reviews — same quote layout as the existing book Praise/Reviews tabs
+  - [ ] Readings & Events — Upcoming (ascending) and Past (descending), with a type label (reading / lecture / performance) and optional link. Related lectures are **not duplicated**: add an optional `book?: string` (slug) to `Lecture` in `lecture-data.ts`, tag entries with `book: "starting-over"`, and merge them in, so they show on both the lectures pages and this tab
+  - [ ] Photos — reuse `app/components/ImageGallery.tsx` with images in `public/starting-over/*.webp`; add optional captions
+  - [ ] Merch — card grid linking out to external stores (no on-site checkout)
+
+  ## Stage 4 — Entry points
+  - [ ] Add "starting over" to the author submenu in `app/components/header-data.ts` (check active-state highlighting against "books")
+  - [ ] Optionally feature the Starting Over card on `/author`
+  - [ ] Update `CLAUDE.md` with the new route
+
+  ## Pending from the client
+  - Confirmed book title (to be updated in the database)
+  - Endorsement and review texts with attributions and links
+  - Reading and performance dates/locations
+  - Personal photos
+  - Merch items and store URLs
+
 # LOCAL SETUP
                                                                                                                      
 1. Clone the repository and install dependencies:                                                                                      

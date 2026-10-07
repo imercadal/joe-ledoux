@@ -29,9 +29,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   let bookRoutes: MetadataRoute.Sitemap = []
   try {
     const { db } = await connectToDb()
-    const books = await db.collection('books').find({}, { projection: { _id: 1 } }).toArray()
+    const books = await db.collection('books').find({}, { projection: { slug: 1 } }).toArray()
     bookRoutes = books.map((book) => ({
-      url: `${BASE_URL}/author/${book._id.toString()}`,
+      url: `${BASE_URL}/author/${book.slug}`,
       lastModified: new Date(),
       changeFrequency: 'yearly' as const,
       priority: 0.8,
