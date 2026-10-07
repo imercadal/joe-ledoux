@@ -1,6 +1,5 @@
 import { NextRequest } from 'next/server';
-import { connectToDb } from '../../db';
-import { ObjectId } from 'mongodb';
+import { getBook } from '../get-book';
 
 // Accepts a book slug (canonical) or, for old links, a MongoDB ObjectId.
 export async function GET( request: NextRequest ) {
@@ -11,14 +10,8 @@ export async function GET( request: NextRequest ) {
     return new Response("Invalid book id", { status: 400 });
   }
 
-  const { db } = await connectToDb();
-  let book;
   try {
-    book = await db.collection('books').findOne({ slug: id });
-
-    if (!book && ObjectId.isValid(id)) {
-      book = await db.collection('books').findOne({ _id: new ObjectId(id) });
-    }
+    const book = await getBook(id);
 
     if (!book) {
       return new Response("Book not found", { status: 404 });

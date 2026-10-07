@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Book } from '../book-data';
+import { getBook } from '../../api/books/get-book';
 import BookContentTabs from './BookContentTabs';
 import Link from 'next/link';
 import { permanentRedirect } from 'next/navigation';
@@ -9,10 +10,13 @@ export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
-  const res = await fetch(new URL(`/api/books/${slug}`, baseUrl).toString());
-  if (!res.ok) return { title: 'Book' };
-  const book: Book = await res.json();
+  let book: Book | null = null;
+  try {
+    book = await getBook(slug);
+  } catch {
+    // Fall through to the generic title; the page itself logs the error
+  }
+  if (!book) return { title: 'Book' };
   return {
     title: book.title,
     description: book.synopsis?.slice(0, 160) ?? `${book.title} by Joseph LeDoux`,
@@ -28,15 +32,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 export default async function BookDetails({ params }: { params: Promise<{ slug: string }> }) {
     const { slug } = await params;
 
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
-    const apiUrl = new URL(`/api/books/${slug}`, baseUrl).toString();
+    let book: Book | null = null;
+    try {
+        book = await getBook(slug);
+    } catch (error) {
+        console.error("Failed to load book:", error);
+    }
 
-    const response = await fetch(apiUrl);
-
-    if(!response.ok) {
-        const errorText = await response.text();
-        console.error("Fetch failed:", errorText);
-
+    if (!book) {
         return (
             <main className="bg-dark h-screen">
                 <div className="relative mb-8 h-40 font-bold bg-cover bg-center bg-[url('/317_Deep_History_banner.webp')] flex flex-col justify-center items-center gap-1">
@@ -55,23 +58,9 @@ export default async function BookDetails({ params }: { params: Promise<{ slug: 
         );
     }
 
-    const book: Book = await response.json();
-
-    // Old ObjectId links resolve via the API fallback; send them to the canonical slug URL
-    if (book?.slug && slug !== book.slug) {
+    // Old ObjectId links resolve via the _id fallback; send them to the canonical slug URL
+    if (book.slug && slug !== book.slug) {
         permanentRedirect(`/author/${book.slug}`);
-    }
-    
-    if (!book) {
-        return (
-            <main className='bg-dark'>
-                    <div className="relative mb-8 h-40 font-bold bg-cover bg-center bg-[url('/317_Deep_History_banner.webp')] flex flex-col justify-center items-center gap-1">
-                    <h3 className="font-bold">BOOK DETAILS</h3>
-                </div>
-                <h3 className='text-lightText'>Book not found</h3>
-                <Link href='/author'>Back to BOOKS</Link>
-            </main>
-        );
     }
 
     return(

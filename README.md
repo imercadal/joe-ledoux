@@ -20,10 +20,38 @@ The original, client-approved design unified all media in one page, which could 
   - **MongoDB Atlas** — Publications, books, and media items are stored in a
     `websitedb` database and fetched server-side via internal API routes
     (`/api/publications`, `/api/books`, `/api/media`). Media pages use ISR with
-    a 5-minute revalidation window.
+    a 5-minute revalidation window. The individual book page (`/author/[slug]`)
+    is the exception: it queries MongoDB directly through a shared helper —
+    see "Self-fetching and preview deployments" below.
   - **Static TypeScript data files** — Albums, shows, lectures, columns, and
     articles are hardcoded in `*-data.ts` files co-located with their routes.
     These change infrequently enough that a redeploy is acceptable.
+
+  ## Self-fetching and preview deployments
+
+  Most server components load their data by fetching the site's own API routes
+  over HTTP, using a base URL from an environment variable
+  (`NEXT_PUBLIC_SITE_URL` or `NEXT_PUBLIC_BASE_URL`). In production that URL
+  is the live site, so on a **Vercel preview deployment** these pages call the
+  *production* API rather than the preview's own code.
+
+  This surfaced when book pages moved from ObjectId URLs to slugs (Stage 1 of
+  the roadmap below). Locally everything worked, but on the preview every book
+  page showed "Document not found": the preview's new `/author/[slug]` page
+  asked production's `/api/books/<slug>`, and production — still on the old
+  code — rejected anything that wasn't an ObjectId.
+
+  The fix was to stop the book page from calling its own API. The lookup now
+  lives in `app/api/books/get-book.ts` (`getBook(slugOrId)`), which is used by
+  both the `/author/[slug]` page and the `/api/books/[id]` route. As a result:
+  - Previews test their own code, so API changes can be verified before merging
+  - There is one fewer HTTP round trip (and serverless invocation) per page view
+  - The page no longer depends on a base-URL env var being set correctly
+
+  Other pages (`/author`, publications, media) still self-fetch. They work, but
+  have the same weakness and should be converted the same way when their API
+  routes next change — in particular, the Starting Over page (Stage 2) should
+  use `getBook('starting-over')` directly.
 
   ## Server and client components
 
@@ -45,10 +73,11 @@ Appendix C of Joe's memoir *Starting Over* (MIT Press) sends readers to the webs
   - [x] `/api/books/[id]` looks up by `slug`, falling back to `_id` for legacy links
   - [x] Rename `app/author/[_id]` → `app/author/[slug]`; legacy ObjectId URLs permanently redirect to the slug URL
   - [x] Book links use slugs: `BookList.tsx`, `sitemap.ts`, `NewsBanner.tsx`, `news/page.tsx`
+  - [x] Book page queries MongoDB directly via `getBook()` instead of self-fetching, so previews test their own code (see "Self-fetching and preview deployments")
 
   ## Stage 2 — Starting Over page shell
   - [ ] `app/author/starting-over/starting-over-data.ts` — static data for endorsements, reviews, events, photos and merch (reuses `AdvancedPraise` / `Review` from `book-data.ts`)
-  - [ ] `app/author/starting-over/page.tsx` — server component with metadata and banner; core book info (cover, synopsis, stores) still comes from MongoDB by slug. The static segment takes precedence over `[slug]`
+  - [ ] `app/author/starting-over/page.tsx` — server component with metadata and banner; core book info (cover, synopsis, stores) comes from MongoDB via `getBook('starting-over')`. The static segment takes precedence over `[slug]`
   - [ ] `StartingOverTabs.tsx` — client tabs styled like `BookContentTabs.tsx`: The Book / Endorsements / Praise & Reviews / Readings & Events / Photos / Merch. Empty tabs are hidden; the active tab is synced to `?tab=` so tabs can be linked directly; nav wraps on mobile
 
   ## Stage 3 — Tab content
