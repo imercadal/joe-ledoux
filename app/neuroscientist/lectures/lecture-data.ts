@@ -1989,4 +1989,29 @@ export const lectures : Lecture[] = [
     date: new Date("2025-11-19"),
     urlToLecture: ""
   },
+  {
+    id: "500",
+    title: "Putting the Mental Back into Mental Disorders",
+    event: "Cognitive Neuroscience George Miller Award, Vancouver CA",
+    date: new Date("2026-03-09")
+  },
+    {
+    id: "501",
+    title: "Keynote lecture, Putting the Mental Back into Mental Disorders",
+    event: "American Psychopathological Association, Boston MA",
+    date: new Date("2026-03-17")
+  },
+  {
+    id: "502",
+    title: "Keynote Lecture: “Starting Life Over and Over”",
+    event: "Family Firm Institute, FFI Global Conference 2026, New York, NY",
+    date: new Date("2026-10-29"),
+    urlToLecture: "https://digital.ffi.org/2026-main-conference/"
+  },
+  {
+    id: "503",
+    title: "Keynote Lecture: The Troubling Problem of the Emotional Brain",
+    event: "Brain Health Institute, Rutgers University",
+    date: new Date("2026-12-02")
+  },
 ]

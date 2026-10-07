@@ -7,7 +7,17 @@ export interface Post {
     urlToPost: string;
 }
 
-export const posts : Post[] = [{
+export const posts : Post[] = [
+
+{
+    id: "545",
+    title: "Can AI Have Conscious Experiences?",
+    mediaCompany: "Psychology Today",
+    section: "I Got a Mind to Tell You",
+    date: new Date("2026-09-09"),
+    urlToPost: "https://www.psychologytoday.com/us/blog/i-got-a-mind-to-tell-you/202609/can-ai-have-conscious-experiences"
+},
+{
     id: "098",
     title: "Is Consciousness Mysterious?",
     mediaCompany: "Psychology Today",
@@ -301,5 +311,8 @@ export const posts : Post[] = [{
     section: "For What It's Worth",
     date: new Date("2009-04-11"),
     urlToPost: "https://ledouxjoseph.blogspot.com/2009/04/saturday-april-11-2009-cambridge-uk.html"
-}
+},
+
+
+
 ]
